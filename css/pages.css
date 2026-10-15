@@ -103,6 +103,12 @@
   color: var(--couleur-texte-doux);
 }
 
+/* Sélecteur plus précis que « .cv__bloc p + p » pour garder un petit écart */
+.liste-resume .resume__texte {
+  margin-top: 0.25rem;
+  font-size: var(--taille-petit);
+}
+
 @media (max-width: 860px) {
   .cv {
     grid-template-columns: minmax(0, 1fr);
@@ -177,7 +183,7 @@
 /* Une ligne par document : date | titre + résumé | catégorie | flèche */
 .doc {
   display: grid;
-  grid-template-columns: 7rem minmax(0, 1fr) auto auto;
+  grid-template-columns: 7rem minmax(0, 1fr) auto 1rem;
   align-items: center;
   gap: 1.5rem;
   padding: 1.25rem 0.75rem;
@@ -187,8 +193,13 @@
   transition: background-color var(--duree-transition);
 }
 
-.doc:hover {
+a.doc:hover {
   background-color: var(--couleur-fond-secondaire);
+}
+
+/* Document pas encore publié : pas de lien, texte atténué */
+.doc--a-venir {
+  color: var(--couleur-texte-doux);
 }
 
 .doc__date {
@@ -393,6 +404,10 @@
 
 .frise__contenu .liste-etiquettes {
   margin-top: 0.5rem;
+}
+
+.frise__contenu .carte__lien {
+  justify-self: start;
 }
 
 @media (max-width: 640px) {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="Tutoriels, procédures et notes techniques rédigés par Janis Creach.">
+  <meta name="description" content="Procédures et notes techniques de Janis Creach sur l'administration des systèmes et des réseaux.">
   <title>Documentation — Janis Creach</title>
 
   <!-- Icône de l'onglet -->
@@ -55,108 +55,122 @@
     </div>
   </header>
 
-  <p class="bandeau-demo"><strong>Démo</strong> — Contenu fictif pour valider le design, à remplacer.</p>
-
   <main id="contenu" class="page">
     <!-- ===================== En-tête de page ===================== -->
     <section class="section en-tete-page">
       <p class="etiquette-mono">// Documentation</p>
       <h1>Documentation</h1>
-      <p class="texte-intro">Tutoriels, procédures et notes techniques que je rédige au fil de mes projets.</p>
+      <p class="texte-intro">Procédures et notes techniques sur l'administration des systèmes et des réseaux.</p>
     </section>
 
     <!-- ===================== Liste des documents ===================== -->
     <section class="section">
-      <h2 class="titre-section">Derniers documents</h2>
+      <h2 class="titre-section">Documents</h2>
       <ul class="liste-docs">
         <li>
-          <a class="doc" href="#article-exemple">
-            <span class="doc__date">12.09.2026</span>
+          <a class="doc" href="#article-vlan">
+            <span class="doc__date">15.10.2026</span>
             <span>
-              <span class="doc__titre">Déployer un reverse proxy Nginx avec HTTPS</span>
-              <span class="doc__resume">Configuration pas à pas avec Let's Encrypt et renouvellement automatique.</span>
+              <span class="doc__titre">Configurer des VLAN et le routage inter-VLAN</span>
+              <span class="doc__resume">Création des VLAN, ports d'accès, lien trunk et sous-interfaces sur du matériel Cisco.</span>
             </span>
             <span class="etiquette">Tutoriel</span>
             <span class="fleche" aria-hidden="true">→</span>
           </a>
         </li>
         <li>
-          <a class="doc" href="#article-exemple">
-            <span class="doc__date">28.08.2026</span>
+          <div class="doc doc--a-venir">
+            <span class="doc__date">À venir</span>
             <span>
-              <span class="doc__titre">Sauvegarder ses serveurs avec restic</span>
-              <span class="doc__resume">Sauvegardes chiffrées, rotation et test de restauration.</span>
+              <span class="doc__titre">Installer un portail captif Alcasar</span>
+              <span class="doc__resume">Installation, configuration des utilisateurs et contrôle de l'accès à Internet.</span>
             </span>
             <span class="etiquette">Procédure</span>
-            <span class="fleche" aria-hidden="true">→</span>
-          </a>
+          </div>
         </li>
         <li>
-          <a class="doc" href="#article-exemple">
-            <span class="doc__date">03.07.2026</span>
+          <div class="doc doc--a-venir">
+            <span class="doc__date">À venir</span>
             <span>
-              <span class="doc__titre">Segmenter un réseau domestique avec des VLAN</span>
-              <span class="doc__resume">Isoler les objets connectés, les invités et le réseau d'administration.</span>
+              <span class="doc__titre">Superviser son réseau avec Zabbix et SNMP</span>
+              <span class="doc__resume">Ajout des équipements, modèles de supervision et alertes.</span>
             </span>
-            <span class="etiquette">Réseau</span>
-            <span class="fleche" aria-hidden="true">→</span>
-          </a>
+            <span class="etiquette">Supervision</span>
+          </div>
         </li>
         <li>
-          <a class="doc" href="#article-exemple">
-            <span class="doc__date">15.05.2026</span>
+          <div class="doc doc--a-venir">
+            <span class="doc__date">À venir</span>
             <span>
-              <span class="doc__titre">Mémo Git&nbsp;: les commandes du quotidien</span>
-              <span class="doc__resume">Branches, fusion, annulation&nbsp;: l'essentiel sur une seule page.</span>
+              <span class="doc__titre">Analyser des trames avec Wireshark</span>
+              <span class="doc__resume">Filtres utiles et lecture des échanges ARP, DHCP et DNS.</span>
             </span>
             <span class="etiquette">Mémo</span>
-            <span class="fleche" aria-hidden="true">→</span>
-          </a>
+          </div>
         </li>
       </ul>
     </section>
 
-    <!-- ===================== Article d'exemple (pour valider la mise en forme) ===================== -->
-    <section class="section" id="article-exemple">
+    <!-- ===================== Article ===================== -->
+    <section class="section" id="article-vlan">
       <article class="article">
-        <p class="etiquette-mono">// Tutoriel · 12.09.2026 · 6 min de lecture</p>
-        <h2>Déployer un reverse proxy Nginx avec HTTPS</h2>
-        <p class="texte-intro">Cet article d'exemple sert à valider la mise en forme de la documentation&nbsp;: titres, paragraphes, listes, blocs de code et encadrés.</p>
+        <p class="etiquette-mono">// Tutoriel · 15.10.2026 · 5 min de lecture</p>
+        <h2>Configurer des VLAN et le routage inter-VLAN</h2>
+        <p class="texte-intro">Séparer un réseau en VLAN isole les services (administration, utilisateurs, invités…). Pour qu'ils communiquent malgré tout, on ajoute un routage inter-VLAN, ici avec un routeur relié au commutateur par un seul lien trunk («&nbsp;router on a stick&nbsp;»).</p>
 
-        <h3>1. Installer Nginx</h3>
-        <p>Sur une distribution basée sur Debian, Nginx s'installe directement avec <code>apt</code>. Le service démarre automatiquement après l'installation.</p>
+        <h3>1. Créer les VLAN sur le commutateur</h3>
+        <p>On crée un VLAN par service et on lui donne un nom explicite.</p>
         <div class="bloc-code">
-          <p class="bloc-code__langage">bash</p>
-          <pre><code>sudo apt update
-sudo apt install nginx
-systemctl status nginx</code></pre>
+          <p class="bloc-code__langage">cisco ios</p>
+          <pre><code>Switch(config)# vlan 10
+Switch(config-vlan)# name ADMINISTRATION
+Switch(config-vlan)# vlan 20
+Switch(config-vlan)# name UTILISATEURS</code></pre>
         </div>
 
-        <h3>2. Créer la configuration du site</h3>
-        <p>On crée un fichier dans <code>/etc/nginx/sites-available/</code> qui redirige les requêtes vers l'application qui tourne en local sur le port 3000.</p>
+        <h3>2. Affecter les ports aux VLAN</h3>
+        <p>Les ports reliés aux postes passent en mode <code>access</code> dans le VLAN voulu.</p>
         <div class="bloc-code">
-          <p class="bloc-code__langage">nginx</p>
-          <pre tabindex="0"><code>server {
-    listen 80;
-    server_name exemple.fr;
+          <p class="bloc-code__langage">cisco ios</p>
+          <pre tabindex="0"><code>Switch(config)# interface range fa0/1 - 12
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 10
+Switch(config-if-range)# interface range fa0/13 - 24
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 20</code></pre>
+        </div>
 
-    location / {
-        proxy_pass http://127.0.0.1:3000;
-        proxy_set_header Host $host;
-    }
-}</code></pre>
+        <h3>3. Créer le lien trunk vers le routeur</h3>
+        <p>Le port relié au routeur transporte tous les VLAN, chaque trame étant marquée avec son numéro de VLAN (norme 802.1Q).</p>
+        <div class="bloc-code">
+          <p class="bloc-code__langage">cisco ios</p>
+          <pre><code>Switch(config)# interface gi0/1
+Switch(config-if)# switchport mode trunk</code></pre>
         </div>
 
         <div class="note">
-          <p><strong>À savoir&nbsp;:</strong> pensez à tester la configuration avec <code>nginx -t</code> avant de recharger le service.</p>
+          <p><strong>À savoir&nbsp;:</strong> sur certains commutateurs (par exemple les Catalyst 3560), il faut d'abord indiquer <code>switchport trunk encapsulation dot1q</code> avant de passer le port en mode trunk.</p>
         </div>
 
-        <h3>3. Activer HTTPS</h3>
-        <p>Certbot obtient un certificat gratuit et configure Nginx automatiquement&nbsp;:</p>
+        <h3>4. Configurer les sous-interfaces du routeur</h3>
+        <p>Sur le routeur, on crée une sous-interface par VLAN. Son adresse IP sert de passerelle par défaut aux postes de ce VLAN.</p>
+        <div class="bloc-code">
+          <p class="bloc-code__langage">cisco ios</p>
+          <pre tabindex="0"><code>Router(config)# interface gi0/0
+Router(config-if)# no shutdown
+Router(config-if)# interface gi0/0.10
+Router(config-subif)# encapsulation dot1Q 10
+Router(config-subif)# ip address 192.168.10.254 255.255.255.0
+Router(config-subif)# interface gi0/0.20
+Router(config-subif)# encapsulation dot1Q 20
+Router(config-subif)# ip address 192.168.20.254 255.255.255.0</code></pre>
+        </div>
+
+        <h3>5. Vérifier</h3>
         <ul>
-          <li>installer le paquet <code>certbot</code> et son extension Nginx&nbsp;;</li>
-          <li>lancer <code>certbot --nginx -d exemple.fr</code>&nbsp;;</li>
-          <li>vérifier que le renouvellement automatique est bien planifié.</li>
+          <li><code>show vlan brief</code> sur le commutateur&nbsp;: chaque port est dans le bon VLAN&nbsp;;</li>
+          <li><code>show interfaces trunk</code>&nbsp;: le lien vers le routeur est bien en trunk&nbsp;;</li>
+          <li>un <code>ping</code> d'un poste du VLAN 10 vers un poste du VLAN 20 doit répondre.</li>
         </ul>
       </article>
     </section>
@@ -171,7 +185,7 @@ systemctl status nginx</code></pre>
             <img src="assets/logo.svg" alt="" width="40" height="40">
             <span>Janis Creach</span>
           </a>
-          <p class="pied-de-page__texte">Systèmes, réseaux &amp; développement web. Site statique hébergé sur GitHub Pages.</p>
+          <p class="pied-de-page__texte">Administration systèmes, réseaux &amp; cybersécurité.</p>
         </div>
 
         <nav class="pied-de-page__colonne" aria-label="Plan du site">
@@ -220,7 +234,7 @@ systemctl status nginx</code></pre>
 
       <div class="pied-de-page__bas">
         <p>© 2026 Janis Creach</p>
-        <p>Fait main en HTML, CSS &amp; JavaScript</p>
+        <p>Site hébergé sur GitHub Pages</p>
       </div>
     </div>
   </footer>

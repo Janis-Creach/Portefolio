@@ -270,32 +270,46 @@
   }
 }
 
-/* ----- Liste de liens datés (documentation récente) ----- */
+/* ----- Listes en lignes : libellé court à gauche, texte à droite
+         (documentation récente, domaines de compétences) ----- */
 
-.liste-liens {
+.liste-liens,
+.liste-domaines {
   display: grid;
 }
 
-.liste-liens a {
+.liste-liens a,
+.liste-liens__a-venir,
+.domaine {
   display: grid;
   grid-template-columns: 6.5rem minmax(0, 1fr);
   gap: 1rem;
   padding-block: 0.75rem;
   font-size: var(--taille-petit);
-  text-decoration: none;
-  color: var(--couleur-texte);
   border-bottom: 1px solid var(--couleur-bordure);
 }
 
-.liste-liens li:first-child a {
+.liste-liens li:first-child > *,
+.domaine:first-child {
   border-top: 1px solid var(--couleur-bordure);
+}
+
+.liste-liens a {
+  text-decoration: none;
+  color: var(--couleur-texte);
 }
 
 .liste-liens a:hover {
   color: var(--couleur-lien);
 }
 
-.liste-liens__date {
+/* Document pas encore publié : texte atténué */
+.liste-liens__a-venir {
+  color: var(--couleur-texte-doux);
+}
+
+.liste-liens__date,
+.domaine dt {
   font-family: var(--police-mono);
   font-size: var(--taille-mini);
   color: var(--couleur-texte-doux);
