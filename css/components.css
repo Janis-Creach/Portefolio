@@ -316,7 +316,7 @@ a:hover > .fleche {
   }
 }
 
-/* ----- Liste libellé / valeur (coordonnées du CV, mentions légales) ----- */
+/* ----- Liste libellé / valeur (coordonnées du CV) ----- */
 
 .liste-infos {
   display: grid;

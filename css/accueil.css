@@ -143,7 +143,9 @@
 .defilement__liste {
   display: flex;
   gap: 3rem;
-  padding-right: 3rem;
+  /* Même écart après le dernier élément, pour que la boucle soit régulière
+     (une marge, car la remise à zéro des listes annule le padding) */
+  margin-right: 3rem;
 }
 
 .defilement__element {

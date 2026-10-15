@@ -322,6 +322,33 @@ a.doc:hover {
   margin-bottom: 0;
 }
 
+/* ==================== Mentions légales ==================== */
+
+/* Texte aligné à gauche, sous le titre de la page */
+.article--mentions {
+  margin-inline: 0;
+}
+
+/* Intertitres plus discrets que le titre d'un article de documentation */
+.article--mentions h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: var(--taille-h3);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.article--mentions h2:first-child {
+  margin-top: 0;
+}
+
+.article__mise-a-jour {
+  margin-top: 2.5rem;
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  color: var(--couleur-texte-doux);
+}
+
 /* ==================== Formation / Expérience : frise ==================== */
 
 .titre-section {
