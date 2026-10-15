@@ -195,6 +195,7 @@ a:hover > .fleche {
 }
 
 .carte__texte {
+  max-width: 65ch;
   color: var(--couleur-texte-doux);
 }
 
@@ -313,6 +314,24 @@ a:hover > .fleche {
   50% {
     opacity: 0;
   }
+}
+
+/* ----- Liste libellé / valeur (coordonnées du CV, mentions légales) ----- */
+
+.liste-infos {
+  display: grid;
+  gap: 1rem;
+  font-size: var(--taille-petit);
+}
+
+.liste-infos dt {
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  color: var(--couleur-texte-doux);
+}
+
+.liste-infos dd {
+  overflow-wrap: anywhere;
 }
 
 /* ----- Liste à puces carrées (compétences, certifications) ----- */

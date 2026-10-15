@@ -63,8 +63,8 @@
 
   /* ----- Dimensions et espacements ----- */
   --hauteur-nav: 48px;
-  --largeur-max: 1200px;
-  --marge-laterale: clamp(1rem, 4vw, 2.5rem);
+  --largeur-max: 100%;             /* contenu sur toute la largeur (ex. 1200px pour le centrer) */
+  --marge-laterale: clamp(1rem, 4vw, 4rem);
   --espace-section: clamp(3rem, 8vw, 5.5rem);
 
   /* ----- Arrondis ----- */

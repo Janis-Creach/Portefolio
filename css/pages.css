@@ -45,23 +45,6 @@
   margin-top: 1rem;
 }
 
-/* Coordonnées : libellé au-dessus de la valeur */
-.liste-infos {
-  display: grid;
-  gap: 1rem;
-  font-size: var(--taille-petit);
-}
-
-.liste-infos dt {
-  font-family: var(--police-mono);
-  font-size: var(--taille-mini);
-  color: var(--couleur-texte-doux);
-}
-
-.liste-infos dd {
-  overflow-wrap: anywhere;
-}
-
 /* Compétences regroupées par thème, sur deux colonnes */
 .groupes-competences {
   display: grid;

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PIED DE PAGE : liens du site et raccourcis (GitHub, LinkedIn, email)
+   PIED DE PAGE : présentation, mentions légales et raccourcis (GitHub, LinkedIn, email)
    ========================================================================== */
 
 .pied-de-page {
@@ -23,7 +23,7 @@
 /* Trois colonnes séparées par des lignes (l'espace de 1px laisse voir la bordure) */
 .pied-de-page__grille {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
   gap: 1px;
   background-color: var(--couleur-bordure);
 }
@@ -57,22 +57,10 @@
   color: var(--couleur-texte-doux);
 }
 
-/* ----- Listes de liens ----- */
+/* ----- Mentions légales (liste libellé / valeur : voir components.css) ----- */
 
-.pied-de-page__liens {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.pied-de-page__lien {
-  font-size: var(--taille-petit);
-  text-decoration: none;
-  color: var(--couleur-texte);
-}
-
-.pied-de-page__lien:hover {
-  color: var(--couleur-lien);
-  text-decoration: underline;
+.mentions-legales {
+  max-width: 70ch;
 }
 
 /* ----- Raccourcis vers GitHub, LinkedIn et email ----- */
