@@ -153,6 +153,18 @@ ol[class] {
   white-space: nowrap;
 }
 
+/* ----- Bandeau « Site en travaux » sous la barre de navigation ----- */
+
+.bandeau-travaux {
+  padding: 0.5rem var(--marge-laterale);
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  text-align: center;
+  color: var(--couleur-texte-doux);
+  background-color: var(--couleur-fond-secondaire);
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
 /* ----- Animations réduites si l'utilisateur le demande ----- */
 
 @media (prefers-reduced-motion: reduce) {
