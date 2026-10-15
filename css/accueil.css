@@ -210,8 +210,9 @@
   margin-top: auto;
 }
 
-/* Petits écrans (moins de 375 px) : chiffres clés sur 2 colonnes */
-@media (max-width: 374px) {
+/* Petits écrans (moins de 375 px) et tablettes étroites (641 à 750 px) :
+   chiffres clés sur 2 colonnes pour que les libellés tiennent */
+@media (max-width: 374px), (min-width: 641px) and (max-width: 750px) {
   .statistiques {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

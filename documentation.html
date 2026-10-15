@@ -122,7 +122,7 @@
         <p>On crée un VLAN par service et on lui donne un nom explicite.</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">cisco ios</p>
-          <pre><code>Switch(config)# vlan 10
+          <pre tabindex="0"><code>Switch(config)# vlan 10
 Switch(config-vlan)# name ADMINISTRATION
 Switch(config-vlan)# vlan 20
 Switch(config-vlan)# name UTILISATEURS</code></pre>
@@ -144,7 +144,7 @@ Switch(config-if-range)# switchport access vlan 20</code></pre>
         <p>Le port relié au routeur transporte tous les VLAN, chaque trame étant marquée avec son numéro de VLAN (norme 802.1Q).</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">cisco ios</p>
-          <pre><code>Switch(config)# interface gi0/1
+          <pre tabindex="0"><code>Switch(config)# interface gi0/1
 Switch(config-if)# switchport mode trunk</code></pre>
         </div>
 

@@ -74,7 +74,7 @@ a:hover > .fleche {
   transform: translateX(3px);
 }
 
-/* ----- Étiquettes (technos, statuts) ----- */
+/* ----- Étiquettes (technos, savoir-être, catégories) ----- */
 
 .liste-etiquettes {
   display: flex;
