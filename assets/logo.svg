@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="titre-logo">
+  <title id="titre-logo">Logo Janis Creach</title>
+
+  <!-- Tuile de fond vert-noir -->
+  <rect width="48" height="48" rx="6" fill="#0f1a14"/>
+
+  <!-- Initiales « JC » en pixels de 4 × 4.
+       Une couleur par ligne : dégradé du vert citron (haut) au vert (bas). -->
+
+  <!-- Ligne 1 -->
+  <g fill="#b5e61d">
+    <rect x="6" y="14" width="16" height="4"/>
+    <rect x="30" y="14" width="12" height="4"/>
+  </g>
+
+  <!-- Ligne 2 -->
+  <g fill="#88dd39">
+    <rect x="14" y="18" width="8" height="4"/>
+    <rect x="26" y="18" width="8" height="4"/>
+  </g>
+
+  <!-- Ligne 3 -->
+  <g fill="#5bd555">
+    <rect x="14" y="22" width="8" height="4"/>
+    <rect x="26" y="22" width="8" height="4"/>
+  </g>
+
+  <!-- Ligne 4 -->
+  <g fill="#2ecc71">
+    <rect x="6" y="26" width="4" height="4"/>
+    <rect x="14" y="26" width="8" height="4"/>
+    <rect x="26" y="26" width="8" height="4"/>
+  </g>
+
+  <!-- Ligne 5 -->
+  <g fill="#1fa65a">
+    <rect x="10" y="30" width="8" height="4"/>
+    <rect x="30" y="30" width="12" height="4"/>
+  </g>
+</svg>

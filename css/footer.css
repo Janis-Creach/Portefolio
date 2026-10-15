@@ -1,0 +1,140 @@
+/* ==========================================================================
+   PIED DE PAGE : liens du site et raccourcis (GitHub, LinkedIn, email)
+   ========================================================================== */
+
+.pied-de-page {
+  border-top: 1px solid var(--couleur-bordure);
+}
+
+/* Fine bande au dégradé de la marque */
+.pied-de-page::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--degrade-marque);
+}
+
+.pied-de-page__interieur {
+  max-width: var(--largeur-max);
+  margin-inline: auto;
+  border-inline: 1px solid var(--couleur-bordure);
+}
+
+/* Trois colonnes séparées par des lignes (l'espace de 1px laisse voir la bordure) */
+.pied-de-page__grille {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1px;
+  background-color: var(--couleur-bordure);
+}
+
+.pied-de-page__colonne {
+  padding: 2.5rem var(--marge-laterale);
+  background-color: var(--couleur-fond);
+}
+
+.pied-de-page__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-family: var(--police-titre);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--couleur-texte);
+}
+
+.pied-de-page__logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.pied-de-page__texte {
+  max-width: 36ch;
+  font-size: var(--taille-petit);
+  color: var(--couleur-texte-doux);
+}
+
+/* ----- Listes de liens ----- */
+
+.pied-de-page__liens {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pied-de-page__lien {
+  font-size: var(--taille-petit);
+  text-decoration: none;
+  color: var(--couleur-texte);
+}
+
+.pied-de-page__lien:hover {
+  color: var(--couleur-lien);
+  text-decoration: underline;
+}
+
+/* ----- Raccourcis vers GitHub, LinkedIn et email ----- */
+
+.liens-sociaux {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lien-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--taille-petit);
+  text-decoration: none;
+  color: var(--couleur-texte);
+}
+
+/* Petite case carrée autour de l'icône */
+.lien-social__icone {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi-md);
+  transition: background-color var(--duree-transition), border-color var(--duree-transition), color var(--duree-transition);
+}
+
+.lien-social__icone svg {
+  width: 18px;
+  height: 18px;
+}
+
+.lien-social:hover {
+  color: var(--couleur-lien);
+}
+
+.lien-social:hover .lien-social__icone {
+  color: var(--bouton-texte);
+  background-color: var(--bouton-fond);
+  border-color: var(--bouton-fond);
+}
+
+/* ----- Ligne du bas ----- */
+
+.pied-de-page__bas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem var(--marge-laterale);
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  color: var(--couleur-texte-doux);
+  border-top: 1px solid var(--couleur-bordure);
+}
+
+/* ----- Petits écrans : colonnes empilées ----- */
+
+@media (max-width: 760px) {
+  .pied-de-page__grille {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

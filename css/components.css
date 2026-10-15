@@ -1,0 +1,471 @@
+/* ==========================================================================
+   COMPOSANTS PARTAGÉS : boutons, étiquettes, cartes, terminal, niveaux…
+   ========================================================================== */
+
+/* ----- Boutons ----- */
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.625rem 1.125rem;
+  font-family: var(--police-texte);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--arrondi-md);
+  cursor: pointer;
+  transition: background-color var(--duree-transition), border-color var(--duree-transition), color var(--duree-transition);
+}
+
+/* Bouton plein (action principale) */
+.bouton--principal {
+  color: var(--bouton-texte);
+  background-color: var(--bouton-fond);
+}
+
+.bouton--principal:hover {
+  background-color: var(--bouton-fond-survol);
+}
+
+/* Bouton transparent avec bordure */
+.bouton--fantome {
+  color: var(--couleur-texte);
+  background-color: transparent;
+  border-color: var(--couleur-bordure-forte);
+}
+
+.bouton--fantome:hover {
+  background-color: var(--couleur-fond-secondaire);
+  border-color: var(--couleur-texte-doux);
+}
+
+/* Bouton vert citron, pour les fonds sombres */
+.bouton--accent {
+  color: #0b1f14;
+  background-color: var(--vert-citron);
+}
+
+.bouton--accent:hover {
+  background-color: var(--vert-emeraude);
+}
+
+/* Bouton transparent pour les fonds sombres */
+.bouton--fantome-clair {
+  color: var(--bloc-sombre-texte);
+  background-color: transparent;
+  border-color: rgb(255 255 255 / 0.25);
+}
+
+.bouton--fantome-clair:hover {
+  background-color: rgb(255 255 255 / 0.08);
+}
+
+/* Bouton inactif (ex. fichier pas encore disponible) */
+.bouton[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Petite flèche qui glisse vers la droite au survol */
+.fleche {
+  display: inline-block;
+  transition: transform var(--duree-transition);
+}
+
+a:hover > .fleche {
+  transform: translateX(3px);
+}
+
+/* ----- Étiquettes (technos, statuts) ----- */
+
+.liste-etiquettes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.etiquette {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1875rem 0.5rem;
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  white-space: nowrap;
+  color: var(--couleur-texte-doux);
+  background-color: var(--couleur-fond-secondaire);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 4px;
+}
+
+.etiquette--succes {
+  color: var(--couleur-lien);
+  background-color: color-mix(in srgb, var(--couleur-accent) 10%, transparent);
+  border-color: color-mix(in srgb, var(--couleur-accent) 40%, transparent);
+}
+
+/* ----- En-tête des pages intérieures ----- */
+
+.en-tete-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Motif de pixels décoratif en haut à droite */
+.en-tete-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(40%, 300px);
+  aspect-ratio: 3 / 2;
+  background: url("../assets/motif-pixels.svg") no-repeat right top / contain;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.en-tete-page h1 {
+  margin-bottom: 1.25rem;
+}
+
+.en-tete-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* ----- Grille « bento » : cartes de tailles variées sur 12 colonnes ----- */
+
+.grille-bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1px; /* l'espace laisse voir le fond = lignes de séparation */
+  overflow: hidden;
+  background-color: var(--couleur-bordure);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi-lg);
+}
+
+/* Largeur des cartes en nombre de colonnes */
+.colonnes-4 { grid-column: span 4; }
+.colonnes-5 { grid-column: span 5; }
+.colonnes-6 { grid-column: span 6; }
+.colonnes-7 { grid-column: span 7; }
+.colonnes-8 { grid-column: span 8; }
+
+@media (max-width: 960px) {
+  .colonnes-4,
+  .colonnes-5,
+  .colonnes-7,
+  .colonnes-8 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 640px) {
+  .grille-bento > * {
+    grid-column: span 12;
+  }
+}
+
+/* ----- Cartes ----- */
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background-color: var(--couleur-fond);
+  transition: background-color var(--duree-transition);
+}
+
+.carte:hover {
+  background-color: var(--couleur-fond-secondaire);
+}
+
+.carte .etiquette-mono {
+  margin-bottom: 0;
+}
+
+.carte__texte {
+  color: var(--couleur-texte-doux);
+}
+
+/* Lien en bas de carte, poussé tout en bas */
+.carte__lien {
+  display: inline-flex;
+  gap: 0.375rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: var(--taille-petit);
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--couleur-lien);
+}
+
+.carte__lien:hover {
+  text-decoration: underline;
+}
+
+/* Animation « chute » des cartes au chargement */
+@media (prefers-reduced-motion: no-preference) {
+  .grille-bento > .carte {
+    animation: chute 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .grille-bento > .carte:nth-child(2) { animation-delay: 0.08s; }
+  .grille-bento > .carte:nth-child(3) { animation-delay: 0.16s; }
+  .grille-bento > .carte:nth-child(4) { animation-delay: 0.24s; }
+  .grille-bento > .carte:nth-child(5) { animation-delay: 0.32s; }
+  .grille-bento > .carte:nth-child(6) { animation-delay: 0.4s; }
+}
+
+@keyframes chute {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ----- Terminal (bloc de code façon console) ----- */
+
+.terminal {
+  overflow: hidden;
+  font-family: var(--police-mono);
+  font-size: var(--taille-petit);
+  color: var(--bloc-sombre-texte);
+  background-color: var(--bloc-sombre-fond);
+  border: 1px solid var(--bloc-sombre-bordure);
+  border-radius: var(--arrondi-lg);
+}
+
+.terminal__barre {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+/* Trois carrés de couleur (version « pixel » des boutons de fenêtre) */
+.terminal__pixel {
+  width: 10px;
+  height: 10px;
+  background-color: var(--vert-citron);
+}
+
+.terminal__pixel:nth-child(2) {
+  background-color: var(--vert-emeraude);
+}
+
+.terminal__pixel:nth-child(3) {
+  background-color: var(--vert);
+}
+
+.terminal__titre {
+  margin-left: auto;
+  font-size: var(--taille-mini);
+  color: var(--bloc-sombre-texte-doux);
+}
+
+.terminal__contenu {
+  padding: 1.25rem;
+  line-height: 1.9;
+}
+
+.terminal__invite {
+  margin-right: 0.5rem;
+  color: var(--vert-citron);
+}
+
+.terminal__sortie {
+  color: var(--bloc-sombre-texte-doux);
+}
+
+.terminal__succes {
+  color: var(--vert-emeraude);
+}
+
+/* Curseur clignotant */
+.terminal__curseur {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  margin-left: 0.25rem;
+  vertical-align: text-bottom;
+  background-color: var(--vert-citron);
+  animation: clignote 1s steps(1) infinite;
+}
+
+@keyframes clignote {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ----- Niveaux de compétence en pixels (5 cases) ----- */
+
+.liste-niveaux {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ligne-niveau {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: var(--taille-petit);
+}
+
+/* 5 cases grises ; les cases remplies sont dessinées par ::before */
+.niveau {
+  --taille-case: 10px;
+  --pas-case: 14px; /* case + espace */
+  position: relative;
+  flex-shrink: 0;
+  width: calc(var(--pas-case) * 5);
+  height: var(--taille-case);
+  background: repeating-linear-gradient(90deg, var(--couleur-fond-tertiaire) 0 var(--taille-case), transparent var(--taille-case) var(--pas-case));
+}
+
+.niveau::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--pas-case) * var(--niveau));
+  background: repeating-linear-gradient(90deg, var(--couleur-accent) 0 var(--taille-case), transparent var(--taille-case) var(--pas-case));
+}
+
+.niveau--1 { --niveau: 1; }
+.niveau--2 { --niveau: 2; }
+.niveau--3 { --niveau: 3; }
+.niveau--4 { --niveau: 4; }
+.niveau--5 { --niveau: 5; }
+
+/* ----- Badge carré des certifications ----- */
+
+.badge-certification {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  font-family: var(--police-mono);
+  font-size: var(--taille-petit);
+  font-weight: 700;
+  color: var(--vert-citron);
+  background-color: var(--bloc-sombre-fond);
+  border: 1px solid var(--bloc-sombre-bordure);
+  border-radius: var(--arrondi-md);
+  /* Liseré au dégradé de la marque en bas du badge */
+  box-shadow: inset 0 -4px 0 var(--vert);
+}
+
+/* ----- Cartes de projet ----- */
+
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .grille-projets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grille-projets {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.carte-projet {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--couleur-fond);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi-lg);
+  transition: background-color var(--duree-transition), border-color var(--duree-transition);
+}
+
+.carte-projet:hover {
+  background-color: var(--couleur-fond-secondaire);
+  border-color: var(--couleur-bordure-forte);
+}
+
+/* Visuel : fond sombre + motif de pixels, placé différemment selon la variante */
+.visuel-pixels {
+  aspect-ratio: 16 / 9;
+  background: url("../assets/motif-pixels.svg") no-repeat right bottom / auto 75%;
+  background-color: var(--bloc-sombre-fond);
+}
+
+.visuel-pixels--gauche {
+  background-position: left -20% bottom;
+  background-size: auto 110%;
+}
+
+.visuel-pixels--haut {
+  background-position: right 10% top 20%;
+  background-size: auto 55%;
+}
+
+.carte-projet__corps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.carte-projet__corps .etiquette-mono {
+  margin-bottom: 0;
+}
+
+.carte-projet__titre {
+  font-size: var(--taille-h3);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.carte-projet__texte {
+  font-size: var(--taille-petit);
+  color: var(--couleur-texte-doux);
+}
+
+/* ----- Séparateur : trois losanges posés sur la ligne ----- */
+
+.separateur-losanges {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 0;
+}
+
+.separateur-losanges span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--vert-citron);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.separateur-losanges span:nth-child(2) {
+  background-color: var(--vert-emeraude);
+}
+
+.separateur-losanges span:nth-child(3) {
+  background-color: var(--vert);
+}

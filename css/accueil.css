@@ -1,0 +1,324 @@
+/* ==========================================================================
+   PAGE D'ACCUEIL : présentation, bandeau des technos, chiffres, contact
+   ========================================================================== */
+
+/* ----- Présentation (texte à gauche, terminal à droite) ----- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  overflow: hidden;
+}
+
+.hero__titre {
+  margin-bottom: 1.5rem;
+}
+
+/* Deuxième ligne du titre, plus discrète */
+.hero__sous-titre {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.5em;
+  line-height: 1.15;
+  color: var(--couleur-texte-doux);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* Trois infos rapides alignées sous les boutons */
+.hero__infos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--couleur-bordure);
+}
+
+.hero__info {
+  padding: 1rem 1rem 0 0;
+}
+
+.hero__info dt {
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--couleur-texte-doux);
+}
+
+.hero__info dd {
+  margin-top: 0.25rem;
+  font-size: var(--taille-petit);
+  font-weight: 500;
+}
+
+/* Le terminal est posé sur un motif de pixels */
+.hero__visuel {
+  position: relative;
+  padding: 2.5rem 0 0 2.5rem;
+}
+
+.hero__visuel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 220px;
+  aspect-ratio: 3 / 2;
+  background: url("../assets/motif-pixels.svg") no-repeat right top / contain;
+}
+
+.hero__visuel .terminal {
+  position: relative;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__visuel {
+    padding: 2rem 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__infos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ----- Bandeau défilant des technologies ----- */
+
+.defilement {
+  padding-block: 1.25rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--couleur-bordure);
+  /* Fondu sur les bords gauche et droit */
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.defilement__piste {
+  display: flex;
+  width: max-content;
+  animation: defile 35s linear infinite;
+}
+
+.defilement:hover .defilement__piste {
+  animation-play-state: paused;
+}
+
+.defilement__liste {
+  display: flex;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.defilement__element {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--police-titre);
+  font-size: 1.125rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--couleur-texte-doux);
+  transition: color var(--duree-transition);
+}
+
+/* Petit pixel devant chaque techno */
+.defilement__element::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: currentColor;
+}
+
+.defilement__element:hover {
+  color: var(--couleur-lien);
+}
+
+/* La piste contient deux fois la liste : on la décale de moitié en boucle */
+@keyframes defile {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Sans animation : liste fixe, la copie est masquée */
+@media (prefers-reduced-motion: reduce) {
+  .defilement__piste {
+    flex-wrap: wrap;
+    width: auto;
+    padding-inline: var(--marge-laterale);
+    animation: none;
+  }
+
+  .defilement__liste[aria-hidden="true"] {
+    display: none;
+  }
+
+  .defilement__liste {
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+  }
+}
+
+/* ----- Chiffres clés ----- */
+
+.statistiques {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.statistique {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Valeur affichée au-dessus du libellé (l'ordre HTML reste dt puis dd) */
+.statistique dd {
+  order: -1;
+}
+
+.statistique dd {
+  font-family: var(--police-titre);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.statistique dt {
+  font-size: var(--taille-petit);
+  color: var(--couleur-texte-doux);
+}
+
+/* ----- Carte « projet à la une » : texte + visuel côte à côte ----- */
+
+.carte--avec-visuel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
+}
+
+.carte--avec-visuel .carte__corps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.carte--avec-visuel .visuel-pixels {
+  aspect-ratio: auto;
+  min-height: 220px;
+}
+
+@media (max-width: 1100px) {
+  .carte--avec-visuel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .carte--avec-visuel .visuel-pixels {
+    order: -1;
+    min-height: 160px;
+  }
+}
+
+/* ----- Liste de liens datés (documentation récente) ----- */
+
+.liste-liens {
+  display: grid;
+}
+
+.liste-liens a {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0.75rem;
+  font-size: var(--taille-petit);
+  text-decoration: none;
+  color: var(--couleur-texte);
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.liste-liens li:first-child a {
+  border-top: 1px solid var(--couleur-bordure);
+}
+
+.liste-liens a:hover {
+  color: var(--couleur-lien);
+}
+
+.liste-liens__date {
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  color: var(--couleur-texte-doux);
+}
+
+/* ----- Appel à contact (bloc sombre) ----- */
+
+.appel-contact {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 2rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  overflow: hidden;
+  color: var(--bloc-sombre-texte);
+  background-color: var(--bloc-sombre-fond);
+  border: 1px solid var(--bloc-sombre-bordure);
+  border-radius: var(--arrondi-lg);
+}
+
+/* Motif de pixels en haut à droite */
+.appel-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 240px;
+  aspect-ratio: 3 / 2;
+  background: url("../assets/motif-pixels.svg") no-repeat right top / contain;
+  opacity: 0.35;
+}
+
+.appel-contact > * {
+  position: relative;
+}
+
+.appel-contact .etiquette-mono {
+  color: var(--bloc-sombre-texte-doux);
+}
+
+.appel-contact__titre {
+  margin-bottom: 1rem;
+  color: #f9fbf7;
+}
+
+.appel-contact__texte {
+  color: var(--bloc-sombre-texte-doux);
+}
+
+.appel-contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .appel-contact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

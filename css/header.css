@@ -1,0 +1,204 @@
+/* ==========================================================================
+   EN-TÊTE : barre de navigation fixe en haut de page
+   ========================================================================== */
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--couleur-fond);
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+/* La barre est découpée en cellules séparées par des lignes verticales */
+.entete__barre {
+  display: flex;
+  align-items: stretch;
+  height: var(--hauteur-nav);
+  max-width: var(--largeur-max);
+  margin-inline: auto;
+  border-inline: 1px solid var(--couleur-bordure);
+}
+
+/* ----- Logo + nom ----- */
+
+.entete__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding-inline: 1rem;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--couleur-texte);
+  border-right: 1px solid var(--couleur-bordure);
+}
+
+.entete__logo img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ----- Liens de navigation ----- */
+
+.navigation {
+  display: flex;
+  flex: 1;
+}
+
+.navigation__liste {
+  display: flex;
+}
+
+.navigation__lien {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-inline: 1rem;
+  font-size: var(--taille-petit);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--couleur-texte);
+  border-right: 1px solid var(--couleur-bordure);
+  transition: background-color var(--duree-transition);
+}
+
+.navigation__lien:hover {
+  background-color: var(--couleur-fond-secondaire);
+}
+
+/* Page en cours : fond plus marqué + trait vert en bas */
+.navigation__lien[aria-current="page"] {
+  background-color: var(--couleur-fond-tertiaire);
+  box-shadow: inset 0 -2px 0 var(--couleur-accent);
+}
+
+/* ----- Boutons carrés de la barre (thème et menu) ----- */
+
+.bouton-theme,
+.bouton-menu {
+  display: grid;
+  place-items: center;
+  width: var(--hauteur-nav);
+  padding: 0;
+  color: var(--couleur-texte);
+  background: none;
+  border: 0;
+  border-left: 1px solid var(--couleur-bordure);
+  cursor: pointer;
+  transition: background-color var(--duree-transition);
+}
+
+.bouton-theme:hover,
+.bouton-menu:hover {
+  background-color: var(--couleur-fond-secondaire);
+}
+
+.bouton-theme svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* On affiche la lune en mode clair et le soleil en mode sombre */
+.bouton-theme__soleil,
+:root[data-theme="dark"] .bouton-theme__lune {
+  display: none;
+}
+
+:root[data-theme="dark"] .bouton-theme__soleil {
+  display: block;
+}
+
+/* ----- Bouton « burger » (visible seulement sur mobile) ----- */
+
+.bouton-menu {
+  display: none;
+}
+
+/* Trois barres dessinées avec un élément et ses deux pseudo-éléments */
+.bouton-menu__barres,
+.bouton-menu__barres::before,
+.bouton-menu__barres::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform var(--duree-transition);
+}
+
+.bouton-menu__barres {
+  position: relative;
+}
+
+.bouton-menu__barres::before,
+.bouton-menu__barres::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.bouton-menu__barres::before {
+  top: -6px;
+}
+
+.bouton-menu__barres::after {
+  top: 6px;
+}
+
+/* Menu ouvert : les barres forment une croix */
+.entete.est-ouvert .bouton-menu__barres {
+  background-color: transparent;
+}
+
+.entete.est-ouvert .bouton-menu__barres::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.entete.est-ouvert .bouton-menu__barres::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ----- Petits écrans : menu déroulant ----- */
+
+@media (max-width: 960px) {
+  .bouton-menu {
+    display: grid;
+    order: 3;
+  }
+
+  .bouton-theme {
+    margin-left: auto;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    background-color: var(--couleur-fond);
+    border-bottom: 1px solid var(--couleur-bordure);
+  }
+
+  .entete.est-ouvert .navigation {
+    display: block;
+  }
+
+  .navigation__liste {
+    flex-direction: column;
+  }
+
+  .navigation__lien {
+    height: 52px;
+    padding-inline: var(--marge-laterale);
+    font-size: var(--taille-texte);
+    border-top: 1px solid var(--couleur-bordure);
+    border-right: 0;
+  }
+
+  .navigation__lien[aria-current="page"] {
+    box-shadow: inset 3px 0 0 var(--couleur-accent);
+  }
+}

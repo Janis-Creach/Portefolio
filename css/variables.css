@@ -1,0 +1,80 @@
+/* ==========================================================================
+   VARIABLES DU SITE
+   Toutes les valeurs à modifier souvent sont ici : couleurs, polices, tailles.
+
+   Couleurs : light-dark(valeur en mode clair, valeur en mode sombre).
+   Le navigateur choisit automatiquement la bonne valeur selon le thème actif.
+   ========================================================================== */
+
+:root {
+  /* Par défaut, le thème suit le réglage de l'appareil */
+  color-scheme: light dark;
+
+  /* ----- Palette de la marque (identique dans les deux thèmes) ----- */
+  --vert-citron: #b5e61d;
+  --vert-emeraude: #2ecc71;
+  --vert: #1fa65a;
+  --vert-fonce: #0b6b3a;
+  --degrade-marque: linear-gradient(90deg, var(--vert-citron), var(--vert-emeraude), var(--vert), var(--vert-fonce));
+
+  /* ----- Surfaces ----- */
+  --couleur-fond: light-dark(#f9fbf7, #0b120e);
+  --couleur-fond-secondaire: light-dark(#f1f5ee, #121c16);
+  --couleur-fond-tertiaire: light-dark(#e3eadf, #1c2a21);
+
+  /* ----- Textes ----- */
+  --couleur-texte: light-dark(#0f1a14, #eef4ea);
+  --couleur-texte-doux: light-dark(#4a5a50, #a3b3a8);
+  --couleur-lien: light-dark(#0b6b3a, #2ecc71);
+  --couleur-accent: light-dark(#1fa65a, #2ecc71);
+
+  /* ----- Bordures ----- */
+  --couleur-bordure: light-dark(#dce4d8, #24332a);
+  --couleur-bordure-forte: light-dark(#b9c6b3, #3a4d41);
+
+  /* ----- Boutons ----- */
+  --bouton-fond: light-dark(#0b1f14, #eef4ea);
+  --bouton-fond-survol: light-dark(#0b6b3a, #b5e61d);
+  --bouton-texte: light-dark(#f9fbf7, #0b1f14);
+
+  /* ----- Blocs sombres (terminal, code, appel à contact) ----- */
+  --bloc-sombre-fond: light-dark(#0b1f14, #050b08);
+  --bloc-sombre-texte: #d9e8de;
+  --bloc-sombre-texte-doux: #9fb5a7;
+  --bloc-sombre-bordure: light-dark(#0b1f14, #24332a);
+
+  /* ----- Polices ----- */
+  --police-texte: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --police-titre: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --police-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ----- Tailles de texte ----- */
+  --taille-h1: clamp(2.75rem, 7vw, 4.5rem);
+  --taille-h2: clamp(2rem, 4.5vw, 3.5rem);
+  --taille-h3: 1.375rem;
+  --taille-texte: 1rem;
+  --taille-petit: 0.875rem;
+  --taille-mini: 0.75rem;
+
+  /* ----- Dimensions et espacements ----- */
+  --hauteur-nav: 48px;
+  --largeur-max: 1200px;
+  --marge-laterale: clamp(1rem, 4vw, 2.5rem);
+  --espace-section: clamp(3rem, 8vw, 5.5rem);
+
+  /* ----- Arrondis ----- */
+  --arrondi-md: 0.375rem;
+  --arrondi-lg: 0.5rem;
+
+  /* ----- Animations ----- */
+  --duree-transition: 0.2s;
+}
+
+/* Thème forcé avec le bouton (voir js/theme.js) */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}

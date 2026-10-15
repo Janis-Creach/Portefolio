@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Portfolio de Janis Creach : systèmes, réseaux et développement web.">
+  <title>Janis Creach — Portfolio</title>
+
+  <!-- Icône de l'onglet -->
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Space+Mono:wght@400;700&display=swap">
+
+  <!-- Styles du site -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- ===================== Barre de navigation ===================== -->
+  <header class="entete">
+    <div class="entete__barre">
+      <a class="entete__logo" href="index.html">
+        <img src="assets/logo.svg" alt="" width="28" height="28">
+        <span>Janis Creach</span>
+      </a>
+
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation-principale">
+        <span class="bouton-menu__barres" aria-hidden="true"></span>
+        <span class="visuellement-cache">Menu</span>
+      </button>
+
+      <nav class="navigation" id="navigation-principale" aria-label="Navigation principale">
+        <ul class="navigation__liste">
+          <li><a class="navigation__lien" href="cv.html">Mon CV</a></li>
+          <li><a class="navigation__lien" href="certification.html">Certification</a></li>
+          <li><a class="navigation__lien" href="documentation.html">Documentation</a></li>
+          <li><a class="navigation__lien" href="formation-experience.html">Formation/Expérience</a></li>
+          <li><a class="navigation__lien" href="projets.html">Projets</a></li>
+        </ul>
+      </nav>
+
+      <button class="bouton-theme" type="button" aria-label="Changer de thème">
+        <svg class="bouton-theme__lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="bouton-theme__soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="8" height="8"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <p class="bandeau-demo"><strong>Démo</strong> — Contenu fictif pour valider le design, à remplacer.</p>
+
+  <main id="contenu" class="page">
+
+    <!-- ===================== Présentation ===================== -->
+    <section class="section hero">
+      <div class="hero__texte">
+        <p class="etiquette-mono">// Portfolio</p>
+        <h1 class="hero__titre">
+          Janis Creach
+          <span class="hero__sous-titre">Systèmes, réseaux &amp; développement web.</span>
+        </h1>
+        <p class="texte-intro">Je conçois, déploie et documente des infrastructures fiables et des outils web simples, pensés pour durer et pour être repris facilement.</p>
+
+        <div class="hero__actions">
+          <a class="bouton bouton--principal" href="projets.html">Voir mes projets <span class="fleche" aria-hidden="true">→</span></a>
+          <a class="bouton bouton--fantome" href="cv.html">Consulter mon CV</a>
+        </div>
+
+        <dl class="hero__infos">
+          <div class="hero__info">
+            <dt>Localisation</dt>
+            <dd>France</dd>
+          </div>
+          <div class="hero__info">
+            <dt>Statut</dt>
+            <dd>Ouvert aux opportunités</dd>
+          </div>
+          <div class="hero__info">
+            <dt>Langues</dt>
+            <dd>FR · EN</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__visuel">
+        <div class="terminal">
+          <div class="terminal__barre" aria-hidden="true">
+            <span class="terminal__pixel"></span>
+            <span class="terminal__pixel"></span>
+            <span class="terminal__pixel"></span>
+            <span class="terminal__titre">~/portfolio — bash</span>
+          </div>
+          <div class="terminal__contenu">
+            <p><span class="terminal__invite">$</span>whoami</p>
+            <p class="terminal__sortie">janis-creach</p>
+            <p><span class="terminal__invite">$</span>cat competences.txt</p>
+            <p class="terminal__sortie">→ Systèmes &amp; réseaux</p>
+            <p class="terminal__sortie">→ Développement web</p>
+            <p class="terminal__sortie">→ Automatisation &amp; scripts</p>
+            <p><span class="terminal__invite">$</span>./statut.sh</p>
+            <p class="terminal__succes">✔ Disponible pour de nouveaux projets<span class="terminal__curseur" aria-hidden="true"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Technologies (bandeau défilant) ===================== -->
+    <section class="defilement" aria-label="Technologies utilisées">
+      <div class="defilement__piste">
+        <ul class="defilement__liste">
+          <li class="defilement__element">Linux</li>
+          <li class="defilement__element">Windows Server</li>
+          <li class="defilement__element">Docker</li>
+          <li class="defilement__element">Proxmox</li>
+          <li class="defilement__element">Ansible</li>
+          <li class="defilement__element">Git</li>
+          <li class="defilement__element">Bash</li>
+          <li class="defilement__element">Python</li>
+          <li class="defilement__element">HTML &amp; CSS</li>
+          <li class="defilement__element">JavaScript</li>
+          <li class="defilement__element">Nginx</li>
+          <li class="defilement__element">PostgreSQL</li>
+        </ul>
+        <!-- Copie de la liste pour que le défilement boucle sans trou -->
+        <ul class="defilement__liste" aria-hidden="true">
+          <li class="defilement__element">Linux</li>
+          <li class="defilement__element">Windows Server</li>
+          <li class="defilement__element">Docker</li>
+          <li class="defilement__element">Proxmox</li>
+          <li class="defilement__element">Ansible</li>
+          <li class="defilement__element">Git</li>
+          <li class="defilement__element">Bash</li>
+          <li class="defilement__element">Python</li>
+          <li class="defilement__element">HTML &amp; CSS</li>
+          <li class="defilement__element">JavaScript</li>
+          <li class="defilement__element">Nginx</li>
+          <li class="defilement__element">PostgreSQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== En bref (grille bento) ===================== -->
+    <section class="section">
+      <div class="section__entete">
+        <div>
+          <p class="etiquette-mono">// En bref</p>
+          <h2>Un aperçu de mon parcours</h2>
+        </div>
+        <a class="bouton bouton--fantome" href="formation-experience.html">Formation &amp; expérience <span class="fleche" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="grille-bento">
+        <article class="carte colonnes-7">
+          <p class="etiquette-mono">À propos</p>
+          <h3>Du serveur au navigateur, je m'occupe de toute la chaîne.</h3>
+          <p class="carte__texte">Installation de serveurs, configuration réseau, automatisation des tâches répétitives et création d'interfaces web : j'aime comprendre comment chaque couche fonctionne et laisser derrière moi une documentation claire.</p>
+          <a class="carte__lien" href="cv.html">Lire mon CV <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="carte colonnes-5">
+          <p class="etiquette-mono">Chiffres clés</p>
+          <dl class="statistiques">
+            <div class="statistique">
+              <dt>Années d'expérience</dt>
+              <dd>4</dd>
+            </div>
+            <div class="statistique">
+              <dt>Projets réalisés</dt>
+              <dd>12</dd>
+            </div>
+            <div class="statistique">
+              <dt>Certifications</dt>
+              <dd>5</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="carte carte--avec-visuel colonnes-8">
+          <div class="carte__corps">
+            <p class="etiquette-mono">Projet à la une</p>
+            <h3>Homelab automatisé</h3>
+            <p class="carte__texte">Un cluster de virtualisation entièrement décrit par du code : création des machines, sauvegardes et supervision en une seule commande.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">Proxmox</li>
+              <li class="etiquette">Ansible</li>
+              <li class="etiquette">Docker</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">Voir les projets <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+          <div class="visuel-pixels" aria-hidden="true"></div>
+        </article>
+
+        <article class="carte colonnes-4">
+          <p class="etiquette-mono">Dernière certification</p>
+          <span class="badge-certification" aria-hidden="true">LPI</span>
+          <h3>LPIC-1 — Administration Linux</h3>
+          <p class="carte__texte">Linux Professional Institute · 2026</p>
+          <a class="carte__lien" href="certification.html">Toutes les certifications <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="carte colonnes-6">
+          <p class="etiquette-mono">Compétences</p>
+          <ul class="liste-niveaux">
+            <li class="ligne-niveau">Linux &amp; Bash <span class="niveau niveau--5" role="img" aria-label="Niveau 5 sur 5"></span></li>
+            <li class="ligne-niveau">Réseaux (TCP/IP, VLAN) <span class="niveau niveau--4" role="img" aria-label="Niveau 4 sur 5"></span></li>
+            <li class="ligne-niveau">Docker &amp; virtualisation <span class="niveau niveau--4" role="img" aria-label="Niveau 4 sur 5"></span></li>
+            <li class="ligne-niveau">HTML, CSS &amp; JavaScript <span class="niveau niveau--4" role="img" aria-label="Niveau 4 sur 5"></span></li>
+            <li class="ligne-niveau">Python <span class="niveau niveau--3" role="img" aria-label="Niveau 3 sur 5"></span></li>
+          </ul>
+          <a class="carte__lien" href="cv.html">Toutes mes compétences <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="carte colonnes-6">
+          <p class="etiquette-mono">Documentation récente</p>
+          <ul class="liste-liens">
+            <li><a href="documentation.html#article-exemple"><span class="liste-liens__date">12.09.2026</span> Déployer un reverse proxy Nginx avec HTTPS</a></li>
+            <li><a href="documentation.html#article-exemple"><span class="liste-liens__date">28.08.2026</span> Sauvegarder ses serveurs avec restic</a></li>
+            <li><a href="documentation.html#article-exemple"><span class="liste-liens__date">03.07.2026</span> Segmenter un réseau domestique avec des VLAN</a></li>
+          </ul>
+          <a class="carte__lien" href="documentation.html">Toute la documentation <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <div class="separateur-losanges" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <!-- ===================== Projets récents ===================== -->
+    <section class="section">
+      <div class="section__entete">
+        <div>
+          <p class="etiquette-mono">// Projets</p>
+          <h2>Projets récents</h2>
+        </div>
+        <a class="bouton bouton--fantome" href="projets.html">Tous les projets <span class="fleche" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="grille-projets">
+        <article class="carte-projet">
+          <div class="visuel-pixels" aria-hidden="true"></div>
+          <div class="carte-projet__corps">
+            <p class="etiquette-mono">2026 · Infrastructure</p>
+            <h3 class="carte-projet__titre">Homelab automatisé</h3>
+            <p class="carte-projet__texte">Cluster de virtualisation provisionné par du code, avec sauvegardes et supervision.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">Proxmox</li>
+              <li class="etiquette">Ansible</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">En savoir plus <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="carte-projet">
+          <div class="visuel-pixels visuel-pixels--gauche" aria-hidden="true"></div>
+          <div class="carte-projet__corps">
+            <p class="etiquette-mono">2026 · Supervision</p>
+            <h3 class="carte-projet__titre">Tableau de bord de supervision</h3>
+            <p class="carte-projet__texte">Collecte de métriques et alertes pour une dizaine de services, avec des tableaux de bord sur mesure.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">Grafana</li>
+              <li class="etiquette">Prometheus</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">En savoir plus <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="carte-projet">
+          <div class="visuel-pixels visuel-pixels--haut" aria-hidden="true"></div>
+          <div class="carte-projet__corps">
+            <p class="etiquette-mono">2026 · Web</p>
+            <h3 class="carte-projet__titre">Ce portfolio</h3>
+            <p class="carte-projet__texte">Site statique en HTML, CSS et JavaScript simples, avec mode sombre et hébergement sur GitHub Pages.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">HTML</li>
+              <li class="etiquette">CSS</li>
+              <li class="etiquette">JavaScript</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">En savoir plus <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section class="section">
+      <div class="appel-contact">
+        <div>
+          <p class="etiquette-mono">// Contact</p>
+          <h2 class="appel-contact__titre">Un projet, une question&nbsp;?</h2>
+          <p class="appel-contact__texte">Écrivez-moi, je réponds en général sous 48&nbsp;heures.</p>
+        </div>
+        <div class="appel-contact__actions">
+          <a class="bouton bouton--accent" href="mailto:janis.creach@gmail.com">M'écrire un email <span class="fleche" aria-hidden="true">→</span></a>
+          <a class="bouton bouton--fantome-clair" href="https://github.com/Janis-Creach" target="_blank" rel="noopener noreferrer">Voir mon GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Pied de page ===================== -->
+  <footer class="pied-de-page">
+    <div class="pied-de-page__interieur">
+      <div class="pied-de-page__grille">
+        <div class="pied-de-page__colonne">
+          <a class="pied-de-page__logo" href="index.html">
+            <img src="assets/logo.svg" alt="" width="40" height="40">
+            <span>Janis Creach</span>
+          </a>
+          <p class="pied-de-page__texte">Systèmes, réseaux &amp; développement web. Site statique hébergé sur GitHub Pages.</p>
+        </div>
+
+        <nav class="pied-de-page__colonne" aria-label="Plan du site">
+          <p class="etiquette-mono">Pages</p>
+          <ul class="pied-de-page__liens">
+            <li><a class="pied-de-page__lien" href="index.html">Accueil</a></li>
+            <li><a class="pied-de-page__lien" href="cv.html">Mon CV</a></li>
+            <li><a class="pied-de-page__lien" href="certification.html">Certification</a></li>
+            <li><a class="pied-de-page__lien" href="documentation.html">Documentation</a></li>
+            <li><a class="pied-de-page__lien" href="formation-experience.html">Formation/Expérience</a></li>
+            <li><a class="pied-de-page__lien" href="projets.html">Projets</a></li>
+          </ul>
+        </nav>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Me retrouver</p>
+          <ul class="liens-sociaux">
+            <li>
+              <a class="lien-social" href="https://github.com/Janis-Creach" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.57v-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .31.21.69.83.57A12 12 0 0 0 24 12.3c0-6.63-5.37-12-12-12"/></svg>
+                </span>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <!-- À FAIRE : remplacer par l'adresse du profil LinkedIn -->
+              <a class="lien-social" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                </span>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="lien-social" href="mailto:janis.creach@gmail.com">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16"/><path d="m2 5 10 8 10-8"/></svg>
+                </span>
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pied-de-page__bas">
+        <p>© 2026 Janis Creach</p>
+        <p>Fait main en HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   POINT D'ENTRÉE DES STYLES
+   Ce fichier importe chaque partie dans l'ordre.
+   Pour changer les couleurs, polices ou tailles : voir css/variables.css.
+   ========================================================================== */
+
+@import url("variables.css");   /* couleurs, polices, tailles */
+@import url("base.css");        /* remise à zéro, typographie, mise en page */
+@import url("header.css");      /* barre de navigation */
+@import url("footer.css");      /* pied de page */
+@import url("components.css");  /* boutons, cartes, étiquettes, terminal… */
+@import url("accueil.css");     /* page d'accueil */
+@import url("pages.css");       /* CV, certifications, documentation, parcours */
