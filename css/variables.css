@@ -42,6 +42,9 @@
   --bloc-sombre-texte: #d9e8de;
   --bloc-sombre-texte-doux: #9fb5a7;
   --bloc-sombre-bordure: light-dark(#0b1f14, #24332a);
+  --bloc-sombre-titre: #f9fbf7;
+  --bloc-sombre-separateur: rgb(255 255 255 / 0.08);
+  --bouton-accent-texte: #0b1f14;
 
   /* ----- Polices ----- */
   --police-texte: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -68,6 +71,14 @@
 
   /* ----- Animations ----- */
   --duree-transition: 0.2s;
+}
+
+/* Très petits écrans (320 px ou zoom 400 %) : titre principal réduit
+   pour que les mots longs (« Documentation ») tiennent sur la ligne */
+@media (max-width: 359px) {
+  :root {
+    --taille-h1: 2.25rem;
+  }
 }
 
 /* Thème forcé avec le bouton (voir js/theme.js) */

@@ -96,10 +96,17 @@
 
 /* ----- Bandeau défilant des technologies ----- */
 
+/* Le bandeau : la fenêtre qui défile + le bouton pause à droite */
 .defilement {
+  display: flex;
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.defilement__fenetre {
+  flex: 1;
+  min-width: 0;
   padding-block: 1.25rem;
   overflow: hidden;
-  border-bottom: 1px solid var(--couleur-bordure);
   /* Fondu sur les bords gauche et droit */
   mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
 }
@@ -110,8 +117,27 @@
   animation: defile 35s linear infinite;
 }
 
-.defilement:hover .defilement__piste {
+/* Pause au survol, ou avec le bouton (voir js/defilement.js) */
+.defilement:hover .defilement__piste,
+.defilement.est-en-pause .defilement__piste {
   animation-play-state: paused;
+}
+
+/* Icône du bouton : deux barres (pause)… */
+.defilement__icone {
+  width: 10px;
+  height: 12px;
+  border-inline: 3px solid currentColor;
+}
+
+/* …et un triangle (lecture) quand le bandeau est en pause */
+.defilement.est-en-pause .defilement__icone {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid currentColor;
+  border-right: 0;
 }
 
 .defilement__liste {
@@ -160,7 +186,8 @@
     animation: none;
   }
 
-  .defilement__liste[aria-hidden="true"] {
+  .defilement__liste[aria-hidden="true"],
+  .defilement__pause {
     display: none;
   }
 
@@ -179,6 +206,13 @@
   margin-top: auto;
 }
 
+/* Très petits écrans : chiffres clés sur 2 colonnes */
+@media (max-width: 359px) {
+  .statistiques {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .statistique {
   display: flex;
   flex-direction: column;
@@ -188,9 +222,6 @@
 /* Valeur affichée au-dessus du libellé (l'ordre HTML reste dt puis dd) */
 .statistique dd {
   order: -1;
-}
-
-.statistique dd {
   font-family: var(--police-titre);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 500;
@@ -298,13 +329,18 @@
   position: relative;
 }
 
+/* Contour de focus clair, visible sur le fond sombre */
+.appel-contact :focus-visible {
+  outline-color: var(--bloc-sombre-texte);
+}
+
 .appel-contact .etiquette-mono {
   color: var(--bloc-sombre-texte-doux);
 }
 
 .appel-contact__titre {
   margin-bottom: 1rem;
-  color: #f9fbf7;
+  color: var(--bloc-sombre-titre);
 }
 
 .appel-contact__texte {

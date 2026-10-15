@@ -1,0 +1,9 @@
+# Configuration de GitHub Pages (aucune étape de build côté projet)
+
+# Fichiers de documentation du dépôt à ne pas publier sur le site
+exclude:
+  - CLAUDE.md
+  - DESIGN.md
+
+# Pas de thème Jekyll : le site utilise son propre CSS
+theme: null

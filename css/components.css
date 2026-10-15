@@ -27,7 +27,8 @@
   background-color: var(--bouton-fond);
 }
 
-.bouton--principal:hover {
+/* Pas d'effet de survol sur un bouton inactif */
+.bouton--principal:not([aria-disabled="true"]):hover {
   background-color: var(--bouton-fond-survol);
 }
 
@@ -45,7 +46,7 @@
 
 /* Bouton vert citron, pour les fonds sombres */
 .bouton--accent {
-  color: #0b1f14;
+  color: var(--bouton-accent-texte);
   background-color: var(--vert-citron);
 }
 
@@ -125,6 +126,19 @@ a:hover > .fleche {
   background: url("../assets/motif-pixels.svg") no-repeat right top / contain;
   opacity: 0.9;
   pointer-events: none;
+}
+
+/* Le texte passe toujours au-dessus du motif */
+.en-tete-page > * {
+  position: relative;
+}
+
+/* Sous 1140 px, le motif reste dans la marge haute pour ne jamais passer sous le texte */
+@media (max-width: 1140px) {
+  .en-tete-page::after {
+    width: auto;
+    height: var(--espace-section);
+  }
 }
 
 .en-tete-page h1 {
@@ -254,7 +268,7 @@ a:hover > .fleche {
   align-items: center;
   gap: 0.375rem;
   padding: 0.625rem 0.875rem;
-  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  border-bottom: 1px solid var(--bloc-sombre-separateur);
 }
 
 /* Trois carrés de couleur (version « pixel » des boutons de fenêtre) */
@@ -296,7 +310,7 @@ a:hover > .fleche {
   color: var(--vert-emeraude);
 }
 
-/* Curseur clignotant */
+/* Curseur qui clignote 5 fois puis reste fixe */
 .terminal__curseur {
   display: inline-block;
   width: 0.6em;
@@ -304,7 +318,7 @@ a:hover > .fleche {
   margin-left: 0.25rem;
   vertical-align: text-bottom;
   background-color: var(--vert-citron);
-  animation: clignote 1s steps(1) infinite;
+  animation: clignote 1s steps(1) 5;
 }
 
 @keyframes clignote {
@@ -367,7 +381,7 @@ a:hover > .fleche {
   background-color: var(--bloc-sombre-fond);
   border: 1px solid var(--bloc-sombre-bordure);
   border-radius: var(--arrondi-md);
-  /* Liseré au dégradé de la marque en bas du badge */
+  /* Liseré vert en bas du badge */
   box-shadow: inset 0 -4px 0 var(--vert);
 }
 
@@ -391,19 +405,32 @@ a:hover > .fleche {
   }
 }
 
-.carte-projet {
+/* Cartes encadrées (projets et certifications) */
+.carte-projet,
+.carte-certification {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   background-color: var(--couleur-fond);
   border: 1px solid var(--couleur-bordure);
   border-radius: var(--arrondi-lg);
   transition: background-color var(--duree-transition), border-color var(--duree-transition);
 }
 
-.carte-projet:hover {
+.carte-projet:hover,
+.carte-certification:hover {
   background-color: var(--couleur-fond-secondaire);
   border-color: var(--couleur-bordure-forte);
+}
+
+.carte-projet__titre,
+.carte-certification__titre {
+  font-size: var(--taille-h3);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.carte-projet {
+  overflow: hidden;
 }
 
 /* Visuel : fond sombre + motif de pixels, placé différemment selon la variante */
@@ -433,12 +460,6 @@ a:hover > .fleche {
 
 .carte-projet__corps .etiquette-mono {
   margin-bottom: 0;
-}
-
-.carte-projet__titre {
-  font-size: var(--taille-h3);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
 }
 
 .carte-projet__texte {

@@ -128,20 +128,10 @@
   gap: 1.25rem;
 }
 
+/* Styles communs avec les cartes de projet : voir components.css */
 .carte-certification {
-  display: flex;
-  flex-direction: column;
   gap: 0.75rem;
   padding: 1.5rem;
-  background-color: var(--couleur-fond);
-  border: 1px solid var(--couleur-bordure);
-  border-radius: var(--arrondi-lg);
-  transition: background-color var(--duree-transition), border-color var(--duree-transition);
-}
-
-.carte-certification:hover {
-  background-color: var(--couleur-fond-secondaire);
-  border-color: var(--couleur-bordure-forte);
 }
 
 .carte-certification__entete {
@@ -149,12 +139,6 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-}
-
-.carte-certification__titre {
-  font-size: var(--taille-h3);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
 }
 
 .carte-certification__organisme {
@@ -232,10 +216,6 @@
   color: var(--couleur-lien);
 }
 
-.doc:hover > .fleche {
-  transform: translateX(3px);
-}
-
 @media (max-width: 640px) {
   .doc {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -299,7 +279,7 @@
   font-family: var(--police-mono);
   font-size: var(--taille-mini);
   color: var(--bloc-sombre-texte-doux);
-  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  border-bottom: 1px solid var(--bloc-sombre-separateur);
 }
 
 .article .bloc-code__langage {
@@ -313,6 +293,12 @@
   font-size: var(--taille-petit);
   line-height: 1.7;
   color: var(--bloc-sombre-texte);
+}
+
+/* Focus clavier visible à l'intérieur du bloc (le cadre masque ce qui dépasse) */
+.bloc-code pre:focus-visible {
+  outline-color: var(--bloc-sombre-texte);
+  outline-offset: -4px;
 }
 
 .article .bloc-code code {

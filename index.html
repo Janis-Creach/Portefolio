@@ -21,6 +21,7 @@
   <!-- Scripts -->
   <script src="js/theme.js" defer></script>
   <script src="js/menu.js" defer></script>
+  <script src="js/defilement.js" defer></script>
 </head>
 <body>
   <a class="lien-evitement" href="#contenu">Aller au contenu</a>
@@ -81,7 +82,7 @@
           </div>
           <div class="hero__info">
             <dt>Statut</dt>
-            <dd>Ouvert aux opportunités</dd>
+            <dd>À l'écoute d'opportunités</dd>
           </div>
           <div class="hero__info">
             <dt>Langues</dt>
@@ -114,37 +115,42 @@
 
     <!-- ===================== Technologies (bandeau défilant) ===================== -->
     <section class="defilement" aria-label="Technologies utilisées">
-      <div class="defilement__piste">
-        <ul class="defilement__liste">
-          <li class="defilement__element">Linux</li>
-          <li class="defilement__element">Windows Server</li>
-          <li class="defilement__element">Docker</li>
-          <li class="defilement__element">Proxmox</li>
-          <li class="defilement__element">Ansible</li>
-          <li class="defilement__element">Git</li>
-          <li class="defilement__element">Bash</li>
-          <li class="defilement__element">Python</li>
-          <li class="defilement__element">HTML &amp; CSS</li>
-          <li class="defilement__element">JavaScript</li>
-          <li class="defilement__element">Nginx</li>
-          <li class="defilement__element">PostgreSQL</li>
-        </ul>
-        <!-- Copie de la liste pour que le défilement boucle sans trou -->
-        <ul class="defilement__liste" aria-hidden="true">
-          <li class="defilement__element">Linux</li>
-          <li class="defilement__element">Windows Server</li>
-          <li class="defilement__element">Docker</li>
-          <li class="defilement__element">Proxmox</li>
-          <li class="defilement__element">Ansible</li>
-          <li class="defilement__element">Git</li>
-          <li class="defilement__element">Bash</li>
-          <li class="defilement__element">Python</li>
-          <li class="defilement__element">HTML &amp; CSS</li>
-          <li class="defilement__element">JavaScript</li>
-          <li class="defilement__element">Nginx</li>
-          <li class="defilement__element">PostgreSQL</li>
-        </ul>
+      <div class="defilement__fenetre">
+        <div class="defilement__piste">
+          <ul class="defilement__liste">
+            <li class="defilement__element">Linux</li>
+            <li class="defilement__element">Windows Server</li>
+            <li class="defilement__element">Docker</li>
+            <li class="defilement__element">Proxmox</li>
+            <li class="defilement__element">Ansible</li>
+            <li class="defilement__element">Git</li>
+            <li class="defilement__element">Bash</li>
+            <li class="defilement__element">Python</li>
+            <li class="defilement__element">HTML &amp; CSS</li>
+            <li class="defilement__element">JavaScript</li>
+            <li class="defilement__element">Nginx</li>
+            <li class="defilement__element">PostgreSQL</li>
+          </ul>
+          <!-- Copie de la liste pour que le défilement boucle sans trou -->
+          <ul class="defilement__liste" aria-hidden="true">
+            <li class="defilement__element">Linux</li>
+            <li class="defilement__element">Windows Server</li>
+            <li class="defilement__element">Docker</li>
+            <li class="defilement__element">Proxmox</li>
+            <li class="defilement__element">Ansible</li>
+            <li class="defilement__element">Git</li>
+            <li class="defilement__element">Bash</li>
+            <li class="defilement__element">Python</li>
+            <li class="defilement__element">HTML &amp; CSS</li>
+            <li class="defilement__element">JavaScript</li>
+            <li class="defilement__element">Nginx</li>
+            <li class="defilement__element">PostgreSQL</li>
+          </ul>
+        </div>
       </div>
+      <button class="defilement__pause" type="button" aria-pressed="false" aria-label="Mettre en pause le défilement">
+        <span class="defilement__icone" aria-hidden="true"></span>
+      </button>
     </section>
 
     <!-- ===================== En bref (grille bento) ===================== -->
@@ -161,7 +167,7 @@
         <article class="carte colonnes-7">
           <p class="etiquette-mono">À propos</p>
           <h3>Du serveur au navigateur, je m'occupe de toute la chaîne.</h3>
-          <p class="carte__texte">Installation de serveurs, configuration réseau, automatisation des tâches répétitives et création d'interfaces web : j'aime comprendre comment chaque couche fonctionne et laisser derrière moi une documentation claire.</p>
+          <p class="carte__texte">Installation de serveurs, configuration réseau, automatisation des tâches répétitives et création d'interfaces web&nbsp;: j'aime comprendre comment chaque couche fonctionne et laisser derrière moi une documentation claire.</p>
           <a class="carte__lien" href="cv.html">Lire mon CV <span class="fleche" aria-hidden="true">→</span></a>
         </article>
 
@@ -187,7 +193,7 @@
           <div class="carte__corps">
             <p class="etiquette-mono">Projet à la une</p>
             <h3>Homelab automatisé</h3>
-            <p class="carte__texte">Un cluster de virtualisation entièrement décrit par du code : création des machines, sauvegardes et supervision en une seule commande.</p>
+            <p class="carte__texte">Un cluster de virtualisation entièrement décrit par du code&nbsp;: création des machines, sauvegardes et supervision en une seule commande.</p>
             <ul class="liste-etiquettes">
               <li class="etiquette">Proxmox</li>
               <li class="etiquette">Ansible</li>

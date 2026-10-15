@@ -106,8 +106,8 @@
           <a class="doc" href="#article-exemple">
             <span class="doc__date">15.05.2026</span>
             <span>
-              <span class="doc__titre">Mémo Git : les commandes du quotidien</span>
-              <span class="doc__resume">Branches, fusion, annulation : l'essentiel sur une seule page.</span>
+              <span class="doc__titre">Mémo Git&nbsp;: les commandes du quotidien</span>
+              <span class="doc__resume">Branches, fusion, annulation&nbsp;: l'essentiel sur une seule page.</span>
             </span>
             <span class="etiquette">Mémo</span>
             <span class="fleche" aria-hidden="true">→</span>
@@ -121,13 +121,13 @@
       <article class="article">
         <p class="etiquette-mono">// Tutoriel · 12.09.2026 · 6 min de lecture</p>
         <h2>Déployer un reverse proxy Nginx avec HTTPS</h2>
-        <p class="texte-intro">Cet article d'exemple sert à valider la mise en forme de la documentation : titres, paragraphes, listes, blocs de code et encadrés.</p>
+        <p class="texte-intro">Cet article d'exemple sert à valider la mise en forme de la documentation&nbsp;: titres, paragraphes, listes, blocs de code et encadrés.</p>
 
         <h3>1. Installer Nginx</h3>
         <p>Sur une distribution basée sur Debian, Nginx s'installe directement avec <code>apt</code>. Le service démarre automatiquement après l'installation.</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">bash</p>
-          <pre><code>sudo apt update
+          <pre tabindex="0"><code>sudo apt update
 sudo apt install nginx
 systemctl status nginx</code></pre>
         </div>
@@ -136,7 +136,7 @@ systemctl status nginx</code></pre>
         <p>On crée un fichier dans <code>/etc/nginx/sites-available/</code> qui redirige les requêtes vers l'application qui tourne en local sur le port 3000.</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">nginx</p>
-          <pre><code>server {
+          <pre tabindex="0"><code>server {
     listen 80;
     server_name exemple.fr;
 
@@ -148,14 +148,14 @@ systemctl status nginx</code></pre>
         </div>
 
         <div class="note">
-          <p><strong>À savoir :</strong> pensez à tester la configuration avec <code>nginx -t</code> avant de recharger le service.</p>
+          <p><strong>À savoir&nbsp;:</strong> pensez à tester la configuration avec <code>nginx -t</code> avant de recharger le service.</p>
         </div>
 
         <h3>3. Activer HTTPS</h3>
-        <p>Certbot obtient un certificat gratuit et configure Nginx automatiquement :</p>
+        <p>Certbot obtient un certificat gratuit et configure Nginx automatiquement&nbsp;:</p>
         <ul>
-          <li>installer le paquet <code>certbot</code> et son extension Nginx ;</li>
-          <li>lancer <code>certbot --nginx -d exemple.fr</code> ;</li>
+          <li>installer le paquet <code>certbot</code> et son extension Nginx&nbsp;;</li>
+          <li>lancer <code>certbot --nginx -d exemple.fr</code>&nbsp;;</li>
           <li>vérifier que le renouvellement automatique est bien planifié.</li>
         </ul>
       </article>
