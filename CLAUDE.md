@@ -17,16 +17,16 @@ Le CSS ne va **JAMAIS** dans le HTML. Cette règle n'a aucune exception.
 - Pour changer un style, ajoute ou modifie une classe dans le fichier CSS. Ne mets jamais de style dans le HTML ou le JS (sauf pour basculer une classe CSS existante).
 
 ### Structure de fichiers attendue
-```
+
 /
 ├── index.html
 ├── css/
-│   └── style.css
+│ └── style.css
 ├── js/
-│   └── script.js
+│ └── script.js
 └── assets/
-    └── (images, polices, etc.)
-```
+└── (images, polices, etc.)
+
 Si le projet est plus gros, découpe en plusieurs fichiers (ex. `css/header.css`, `js/menu.js`) plutôt que d'agrandir un seul fichier.
 
 ## Code modifiable par un humain
@@ -47,6 +47,23 @@ Le code doit rester facile à lire et à modifier à la main.
 - Utilise des **chemins relatifs** pour tous les liens, CSS, JS et images (ex. `css/style.css`, pas `/css/style.css`), car le site peut être servi depuis `/nom-du-repo/`.
 - Le point d'entrée est `index.html` à la racine (ou dans le dossier configuré pour Pages).
 - Avant de dire que c'est terminé, vérifie que tous les chemins fonctionnent en relatif et qu'aucun fichier n'est manquant.
+
+## Choix du modèle pour les agents
+Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modèle selon la difficulté de la tâche :
+
+- **Tâches simples → Haiku** (`claude-haiku-5-5`) :
+  - renommer des fichiers ou des variables,
+  - corriger une faute de frappe ou un petit bug évident,
+  - ajuster une couleur, une taille ou un texte,
+  - vérifier que les chemins sont bien relatifs,
+  - mettre en forme ou indenter du code.
+- **Tâches difficiles → Sonnet** (`claude-sonnet-5-5`) :
+  - concevoir ou restructurer une partie du site,
+  - écrire de la logique JavaScript complexe,
+  - déboguer un problème qui n'est pas évident,
+  - modifications touchant plusieurs fichiers à la fois,
+  - décisions d'architecture.
+- En cas de doute sur la difficulté, commence avec Haiku, et passe à Sonnet si la tâche s'avère trop complexe.
 
 ## Façon de travailler
 - Fais des modifications ciblées et ne réécris pas des fichiers entiers sans raison.
