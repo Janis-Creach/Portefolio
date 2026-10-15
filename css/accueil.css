@@ -118,7 +118,7 @@
 }
 
 /* Pause au survol, ou avec le bouton (voir js/defilement.js) */
-.defilement:hover .defilement__piste,
+.defilement__fenetre:hover .defilement__piste,
 .defilement.est-en-pause .defilement__piste {
   animation-play-state: paused;
 }
@@ -191,6 +191,10 @@
     display: none;
   }
 
+  .defilement__fenetre {
+    mask-image: none;
+  }
+
   .defilement__liste {
     flex-wrap: wrap;
     gap: 0.75rem 2rem;
@@ -206,8 +210,8 @@
   margin-top: auto;
 }
 
-/* Très petits écrans : chiffres clés sur 2 colonnes */
-@media (max-width: 359px) {
+/* Petits écrans (moins de 375 px) : chiffres clés sur 2 colonnes */
+@media (max-width: 374px) {
   .statistiques {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

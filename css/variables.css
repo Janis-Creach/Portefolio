@@ -44,6 +44,8 @@
   --bloc-sombre-bordure: light-dark(#0b1f14, #24332a);
   --bloc-sombre-titre: #f9fbf7;
   --bloc-sombre-separateur: rgb(255 255 255 / 0.08);
+  --bloc-sombre-survol: rgb(255 255 255 / 0.08);
+  --bloc-sombre-bordure-bouton: rgb(255 255 255 / 0.25);
   --bouton-accent-texte: #0b1f14;
 
   /* ----- Polices ----- */

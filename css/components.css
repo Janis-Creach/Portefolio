@@ -58,11 +58,11 @@
 .bouton--fantome-clair {
   color: var(--bloc-sombre-texte);
   background-color: transparent;
-  border-color: rgb(255 255 255 / 0.25);
+  border-color: var(--bloc-sombre-bordure-bouton);
 }
 
 .bouton--fantome-clair:hover {
-  background-color: rgb(255 255 255 / 0.08);
+  background-color: var(--bloc-sombre-survol);
 }
 
 /* Bouton inactif (ex. fichier pas encore disponible) */
@@ -131,6 +131,7 @@ a:hover > .fleche {
 /* Le texte passe toujours au-dessus du motif */
 .en-tete-page > * {
   position: relative;
+  z-index: 1;
 }
 
 /* Sous 1140 px, le motif reste dans la marge haute pour ne jamais passer sous le texte */

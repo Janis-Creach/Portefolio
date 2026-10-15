@@ -98,6 +98,13 @@
   background-color: var(--couleur-fond-secondaire);
 }
 
+/* Contour de focus à l'intérieur des éléments de la barre et du bouton pause
+   (sinon coupé par les bords de l'écran) */
+.entete :focus-visible,
+.defilement__pause:focus-visible {
+  outline-offset: -4px;
+}
+
 .bouton-theme svg {
   width: 18px;
   height: 18px;
@@ -202,10 +209,5 @@
 
   .navigation__lien[aria-current="page"] {
     box-shadow: inset 3px 0 0 var(--couleur-accent);
-  }
-
-  /* Contour de focus à l'intérieur du lien (sinon coupé par les bords de l'écran) */
-  .navigation__lien:focus-visible {
-    outline-offset: -4px;
   }
 }
