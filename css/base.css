@@ -99,6 +99,11 @@ ol[class] {
   border-bottom: 1px solid var(--couleur-bordure);
 }
 
+/* Section courte (ex. accroche vers une autre page) */
+.section--compacte {
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+
 .section__entete {
   display: flex;
   flex-wrap: wrap;

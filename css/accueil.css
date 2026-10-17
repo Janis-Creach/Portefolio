@@ -318,6 +318,50 @@
   color: var(--couleur-texte-doux);
 }
 
+/* ----- Accroche vers la page Définition ----- */
+
+/* Texte à gauche, exemples de notions et bouton à droite */
+.accroche-definitions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem 3rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background-color: var(--couleur-fond-secondaire);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi-lg);
+}
+
+.accroche-definitions__titre {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.accroche-definitions__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.accroche-definitions__actions .liste-etiquettes {
+  justify-content: flex-end;
+}
+
+@media (max-width: 760px) {
+  .accroche-definitions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .accroche-definitions__actions {
+    align-items: flex-start;
+  }
+
+  .accroche-definitions__actions .liste-etiquettes {
+    justify-content: flex-start;
+  }
+}
+
 /* ----- Appel à contact (bloc sombre) ----- */
 
 .appel-contact {

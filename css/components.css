@@ -95,6 +95,17 @@ a:hover > .fleche {
   border-radius: 4px;
 }
 
+/* Étiquette cliquable (ex. lien vers une définition) */
+.etiquette--lien {
+  text-decoration: none;
+  transition: color var(--duree-transition), border-color var(--duree-transition);
+}
+
+.etiquette--lien:hover {
+  color: var(--couleur-lien);
+  border-color: var(--couleur-bordure-forte);
+}
+
 /* ----- En-tête des pages intérieures ----- */
 
 .en-tete-page {
