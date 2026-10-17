@@ -82,7 +82,7 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 
 ### Données personnelles
 - Ne **jamais publier** le téléphone ni l'adresse postale de Janis. Sur les pages du site, seuls la ville ou le département apparaissent, et pas de photo.
-- CV téléchargeable : `assets/cv-janis-creach.pdf` (bouton sur `cv.html`). C'est le CV Canva de Janis dont le téléphone et l'adresse ont été **réellement effacés** : texte, icônes, et aussi les copies cachées dans la couche d'accessibilité du PDF (champs `/E` des éléments de structure). La photo y est conservée (choix de Janis). Si Janis fournit un nouveau CV, refaire cet effacement avant de le publier, puis vérifier qu'il ne reste aucune trace (texte extrait **et** objets internes du PDF).
+- CV téléchargeable : `assets/cv-janis-creach.pdf` (bouton sur `cv.html`). C'est le CV Canva de Janis dont le téléphone et l'adresse ont été **réellement effacés** : texte, icônes, et aussi les copies cachées dans la couche d'accessibilité du PDF (champs `/E` des éléments de structure). La photo y est conservée : Janis a demandé d'effacer seulement le téléphone et l'adresse (à retirer aussi s'il le demande). Si Janis fournit un nouveau CV, refaire cet effacement avant de le publier, puis vérifier qu'il ne reste aucune trace (texte extrait **et** objets internes du PDF).
 - Contacts publiés : email `janis.creach@gmail.com` et GitHub `https://github.com/Janis-Creach`.
 - LinkedIn : lien **provisoire** (`https://www.linkedin.com/`, marqué « À FAIRE ») en attendant l'adresse du profil.
 
