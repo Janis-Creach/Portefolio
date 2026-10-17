@@ -428,6 +428,7 @@ a.doc:hover {
   font-family: var(--police-mono);
   font-size: var(--taille-mini);
   color: var(--couleur-texte-doux);
+  overflow-wrap: anywhere; /* un long mot tapé dans la recherche passe à la ligne */
 }
 
 .recherche__resultat + .sommaire {
