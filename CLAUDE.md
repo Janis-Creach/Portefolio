@@ -75,12 +75,28 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 ### Le site
 - Portfolio de **Janis Creach**, étudiant en BTS SIO option SISR, en recherche de stage de technicien en administration systèmes et réseaux.
 - **Mettre l'accent sur le réseau et la cybersécurité**, pas sur la programmation.
-- Le contenu vient du CV (BTS SIO SISR depuis 2025, Bac Pro SN-RISC 2022-2025, stages au lycée Félix le Dantec en juin 2025, chez Axeinfo en juin 2024 et chez Pulsat à Ouessant en décembre 2022 (donné par Janis : dépannages en électricité générale, plomberie et un peu de multimédia ; moins lié à son activité principale, il figure **seulement** sur `formation-experience.html`, pas sur `cv.html`, et n'est pas compté dans « Stages effectués » de l'accueil (2), par choix de Janis), certifications ANSSI, CNIL et Root Me obtenues en 2025, Cisco en 2026 ; SST en 2024 et habilitation électrique B1V en 2023, données par Janis mais absentes du CV PDF). **Ne rien inventer** : toute nouvelle information doit venir de Janis ou de son CV.
+- Le contenu vient du CV et de ce que Janis a précisé. **Ne rien inventer** : toute nouvelle information doit venir de Janis ou de son CV.
+  - Formation : BTS SIO SISR depuis 2025, Bac Pro SN-RISC 2022-2025 (lycée Félix le Dantec, Lannion).
+  - Stages : lycée Félix le Dantec (juin 2025, Alcasar) et Axeinfo (juin 2024). Stage chez Pulsat à Ouessant (décembre 2022 : dépannages en électricité générale, plomberie et un peu de multimédia) : moins lié à son activité principale, il figure **seulement** dans la frise de `formation-experience.html`, ni sur `cv.html` ni dans le compteur « Stages effectués » de l'accueil (choix de Janis).
+  - Certifications : ANSSI, CNIL et Root Me (2025), Cisco (2026) ; SST (2024) et habilitation électrique B1V (2023), données par Janis mais absentes du CV PDF.
+- **Informations répétées sur plusieurs pages** : en modifier une, c'est mettre à jour les autres.
+  - Certification : carte de `certification.html` + liste « Certifications » de `cv.html` + compteur « Certifications et MOOC » de l'accueil (6).
+  - Stage : frise « Expérience » de `formation-experience.html` + « Expérience professionnelle » de `cv.html` + compteur « Stages effectués » de l'accueil (2), sauf exception voulue par Janis (Pulsat).
+  - Notion du glossaire : `definition.html` + nombre de notions noté ci-dessous.
+- Cartes de `certification.html` : badge court, année (précédée du texte caché « Obtenue en »), titre, organisme, « Format » et « Domaine ».
+  - SST : organisme « INRS et Assurance maladie – Risques professionnels » (ils délivrent le certificat ensemble).
+  - B1V : « Référentiel : norme NF C 18-510 » (une norme ne délivre rien ; l'habilitation est délivrée par l'employeur).
+  - Ne nommer aucun organisme de formation tant que Janis ne l'a pas donné.
+  - Afficher seulement l'année d'obtention, jamais « valide » ou « en cours » : le SST est valable 24 mois (renouvelé par un stage MAC) et la B1V se recycle en principe tous les 3 ans.
+  - **Question en attente** : si Janis n'a reçu pour la B1V qu'une attestation de formation (et pas un titre signé par un employeur), écrire « Formation à l'habilitation électrique B1V ».
 - Janis se décrit au masculin dans son CV (« Sérieux et impliqué », « technicien ») : garder ces accords.
 - Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `definition.html` (glossaire des notions, onglet « Définition » de la barre), `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
 - L'en-tête et le pied de page sont **recopiés dans les 8 pages** (pas d'étape de build) : toute modification doit être faite dans les 8 fichiers.
 - Accueil (`index.html`), dans l'ordre : présentation + terminal, bandeau défilant des technos, grille « En bref », « Réalisations », accroche « Un sigle vous échappe ? » vers les définitions, bloc contact.
 - Page Définition : 69 notions en 7 thèmes (formation, réseau, sécurité, systèmes et virtualisation, OS, supervision et support, organismes), avec une barre de recherche. Chaque notion est un `<div class="glossaire__entree" id="...">` contenant `<dt>` (terme + `.glossaire__nom-complet`) et `<dd>` : pour en ajouter une, copier ce bloc ; la recherche la trouve automatiquement. L'`id` permet un lien direct (ex. `definition.html#dhcp`, utilisé par l'accroche de l'accueil). Les définitions ont été vérifiées avec des sources : toute nouvelle définition doit être exacte (vérifier si besoin).
+  - Thème « Organismes » : ANSSI, CNIL, RGPD, Root Me, Cisco, Stormshield, VMware. Pas de `.glossaire__nom-complet` pour un nom de marque (il sert à développer les sigles).
+  - Méthode suivie : faire vérifier chaque nouvelle définition par des agents avec des sources (WebSearch), ne garder que les faits sourcés, et éviter les dates incertaines, les chiffres (nombre de magasins, prix…) et les phrases promotionnelles ou spéculatives.
+  - Idée proposée, pas encore faite : préciser sur la carte « VMware ESXi » que l'hyperviseur s'appelle « ESX » depuis la version 9.0 (juin 2025).
 - Barre de navigation : 6 liens (Mon CV, Certification, Documentation, Formation/Expérience, Projets, Définition). Elle tient au-dessus de 960 px (911 px nécessaires) ; en cas d'ajout d'un lien, vérifier qu'elle ne déborde pas, sinon relever le seuil du menu mobile dans `css/header.css`.
 
 ### Données personnelles
@@ -110,3 +126,8 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - Vérifier les 8 pages en clair et en sombre, de 320 px à 1920 px de large : aucun débordement horizontal, aucune erreur dans la console.
 - Vérifier qu'il n'y a aucun CSS ni JS dans le HTML, que les chemins sont relatifs et que toutes les classes utilisées existent dans le CSS.
 - Pour tester : servir le dossier avec `python3 -m http.server` et ouvrir les pages dans un navigateur (Playwright/Chromium dans l'environnement cloud). Montrer des captures à Janis avant de lui proposer la mise sur `main` : Janis valide sur `beta`, puis demande « pousse dans le main ».
+- Particularités de l'environnement cloud :
+  - Servir avec `python3 -m http.server 8765 --bind 127.0.0.1`.
+  - Lancer les scripts Playwright avec `NODE_PATH=$(npm root -g) PLAYWRIGHT_DISABLE_FORCED_CHROMIUM_PROXIED_LOOPBACK=1 node script.js` et `chromium.launch({ proxy: { server: process.env.HTTPS_PROXY } })`.
+  - Arrêter le serveur dans une commande à part, avec `P="http.server"; pkill -f "[${P:0:1}]${P:1} 8765"` : un `pkill -f "http.server 8765"` écrit en clair tue aussi le shell qui contient ce texte.
+  - Le site publié (`janis-creach.github.io`) et la plupart des sites externes ne sont pas joignables (WebFetch et curl bloqués, WebSearch fonctionne). Après une mise sur `main`, vérifier le déploiement « pages build and deployment » dans GitHub Actions, puis demander à Janis de contrôler la page en ligne.
