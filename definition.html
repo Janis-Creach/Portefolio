@@ -16,11 +16,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Space+Mono:wght@400;700&display=swap">
 
   <!-- Styles du site (?v= : à changer après chaque modification du CSS ou du JS, voir CLAUDE.md) -->
-  <link rel="stylesheet" href="css/style.css?v=20261017">
+  <link rel="stylesheet" href="css/style.css?v=20261017b">
 
   <!-- Scripts -->
-  <script src="js/theme.js?v=20261017" defer></script>
-  <script src="js/menu.js?v=20261017" defer></script>
+  <script src="js/theme.js?v=20261017b" defer></script>
+  <script src="js/menu.js?v=20261017b" defer></script>
+  <script src="js/recherche.js?v=20261017b" defer></script>
 </head>
 <body>
   <a class="lien-evitement" href="#contenu">Aller au contenu</a>
@@ -62,6 +63,14 @@
       <p class="etiquette-mono">// Définition</p>
       <h1>Définitions</h1>
       <p class="texte-intro">Les notions, protocoles et outils cités sur ce portfolio, expliqués simplement.</p>
+      <div class="recherche" role="search">
+        <label class="visuellement-cache" for="recherche-definitions">Rechercher une définition</label>
+        <span class="recherche__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5"/></svg>
+        </span>
+        <input class="recherche__champ" id="recherche-definitions" type="search" placeholder="Rechercher une notion (DHCP, VLAN, pare-feu…)" autocomplete="off" spellcheck="false">
+      </div>
+      <p class="recherche__resultat" id="recherche-resultat" aria-live="polite"></p>
       <nav class="sommaire" aria-label="Catégories de définitions">
         <a class="sommaire__lien" href="#formation">Formation</a>
         <a class="sommaire__lien" href="#reseau">Réseau</a>

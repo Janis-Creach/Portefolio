@@ -376,6 +376,64 @@ a.doc:hover {
   border-color: var(--couleur-bordure-forte);
 }
 
+/* Barre de recherche, sous l'introduction */
+.recherche {
+  position: relative;
+  max-width: 36rem;
+  margin-top: 2rem;
+}
+
+/* Loupe dessinée dans le champ, à gauche */
+.recherche__icone {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  display: grid;
+  color: var(--couleur-texte-doux);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.recherche__icone svg {
+  width: 18px;
+  height: 18px;
+}
+
+.recherche__champ {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  font-family: var(--police-texte);
+  font-size: var(--taille-texte); /* 16 px : évite le zoom automatique sur iPhone */
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+  border: 1px solid var(--couleur-bordure-forte);
+  border-radius: var(--arrondi-md);
+  transition: border-color var(--duree-transition);
+}
+
+.recherche__champ::placeholder {
+  color: var(--couleur-texte-doux);
+  opacity: 1;
+}
+
+.recherche__champ:hover {
+  border-color: var(--couleur-texte-doux);
+}
+
+/* Nombre de résultats (hauteur réservée pour que la page ne saute pas) */
+.recherche__resultat {
+  min-height: 1.5em;
+  margin-top: 0.75rem;
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  color: var(--couleur-texte-doux);
+}
+
+.recherche__resultat + .sommaire {
+  margin-top: 1rem;
+}
+
 /* Grille de définitions : une carte par notion */
 .glossaire {
   display: grid;

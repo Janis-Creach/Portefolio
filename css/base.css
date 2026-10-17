@@ -158,6 +158,11 @@ ol[class] {
   white-space: nowrap;
 }
 
+/* Élément masqué par un script (ex. définition qui ne correspond pas à la recherche) */
+.est-masque {
+  display: none;
+}
+
 /* ----- Animations réduites si l'utilisateur le demande ----- */
 
 @media (prefers-reduced-motion: reduce) {
