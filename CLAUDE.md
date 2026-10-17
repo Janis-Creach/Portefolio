@@ -79,13 +79,15 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - Janis se décrit au masculin dans son CV (« Sérieux et impliqué », « technicien ») : garder ces accords.
 - Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `definition.html` (glossaire des notions, onglet « Définition » de la barre), `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
 - L'en-tête et le pied de page sont **recopiés dans les 8 pages** (pas d'étape de build) : toute modification doit être faite dans les 8 fichiers.
+- Accueil (`index.html`), dans l'ordre : présentation + terminal, bandeau défilant des technos, grille « En bref », « Réalisations », accroche « Un sigle vous échappe ? » vers les définitions, bloc contact.
+- Page Définition : 61 notions en 6 thèmes (formation, réseau, sécurité, systèmes et virtualisation, supervision et support, organismes), avec une barre de recherche. Chaque notion est un `<div class="glossaire__entree" id="...">` contenant `<dt>` (terme + `.glossaire__nom-complet`) et `<dd>` : pour en ajouter une, copier ce bloc ; la recherche la trouve automatiquement. L'`id` permet un lien direct (ex. `definition.html#dhcp`, utilisé par l'accroche de l'accueil). Les définitions ont été vérifiées avec des sources : toute nouvelle définition doit être exacte (vérifier si besoin).
 - Barre de navigation : 6 liens (Mon CV, Certification, Documentation, Formation/Expérience, Projets, Définition). Elle tient au-dessus de 960 px (911 px nécessaires) ; en cas d'ajout d'un lien, vérifier qu'elle ne déborde pas, sinon relever le seuil du menu mobile dans `css/header.css`.
 
 ### Données personnelles
 - Ne **jamais publier** le téléphone ni l'adresse postale de Janis. Sur les pages du site, seuls la ville ou le département apparaissent, et pas de photo.
 - CV téléchargeable : `assets/cv-janis-creach.pdf` (bouton sur `cv.html`). C'est le CV Canva de Janis dont le téléphone et l'adresse ont été **réellement effacés** : texte, icônes, et aussi les copies cachées dans la couche d'accessibilité du PDF (champs `/E` des éléments de structure). La photo y est conservée : Janis a demandé d'effacer seulement le téléphone et l'adresse (à retirer aussi s'il le demande). Si Janis fournit un nouveau CV, refaire cet effacement avant de le publier, puis vérifier qu'il ne reste aucune trace (texte extrait **et** objets internes du PDF).
 - Contacts publiés : email `janis.creach@gmail.com` et GitHub `https://github.com/Janis-Creach`.
-- LinkedIn : lien **provisoire** (`https://www.linkedin.com/`, marqué « À FAIRE ») en attendant l'adresse du profil.
+- LinkedIn : lien **provisoire** (`https://www.linkedin.com/`, marqué « À FAIRE ») en attendant l'adresse du profil. Quand Janis la donne : la remplacer dans le pied de page des 8 pages, et remplacer « Lien à venir » dans les coordonnées de `cv.html`.
 
 ### Organisation du code
 - CSS : `css/style.css` importe dans l'ordre `variables.css`, `base.css`, `header.css`, `footer.css`, `components.css`, `accueil.css`, `pages.css`.
@@ -93,7 +95,7 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - JS : `js/theme.js` (mode sombre automatique selon l'appareil + bouton, choix mémorisé dans `localStorage`, clé `portfolio-theme`), `js/menu.js` (menu mobile), `js/defilement.js` (bouton pause du bandeau, chargé seulement sur l'accueil), `js/recherche.js` (barre de recherche de la page Définition, chargé seulement sur cette page ; masque les éléments avec la classe `.est-masque`).
 - Design inspiré de `DESIGN.md` : bordures de 1 px visibles, motif de pixels (`assets/motif-pixels.svg`), logo pixel « JC » (`assets/logo.svg`). Polices Google Fonts : Space Grotesk, Inter et Space Mono.
 - Piège connu : la remise à zéro `ul[class], ol[class] { padding: 0 }` annule le `padding` posé par une classe sur une liste. Utiliser une marge à la place.
-- **Version des fichiers CSS et JS** : les liens portent un numéro `?v=AAAAMMJJ` (ex. `css/style.css?v=20261017`, `js/theme.js?v=20261017`, et les `@import` de `css/style.css`). GitHub Pages laisse les navigateurs garder les fichiers en cache environ 10 minutes : sans changement de version, un visiteur peut voir le nouveau HTML avec l'ancien CSS (page cassée). **Après chaque modification d'un fichier CSS ou JS, remplacer le numéro partout** (les 8 pages HTML et `css/style.css`) par la date du jour, suivie d'une lettre (`b`, `c`…) s'il y a déjà eu une mise à jour ce jour-là.
+- **Version des fichiers CSS et JS** : les liens portent un numéro `?v=AAAAMMJJ` (ex. `css/style.css?v=20261017`, `js/theme.js?v=20261017`, et les `@import` de `css/style.css`). GitHub Pages laisse les navigateurs garder les fichiers en cache environ 10 minutes : sans changement de version, un visiteur peut voir le nouveau HTML avec l'ancien CSS (page cassée). **Après chaque modification d'un fichier CSS ou JS, remplacer le numéro partout** (les 8 pages HTML et `css/style.css`) par la date du jour, suivie d'une lettre (`b`, `c`…) s'il y a déjà eu une mise à jour ce jour-là. Version en place : `20261017c`. Si Janis voit une page « cassée » (bloc sans style, éléments collés) juste après une mise en ligne, penser d'abord au cache : recharger la page, et vérifier que la version a bien été changée.
 
 ### Publication (GitHub Pages)
 - Publié depuis `main`, dossier racine : https://janis-creach.github.io/Portefolio/
@@ -102,7 +104,9 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - Le site reste volontairement dans le sous-dossier `/Portefolio/`. Google n'affiche donc ni le logo ni le nom du site dans ses résultats (il faudrait un dépôt `Janis-Creach.github.io` ou un nom de domaine) : choix accepté par Janis.
 - Mise sur `main` (**seulement quand Janis le demande**) : `git push origin beta:main` si c'est une avance rapide. Si `main` contient des commits de fusion de pull requests absents de `beta`, intégrer d'abord `origin/main` dans `beta`.
 - Hébergeur pour les mentions légales : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. GitHub ne publie pas de numéro de téléphone.
+- `mentions-legales.html` décrit les données traitées (aucun cookie, thème dans `localStorage`, journaux IP de GitHub, polices Google Fonts). **Si on ajoute un outil tiers** (statistiques, formulaire, vidéo…) **ou si on change les polices** (par ex. auto-hébergées dans `assets/`), mettre à jour la section « Données personnelles ».
 
 ### Avant de dire que c'est terminé
 - Vérifier les 8 pages en clair et en sombre, de 320 px à 1920 px de large : aucun débordement horizontal, aucune erreur dans la console.
 - Vérifier qu'il n'y a aucun CSS ni JS dans le HTML, que les chemins sont relatifs et que toutes les classes utilisées existent dans le CSS.
+- Pour tester : servir le dossier avec `python3 -m http.server` et ouvrir les pages dans un navigateur (Playwright/Chromium dans l'environnement cloud). Montrer des captures à Janis avant de lui proposer la mise sur `main` : Janis valide sur `beta`, puis demande « pousse dans le main ».
