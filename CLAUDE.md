@@ -78,7 +78,7 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - Le contenu vient du CV et de ce que Janis a précisé. **Ne rien inventer** : toute nouvelle information doit venir de Janis ou de son CV.
   - Formation : BTS SIO SISR depuis 2025, Bac Pro SN-RISC 2022-2025 (lycée Félix le Dantec, Lannion).
   - Stages : lycée Félix le Dantec (juin 2025, Alcasar) et Axeinfo (juin 2024). Stage chez Pulsat à Ouessant (décembre 2022 : dépannages en électricité générale, plomberie et un peu de multimédia) : moins lié à son activité principale, il figure **seulement** dans la frise de `formation-experience.html`, ni sur `cv.html` ni dans le compteur « Stages effectués » de l'accueil (choix de Janis).
-  - Certifications (années données par Janis) : ANSSI, CNIL et Root Me (2025), Cisco (2026) ; SST (2024) et habilitation électrique B1V (2023), absentes du CV PDF.
+  - Certifications (années données par Janis) : ANSSI, CNIL et Root Me (2025), Cisco (2026) ; SST (2024) et formation à l'habilitation électrique B1V (2023, attestation de formation), absentes du CV PDF.
 - Choix de contenu : pas de niveaux, jauges ou pourcentages de compétences, ni langues ni centres d'intérêt (absents du CV). Classement fidèle au CV (ex. GLPI en gestion de parc, pas en supervision).
 - Contenu pas encore fourni par Janis :
   - `documentation.html` : seul le tutoriel VLAN existe, rédigé par l'assistant (contenu générique), à faire valider par Janis ; les 3 entrées « À venir » attendent ses vrais documents.
@@ -95,7 +95,7 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
   - B1V : « Référentiel : norme NF C 18-510 » (une norme ne délivre rien ; l'habilitation est délivrée par l'employeur).
   - Ne nommer aucun organisme de formation tant que Janis ne l'a pas donné.
   - Afficher seulement l'année d'obtention, jamais « valide » ou « en cours » : le SST est valable 24 mois (renouvelé par un stage MAC) et la B1V se recycle en principe tous les 3 ans.
-  - **À demander à Janis** (posée, sans réponse à ce jour) : pour la B1V, a-t-il reçu un titre d'habilitation signé par un employeur, ou seulement une attestation de formation ? Intitulé actuel : « Habilitation électrique B1V » ; si attestation seule, le remplacer par « Formation à l'habilitation électrique B1V ».
+  - B1V : Janis a seulement une **attestation de formation** (pas de titre d'habilitation signé par un employeur). Intitulé : « Formation à l'habilitation électrique B1V », sur la carte, dans la liste de `cv.html` et dans la `meta description` ; l'introduction de la page parle de « certifications et formations », sans « habilitations ».
 - Janis se décrit au masculin dans son CV (« Sérieux et impliqué », « technicien ») : garder ces accords.
 - Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `definition.html` (glossaire des notions, onglet « Définition » de la barre), `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
 - L'en-tête et le pied de page sont **recopiés dans les 8 pages** (pas d'étape de build) : toute modification doit être faite dans les 8 fichiers. Ils sont identiques, sauf `aria-current="page"`, placé sur le lien de la page en cours.
