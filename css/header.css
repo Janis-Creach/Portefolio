@@ -71,7 +71,7 @@
 
 /* Page en cours : fond plus marqué + trait vert en bas */
 .navigation__lien[aria-current="page"] {
-  background-color: var(--couleur-fond-tertiaire);
+  background-color: var(--couleur-fond-nav-actif);
   box-shadow: inset 0 -2px 0 var(--couleur-accent);
 }
 
@@ -97,6 +97,8 @@
   background-color: var(--couleur-fond-nav-survol);
 }
 
+/* Le bouton pause est dans le bandeau de l'accueil, pas dans la barre :
+   son survol suit le fond de la page */
 .defilement__pause:hover {
   background-color: var(--couleur-fond-secondaire);
 }

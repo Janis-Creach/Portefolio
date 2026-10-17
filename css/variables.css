@@ -25,6 +25,7 @@
   /* ----- Barre de navigation (teinte légèrement différente du fond) ----- */
   --couleur-fond-nav: light-dark(#eef3eb, #121c16);
   --couleur-fond-nav-survol: light-dark(#e4ebe0, #19261f);
+  --couleur-fond-nav-actif: light-dark(#d7e1d2, #213328);   /* lien de la page en cours */
 
   /* ----- Textes ----- */
   --couleur-texte: light-dark(#0f1a14, #eef4ea);
