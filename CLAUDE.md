@@ -84,7 +84,7 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
   - `documentation.html` : seul le tutoriel VLAN existe, rédigé par l'assistant (contenu générique), à faire valider par Janis ; les 3 entrées « À venir » attendent ses vrais documents.
   - `projets.html` : seule la carte Alcasar décrit une mission réelle ; les autres regroupent des compétences du CV. N'y ajouter aucun détail (contexte, durée, résultats) qui ne vienne pas de Janis.
 - **Informations répétées sur plusieurs pages** : en modifier une, c'est mettre à jour les autres.
-  - Certification : carte de `certification.html` (+ sa `meta description`) + liste « Certifications » de `cv.html` + compteur « Certifications et MOOC » de l'accueil (6). La frise « MOOC et certifications » de `formation-experience.html` ne cite que les certifications cyber (pas SST ni B1V) ; la carte « Certification » de l'accueil met en avant SecNumacadémie.
+  - Certification : carte de `certification.html` (+ sa `meta description`) + liste « Certifications » de `cv.html` + compteur « Certifications et MOOC » de l'accueil (6 ; libellé « MOOC » approximatif, puisque Root Me et Cisco n'en sont pas, à ne changer que si Janis le demande). La frise « MOOC et certifications » de `formation-experience.html` ne cite que les certifications cyber (pas SST ni B1V) ; la carte « Certification » de l'accueil met en avant SecNumacadémie.
   - Stage : frise « Expérience » de `formation-experience.html` + « Expérience professionnelle » de `cv.html` + compteur « Stages effectués » de l'accueil (2), sauf exception voulue par Janis (Pulsat).
   - Projet : `projets.html` + « Projet à la une » et « Réalisations » de l'accueil.
   - Document : `documentation.html` + carte « Documentation » de l'accueil.
@@ -92,10 +92,9 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
   - Notion du glossaire : `definition.html`, puis le nombre de notions et de thèmes de la ligne « Page Définition » ci-dessous (il n'apparaît que dans ce fichier).
 - Cartes de `certification.html` : badge court, année (précédée du texte caché « Obtenue en »), titre, organisme, « Format » et « Domaine ».
   - SST : organisme « INRS et Assurance maladie – Risques professionnels » (ils délivrent le certificat ensemble).
-  - B1V : « Référentiel : norme NF C 18-510 » (une norme ne délivre rien ; l'habilitation est délivrée par l'employeur).
+  - B1V : Janis a seulement une **attestation de formation** (pas de titre d'habilitation, qui serait délivré par un employeur). Intitulé : « Formation à l'habilitation électrique B1V », sur la carte, dans la liste de `cv.html` et dans la `meta description` ; l'introduction de la page parle de « certifications et formations », sans « habilitations ». Ligne organisme : « Référentiel&nbsp;: norme NF C 18-510 » (une norme ne délivre rien).
   - Ne nommer aucun organisme de formation tant que Janis ne l'a pas donné.
   - Afficher seulement l'année d'obtention, jamais « valide » ou « en cours » : le SST est valable 24 mois (renouvelé par un stage MAC) et la B1V se recycle en principe tous les 3 ans.
-  - B1V : Janis a seulement une **attestation de formation** (pas de titre d'habilitation signé par un employeur). Intitulé : « Formation à l'habilitation électrique B1V », sur la carte, dans la liste de `cv.html` et dans la `meta description` ; l'introduction de la page parle de « certifications et formations », sans « habilitations ».
 - Janis se décrit au masculin dans son CV (« Sérieux et impliqué », « technicien ») : garder ces accords.
 - Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `definition.html` (glossaire des notions, onglet « Définition » de la barre), `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
 - L'en-tête et le pied de page sont **recopiés dans les 8 pages** (pas d'étape de build) : toute modification doit être faite dans les 8 fichiers. Ils sont identiques, sauf `aria-current="page"`, placé sur le lien de la page en cours.
