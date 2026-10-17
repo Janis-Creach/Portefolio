@@ -16,12 +16,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Space+Mono:wght@400;700&display=swap">
 
   <!-- Styles du site (?v= : à changer après chaque modification du CSS ou du JS, voir CLAUDE.md) -->
-  <link rel="stylesheet" href="css/style.css?v=20261017c">
+  <link rel="stylesheet" href="css/style.css?v=20261017d">
 
   <!-- Scripts -->
-  <script src="js/theme.js?v=20261017c" defer></script>
-  <script src="js/menu.js?v=20261017c" defer></script>
-  <script src="js/recherche.js?v=20261017c" defer></script>
+  <script src="js/theme.js?v=20261017d" defer></script>
+  <script src="js/menu.js?v=20261017d" defer></script>
+  <script src="js/recherche.js?v=20261017d" defer></script>
 </head>
 <body>
   <a class="lien-evitement" href="#contenu">Aller au contenu</a>
@@ -76,6 +76,7 @@
         <a class="sommaire__lien" href="#reseau">Réseau</a>
         <a class="sommaire__lien" href="#securite">Sécurité</a>
         <a class="sommaire__lien" href="#systemes">Systèmes et virtualisation</a>
+        <a class="sommaire__lien" href="#os">OS</a>
         <a class="sommaire__lien" href="#supervision">Supervision et support</a>
         <a class="sommaire__lien" href="#organismes">Organismes</a>
       </nav>
@@ -274,6 +275,10 @@
           <dt class="glossaire__terme">Cluster</dt>
           <dd class="glossaire__definition">Groupe de serveurs qui travaillent ensemble et se surveillent, pour se répartir la charge ou prendre le relais en cas de panne.</dd>
         </div>
+        <div class="glossaire__entree" id="quorum">
+          <dt class="glossaire__terme">Quorum</dt>
+          <dd class="glossaire__definition">Nombre minimal de membres d'un cluster qui doivent être présents pour qu'il continue de fonctionner, en général plus de la moitié. Si une panne réseau coupe le cluster en deux, seul le groupe majoritaire garde les services&nbsp;; l'autre s'arrête, ce qui évite que deux serveurs modifient les mêmes données en même temps («&nbsp;split&#8209;brain&nbsp;»). D'où l'intérêt d'un nombre impair de serveurs (3, 5…).</dd>
+        </div>
         <div class="glossaire__entree" id="corosync">
           <dt class="glossaire__terme">Corosync</dt>
           <dd class="glossaire__definition">Logiciel libre qui assure la communication entre les serveurs d'un cluster&nbsp;: il sait en permanence lesquels sont actifs et vérifie le quorum, c'est-à-dire qu'assez de serveurs sont présents pour prendre des décisions.</dd>
@@ -297,6 +302,21 @@
         <div class="glossaire__entree" id="scripts">
           <dt class="glossaire__terme">Scripts <span class="glossaire__nom-complet">PowerShell, Bash, Batch</span></dt>
           <dd class="glossaire__definition">Petits programmes qui automatisent des tâches d'administration&nbsp;: PowerShell et Batch sous Windows, Bash sous Linux.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===================== OS (systèmes d'exploitation) ===================== -->
+    <section class="section" id="os">
+      <h2 class="titre-section">OS (systèmes d'exploitation)</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="systeme-exploitation">
+          <dt class="glossaire__terme">Système d'exploitation <span class="glossaire__nom-complet">OS, Operating System</span></dt>
+          <dd class="glossaire__definition">Logiciel de base qui gère le matériel d'un ordinateur ou d'un équipement réseau (processeur, mémoire, stockage, interfaces) et permet aux autres programmes de fonctionner. Exemples&nbsp;: Windows, Linux, Cisco IOS.</dd>
+        </div>
+        <div class="glossaire__entree" id="cisco-ios">
+          <dt class="glossaire__terme">Cisco IOS <span class="glossaire__nom-complet">Internetwork Operating System</span></dt>
+          <dd class="glossaire__definition">Système d'exploitation des routeurs et commutateurs Cisco (à ne pas confondre avec iOS d'Apple). Il se configure en ligne de commande, en passant par plusieurs modes&nbsp;: utilisateur (invite <code>&gt;</code>), privilégié (invite <code>#</code>, commande <code>enable</code>) et configuration (<code>configure terminal</code>). Il existe des variantes pour d'autres gammes, comme IOS XE ou NX-OS.</dd>
         </div>
       </dl>
     </section>

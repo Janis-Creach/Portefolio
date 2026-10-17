@@ -257,8 +257,9 @@ a.doc:hover {
   margin-top: 0.375rem;
 }
 
-/* Code dans le texte */
-.article code {
+/* Code dans le texte (articles et définitions) */
+.article code,
+.glossaire__definition code {
   padding: 0.125rem 0.375rem;
   font-family: var(--police-mono);
   font-size: 0.875em;
