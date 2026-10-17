@@ -2,12 +2,16 @@
    POINT D'ENTRÉE DES STYLES
    Ce fichier importe chaque partie dans l'ordre.
    Pour changer les couleurs, polices ou tailles : voir css/variables.css.
+
+   ?v=… : numéro de version qui oblige les navigateurs à recharger les
+   fichiers après une modification (sinon ils gardent l'ancien CSS en cache
+   environ 10 minutes). Le changer ici ET dans les 8 pages HTML.
    ========================================================================== */
 
-@import url("variables.css");   /* couleurs, polices, tailles */
-@import url("base.css");        /* remise à zéro, typographie, mise en page */
-@import url("header.css");      /* barre de navigation */
-@import url("footer.css");      /* pied de page */
-@import url("components.css");  /* boutons, cartes, étiquettes, terminal… */
-@import url("accueil.css");     /* page d'accueil */
-@import url("pages.css");       /* CV, certifications, documentation, parcours */
+@import url("variables.css?v=20261017");   /* couleurs, polices, tailles */
+@import url("base.css?v=20261017");        /* remise à zéro, typographie, mise en page */
+@import url("header.css?v=20261017");      /* barre de navigation */
+@import url("footer.css?v=20261017");      /* pied de page */
+@import url("components.css?v=20261017");  /* boutons, cartes, étiquettes, terminal… */
+@import url("accueil.css?v=20261017");     /* page d'accueil */
+@import url("pages.css?v=20261017");       /* CV, certifications, documentation, parcours */

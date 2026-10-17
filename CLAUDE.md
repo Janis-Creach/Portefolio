@@ -93,6 +93,7 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - JS : `js/theme.js` (mode sombre automatique selon l'appareil + bouton, choix mémorisé dans `localStorage`, clé `portfolio-theme`), `js/menu.js` (menu mobile), `js/defilement.js` (bouton pause du bandeau, chargé seulement sur l'accueil).
 - Design inspiré de `DESIGN.md` : bordures de 1 px visibles, motif de pixels (`assets/motif-pixels.svg`), logo pixel « JC » (`assets/logo.svg`). Polices Google Fonts : Space Grotesk, Inter et Space Mono.
 - Piège connu : la remise à zéro `ul[class], ol[class] { padding: 0 }` annule le `padding` posé par une classe sur une liste. Utiliser une marge à la place.
+- **Version des fichiers CSS et JS** : les liens portent un numéro `?v=AAAAMMJJ` (ex. `css/style.css?v=20261017`, `js/theme.js?v=20261017`, et les `@import` de `css/style.css`). GitHub Pages laisse les navigateurs garder les fichiers en cache environ 10 minutes : sans changement de version, un visiteur peut voir le nouveau HTML avec l'ancien CSS (page cassée). **Après chaque modification d'un fichier CSS ou JS, remplacer le numéro partout** (les 8 pages HTML et `css/style.css`) par la date du jour.
 
 ### Publication (GitHub Pages)
 - Publié depuis `main`, dossier racine : https://janis-creach.github.io/Portefolio/
