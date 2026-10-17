@@ -6,7 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--couleur-fond);
+  background-color: var(--couleur-fond-nav);
   border-bottom: 1px solid var(--couleur-bordure);
 }
 
@@ -66,7 +66,7 @@
 }
 
 .navigation__lien:hover {
-  background-color: var(--couleur-fond-secondaire);
+  background-color: var(--couleur-fond-nav-survol);
 }
 
 /* Page en cours : fond plus marqué + trait vert en bas */
@@ -93,7 +93,10 @@
 }
 
 .bouton-theme:hover,
-.bouton-menu:hover,
+.bouton-menu:hover {
+  background-color: var(--couleur-fond-nav-survol);
+}
+
 .defilement__pause:hover {
   background-color: var(--couleur-fond-secondaire);
 }
@@ -187,7 +190,7 @@
     right: 0;
     left: 0;
     display: none;
-    background-color: var(--couleur-fond);
+    background-color: var(--couleur-fond-nav);
     border-bottom: 1px solid var(--couleur-bordure);
   }
 

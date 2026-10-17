@@ -22,6 +22,10 @@
   --couleur-fond-secondaire: light-dark(#f1f5ee, #121c16);
   --couleur-fond-tertiaire: light-dark(#e3eadf, #1c2a21);
 
+  /* ----- Barre de navigation (teinte légèrement différente du fond) ----- */
+  --couleur-fond-nav: light-dark(#eef3eb, #121c16);
+  --couleur-fond-nav-survol: light-dark(#e4ebe0, #19261f);
+
   /* ----- Textes ----- */
   --couleur-texte: light-dark(#0f1a14, #eef4ea);
   --couleur-texte-doux: light-dark(#4a5a50, #a3b3a8);
