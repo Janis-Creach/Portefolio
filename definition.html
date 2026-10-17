@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Définitions des notions citées dans le portfolio de Janis Creach : BTS SIO, SISR, DHCP, VLAN, RADIUS, SIEM, Corosync…">
+  <title>Définitions — Janis Creach</title>
+
+  <!-- Icône de l'onglet -->
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Space+Mono:wght@400;700&display=swap">
+
+  <!-- Styles du site -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- ===================== Barre de navigation ===================== -->
+  <header class="entete">
+    <div class="entete__barre">
+      <a class="entete__logo" href="index.html">
+        <img src="assets/logo.svg" alt="" width="28" height="28">
+        <span>Janis Creach</span>
+      </a>
+
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation-principale">
+        <span class="bouton-menu__barres" aria-hidden="true"></span>
+        <span class="visuellement-cache">Menu</span>
+      </button>
+
+      <nav class="navigation" id="navigation-principale" aria-label="Navigation principale">
+        <ul class="navigation__liste">
+          <li><a class="navigation__lien" href="cv.html">Mon CV</a></li>
+          <li><a class="navigation__lien" href="certification.html">Certification</a></li>
+          <li><a class="navigation__lien" href="documentation.html">Documentation</a></li>
+          <li><a class="navigation__lien" href="formation-experience.html">Formation/Expérience</a></li>
+          <li><a class="navigation__lien" href="projets.html">Projets</a></li>
+          <li><a class="navigation__lien" href="definition.html" aria-current="page">Définition</a></li>
+        </ul>
+      </nav>
+
+      <button class="bouton-theme" type="button" aria-label="Changer de thème">
+        <svg class="bouton-theme__lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="bouton-theme__soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="8" height="8"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu" class="page">
+    <!-- ===================== En-tête de page ===================== -->
+    <section class="section en-tete-page">
+      <p class="etiquette-mono">// Définition</p>
+      <h1>Définitions</h1>
+      <p class="texte-intro">Les notions, protocoles et outils cités sur ce portfolio, expliqués simplement.</p>
+      <nav class="sommaire" aria-label="Catégories de définitions">
+        <a class="sommaire__lien" href="#formation">Formation</a>
+        <a class="sommaire__lien" href="#reseau">Réseau</a>
+        <a class="sommaire__lien" href="#securite">Sécurité</a>
+        <a class="sommaire__lien" href="#systemes">Systèmes et virtualisation</a>
+        <a class="sommaire__lien" href="#supervision">Supervision et support</a>
+        <a class="sommaire__lien" href="#organismes">Organismes</a>
+      </nav>
+    </section>
+
+    <!-- ===================== Formation ===================== -->
+    <section class="section" id="formation">
+      <h2 class="titre-section">Formation</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="bts-sio">
+          <dt class="glossaire__terme">BTS SIO <span class="glossaire__nom-complet">Brevet de technicien supérieur Services informatiques aux organisations</span></dt>
+          <dd class="glossaire__definition">Diplôme d'État de niveau bac+2, préparé en deux ans, qui forme des techniciens capables de gérer le système d'information d'une organisation. Il propose deux options&nbsp;: SISR et SLAM.</dd>
+        </div>
+        <div class="glossaire__entree" id="sisr">
+          <dt class="glossaire__terme">Option SISR <span class="glossaire__nom-complet">Solutions d'infrastructure, systèmes et réseaux</span></dt>
+          <dd class="glossaire__definition">Option du BTS SIO centrée sur l'installation, l'administration et la sécurisation des réseaux, des serveurs et des postes de travail.</dd>
+        </div>
+        <div class="glossaire__entree" id="slam">
+          <dt class="glossaire__terme">Option SLAM <span class="glossaire__nom-complet">Solutions logicielles et applications métiers</span></dt>
+          <dd class="glossaire__definition">L'autre option du BTS SIO, centrée sur la conception et le développement d'applications.</dd>
+        </div>
+        <div class="glossaire__entree" id="bac-pro-sn-risc">
+          <dt class="glossaire__terme">Bac Pro SN option RISC <span class="glossaire__nom-complet">Systèmes numériques, option Réseaux informatiques et systèmes communicants</span></dt>
+          <dd class="glossaire__definition">Baccalauréat professionnel en trois ans qui forme à l'installation et à la maintenance des réseaux et des équipements informatiques. Il a été remplacé par le Bac Pro CIEL (cybersécurité, informatique et réseaux, électronique) pour les élèves entrés en seconde à partir de 2023.</dd>
+        </div>
+        <div class="glossaire__entree" id="mooc">
+          <dt class="glossaire__terme">MOOC <span class="glossaire__nom-complet">Massive Open Online Course</span></dt>
+          <dd class="glossaire__definition">Cours en ligne ouvert à tous, souvent gratuit, comme la SecNumacadémie de l'ANSSI ou l'Atelier RGPD de la CNIL.</dd>
+        </div>
+        <div class="glossaire__entree" id="ctf">
+          <dt class="glossaire__terme">CTF <span class="glossaire__nom-complet">Capture The Flag</span></dt>
+          <dd class="glossaire__definition">Exercice ou compétition de cybersécurité où il faut trouver et exploiter des failles pour récupérer des «&nbsp;drapeaux&nbsp;» cachés.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===================== Réseau ===================== -->
+    <section class="section" id="reseau">
+      <h2 class="titre-section">Réseau</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="adresse-ip">
+          <dt class="glossaire__terme">Adresse IP <span class="glossaire__nom-complet">Internet Protocol</span></dt>
+          <dd class="glossaire__definition">Identifiant numérique d'une machine sur un réseau, par exemple 192.168.10.12 en IPv4. Associée à un masque, elle indique aussi à quel réseau la machine appartient.</dd>
+        </div>
+        <div class="glossaire__entree" id="passerelle">
+          <dt class="glossaire__terme">Passerelle par défaut</dt>
+          <dd class="glossaire__definition">Adresse du routeur auquel une machine envoie tout le trafic destiné à un autre réseau, par exemple Internet.</dd>
+        </div>
+        <div class="glossaire__entree" id="dhcp">
+          <dt class="glossaire__terme">DHCP <span class="glossaire__nom-complet">Dynamic Host Configuration Protocol</span></dt>
+          <dd class="glossaire__definition">Protocole qui attribue automatiquement aux machines leur configuration réseau&nbsp;: adresse IP, masque, passerelle et serveurs DNS. L'échange se fait en quatre étapes&nbsp;: Discover, Offer, Request, Acknowledge (DORA).</dd>
+        </div>
+        <div class="glossaire__entree" id="dns">
+          <dt class="glossaire__terme">DNS <span class="glossaire__nom-complet">Domain Name System</span></dt>
+          <dd class="glossaire__definition">Service qui traduit les noms de domaine (comme github.com) en adresses IP, un peu comme un annuaire.</dd>
+        </div>
+        <div class="glossaire__entree" id="vlan">
+          <dt class="glossaire__terme">VLAN <span class="glossaire__nom-complet">Virtual Local Area Network</span></dt>
+          <dd class="glossaire__definition">Réseau local virtuel&nbsp;: il découpe un même commutateur en plusieurs réseaux isolés (administration, utilisateurs, invités…) sans changer le câblage.</dd>
+        </div>
+        <div class="glossaire__entree" id="trunk">
+          <dt class="glossaire__terme">Trunk <span class="glossaire__nom-complet">Norme IEEE 802.1Q</span></dt>
+          <dd class="glossaire__definition">Lien entre deux équipements qui transporte plusieurs VLAN à la fois. Chaque trame porte une étiquette qui indique à quel VLAN elle appartient.</dd>
+        </div>
+        <div class="glossaire__entree" id="routage-inter-vlan">
+          <dt class="glossaire__terme">Routage inter-VLAN</dt>
+          <dd class="glossaire__definition">Mécanisme qui permet à des VLAN, isolés par défaut, de communiquer entre eux à travers un routeur ou un commutateur de niveau 3, avec si besoin des règles de filtrage.</dd>
+        </div>
+        <div class="glossaire__entree" id="stp">
+          <dt class="glossaire__terme">STP <span class="glossaire__nom-complet">Spanning Tree Protocol</span></dt>
+          <dd class="glossaire__definition">Protocole qui évite les boucles dans un réseau de commutateurs&nbsp;: il bloque les liens redondants et les réactive si un lien tombe en panne.</dd>
+        </div>
+        <div class="glossaire__entree" id="wi-fi">
+          <dt class="glossaire__terme">Wi-Fi <span class="glossaire__nom-complet">Normes IEEE 802.11</span></dt>
+          <dd class="glossaire__definition">Technologie de réseau local sans fil qui relie les appareils à un point d'accès par ondes radio.</dd>
+        </div>
+        <div class="glossaire__entree" id="radius">
+          <dt class="glossaire__terme">RADIUS <span class="glossaire__nom-complet">Remote Authentication Dial-In User Service</span></dt>
+          <dd class="glossaire__definition">Protocole qui centralise l'authentification des utilisateurs, leurs autorisations et la traçabilité de leurs connexions. Il sert souvent à sécuriser un Wi-Fi d'entreprise avec des identifiants personnels (802.1X).</dd>
+        </div>
+        <div class="glossaire__entree" id="trame">
+          <dt class="glossaire__terme">Trame</dt>
+          <dd class="glossaire__definition">Unité de données échangée sur un réseau local (par exemple Ethernet). Elle contient notamment les adresses MAC de l'émetteur et du destinataire.</dd>
+        </div>
+        <div class="glossaire__entree" id="wireshark">
+          <dt class="glossaire__terme">Wireshark</dt>
+          <dd class="glossaire__definition">Logiciel libre d'analyse réseau qui capture et décode les trames et les paquets, très utile pour comprendre ou dépanner un échange.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===================== Sécurité ===================== -->
+    <section class="section" id="securite">
+      <h2 class="titre-section">Sécurité</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="nac">
+          <dt class="glossaire__terme">NAC <span class="glossaire__nom-complet">Network Access Control</span></dt>
+          <dd class="glossaire__definition">Contrôle d'accès au réseau&nbsp;: ensemble de mécanismes qui décident qui, ou quel appareil, a le droit de se connecter au réseau et dans quelles conditions.</dd>
+        </div>
+        <div class="glossaire__entree" id="portail-captif">
+          <dt class="glossaire__terme">Portail captif</dt>
+          <dd class="glossaire__definition">Page web qui s'affiche avant tout accès à Internet et demande à l'utilisateur de s'identifier, comme sur les Wi-Fi publics.</dd>
+        </div>
+        <div class="glossaire__entree" id="alcasar">
+          <dt class="glossaire__terme">Alcasar <span class="glossaire__nom-complet">Application libre pour le contrôle d'accès sécurisé et authentifié au réseau</span></dt>
+          <dd class="glossaire__definition">Contrôleur d'accès au réseau libre et français&nbsp;: portail captif, authentification des utilisateurs, traçabilité des connexions et filtrage.</dd>
+        </div>
+        <div class="glossaire__entree" id="pare-feu">
+          <dt class="glossaire__terme">Pare-feu <span class="glossaire__nom-complet">Firewall</span></dt>
+          <dd class="glossaire__definition">Équipement ou logiciel qui filtre le trafic réseau selon des règles (adresses, ports, protocoles) pour bloquer ce qui n'est pas autorisé.</dd>
+        </div>
+        <div class="glossaire__entree" id="vpn">
+          <dt class="glossaire__terme">VPN <span class="glossaire__nom-complet">Virtual Private Network</span></dt>
+          <dd class="glossaire__definition">Réseau privé virtuel&nbsp;: tunnel chiffré qui relie un utilisateur ou un site distant au réseau de l'entreprise à travers Internet.</dd>
+        </div>
+        <div class="glossaire__entree" id="ssh">
+          <dt class="glossaire__terme">SSH <span class="glossaire__nom-complet">Secure Shell</span></dt>
+          <dd class="glossaire__definition">Protocole qui permet d'administrer une machine à distance en ligne de commande, grâce à une connexion chiffrée (port 22 par défaut).</dd>
+        </div>
+        <div class="glossaire__entree" id="tls-https">
+          <dt class="glossaire__terme">SSL/TLS et HTTPS <span class="glossaire__nom-complet">Transport Layer Security</span></dt>
+          <dd class="glossaire__definition">TLS, qui a succédé à SSL, chiffre et authentifie les échanges sur un réseau. HTTPS est le protocole du web (HTTP) protégé par TLS&nbsp;: c'est le cadenas affiché par le navigateur.</dd>
+        </div>
+        <div class="glossaire__entree" id="certificat">
+          <dt class="glossaire__terme">Certificat</dt>
+          <dd class="glossaire__definition">Fichier électronique, signé par une autorité de certification, qui associe une clé publique à une identité (un site, un serveur). Il permet de vérifier qu'on communique avec le bon serveur.</dd>
+        </div>
+        <div class="glossaire__entree" id="ids-ips">
+          <dt class="glossaire__terme">IDS / IPS <span class="glossaire__nom-complet">Intrusion Detection / Prevention System</span></dt>
+          <dd class="glossaire__definition">Un IDS détecte les comportements suspects sur le réseau ou sur une machine et donne l'alerte. Un IPS peut en plus les bloquer automatiquement.</dd>
+        </div>
+        <div class="glossaire__entree" id="siem">
+          <dt class="glossaire__terme">SIEM <span class="glossaire__nom-complet">Security Information and Event Management</span></dt>
+          <dd class="glossaire__definition">Outil qui centralise les journaux de nombreux équipements, les met en corrélation et génère des alertes de sécurité.</dd>
+        </div>
+        <div class="glossaire__entree" id="xdr">
+          <dt class="glossaire__terme">XDR <span class="glossaire__nom-complet">Extended Detection and Response</span></dt>
+          <dd class="glossaire__definition">Approche qui détecte les menaces et aide à y répondre en croisant les données de plusieurs sources&nbsp;: postes, serveurs, réseau, cloud.</dd>
+        </div>
+        <div class="glossaire__entree" id="soc">
+          <dt class="glossaire__terme">SOC <span class="glossaire__nom-complet">Security Operations Center</span></dt>
+          <dd class="glossaire__definition">Centre opérationnel de sécurité&nbsp;: équipe et outils chargés de surveiller en continu un système d'information et de traiter les incidents de sécurité.</dd>
+        </div>
+        <div class="glossaire__entree" id="wazuh">
+          <dt class="glossaire__terme">Wazuh</dt>
+          <dd class="glossaire__definition">Plateforme de sécurité libre (SIEM et XDR)&nbsp;: des agents installés sur les machines remontent les événements, qui sont analysés pour détecter intrusions et anomalies.</dd>
+        </div>
+        <div class="glossaire__entree" id="pentest">
+          <dt class="glossaire__terme">Pentest <span class="glossaire__nom-complet">Test d'intrusion</span></dt>
+          <dd class="glossaire__definition">Attaque simulée et autorisée d'un système pour en trouver les failles avant qu'elles ne soient exploitées par de vrais attaquants.</dd>
+        </div>
+        <div class="glossaire__entree" id="kali-linux">
+          <dt class="glossaire__terme">Kali Linux</dt>
+          <dd class="glossaire__definition">Distribution Linux spécialisée dans les tests de sécurité, livrée avec des centaines d'outils d'audit et de test d'intrusion.</dd>
+        </div>
+        <div class="glossaire__entree" id="metasploit">
+          <dt class="glossaire__terme">Metasploit</dt>
+          <dd class="glossaire__definition">Framework de test d'intrusion qui permet de vérifier si des vulnérabilités connues peuvent être exploitées sur un système.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===================== Systèmes et virtualisation ===================== -->
+    <section class="section" id="systemes">
+      <h2 class="titre-section">Systèmes et virtualisation</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="virtualisation">
+          <dt class="glossaire__terme">Virtualisation</dt>
+          <dd class="glossaire__definition">Technique qui fait fonctionner plusieurs machines virtuelles, chacune avec son propre système, sur un même serveur physique.</dd>
+        </div>
+        <div class="glossaire__entree" id="hyperviseur">
+          <dt class="glossaire__terme">Hyperviseur</dt>
+          <dd class="glossaire__definition">Logiciel qui crée et fait tourner les machines virtuelles. Un hyperviseur de type 1 s'installe directement sur le serveur (Proxmox VE, VMware ESXi)&nbsp;; un hyperviseur de type 2 fonctionne dans un système existant (VirtualBox, VMware Workstation).</dd>
+        </div>
+        <div class="glossaire__entree" id="proxmox">
+          <dt class="glossaire__terme">Proxmox VE <span class="glossaire__nom-complet">Proxmox Virtual Environment</span></dt>
+          <dd class="glossaire__definition">Plateforme de virtualisation libre basée sur Debian. Elle gère des machines virtuelles (KVM) et des conteneurs (LXC) depuis une interface web, et peut fonctionner en cluster.</dd>
+        </div>
+        <div class="glossaire__entree" id="esxi">
+          <dt class="glossaire__terme">VMware ESXi</dt>
+          <dd class="glossaire__definition">Hyperviseur de type 1 de VMware, très répandu en entreprise pour virtualiser les serveurs.</dd>
+        </div>
+        <div class="glossaire__entree" id="raid">
+          <dt class="glossaire__terme">RAID <span class="glossaire__nom-complet">Redundant Array of Independent Disks</span></dt>
+          <dd class="glossaire__definition">Regroupement de plusieurs disques pour gagner en performance ou en tolérance aux pannes. En RAID 1, par exemple, les données sont copiées à l'identique sur deux disques.</dd>
+        </div>
+        <div class="glossaire__entree" id="haute-disponibilite">
+          <dt class="glossaire__terme">Haute disponibilité</dt>
+          <dd class="glossaire__definition">Ensemble de techniques (redondance, bascule automatique) qui permettent à un service de rester accessible même si un serveur ou un équipement tombe en panne.</dd>
+        </div>
+        <div class="glossaire__entree" id="cluster">
+          <dt class="glossaire__terme">Cluster</dt>
+          <dd class="glossaire__definition">Groupe de serveurs qui travaillent ensemble et se surveillent, pour se répartir la charge ou prendre le relais en cas de panne.</dd>
+        </div>
+        <div class="glossaire__entree" id="corosync">
+          <dt class="glossaire__terme">Corosync</dt>
+          <dd class="glossaire__definition">Logiciel libre qui assure la communication entre les serveurs d'un cluster&nbsp;: il sait en permanence lesquels sont actifs et vérifie le quorum, c'est-à-dire qu'assez de serveurs sont présents pour prendre des décisions.</dd>
+        </div>
+        <div class="glossaire__entree" id="pacemaker">
+          <dt class="glossaire__terme">Pacemaker</dt>
+          <dd class="glossaire__definition">Gestionnaire de ressources de cluster libre&nbsp;: il démarre et surveille les services, et les bascule automatiquement sur un autre serveur en cas de panne. Il s'appuie sur Corosync.</dd>
+        </div>
+        <div class="glossaire__entree" id="repartition-de-charge">
+          <dt class="glossaire__terme">Répartition de charge <span class="glossaire__nom-complet">Load balancing</span></dt>
+          <dd class="glossaire__definition">Distribution des requêtes entre plusieurs serveurs, pour qu'aucun ne soit surchargé et que le service continue si l'un d'eux tombe.</dd>
+        </div>
+        <div class="glossaire__entree" id="apache">
+          <dt class="glossaire__terme">Apache <span class="glossaire__nom-complet">Apache HTTP Server</span></dt>
+          <dd class="glossaire__definition">Serveur web libre, parmi les plus utilisés, qui envoie les pages des sites aux navigateurs.</dd>
+        </div>
+        <div class="glossaire__entree" id="mysql">
+          <dt class="glossaire__terme">MySQL</dt>
+          <dd class="glossaire__definition">Système de gestion de bases de données relationnelles, utilisé par de nombreuses applications web.</dd>
+        </div>
+        <div class="glossaire__entree" id="scripts">
+          <dt class="glossaire__terme">Scripts <span class="glossaire__nom-complet">PowerShell, Bash, Batch</span></dt>
+          <dd class="glossaire__definition">Petits programmes qui automatisent des tâches d'administration&nbsp;: PowerShell et Batch sous Windows, Bash sous Linux.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===================== Supervision et support ===================== -->
+    <section class="section" id="supervision">
+      <h2 class="titre-section">Supervision et support</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="supervision-definition">
+          <dt class="glossaire__terme">Supervision</dt>
+          <dd class="glossaire__definition">Surveillance continue de l'état des serveurs, des équipements et des services, avec des alertes dès que quelque chose ne va pas.</dd>
+        </div>
+        <div class="glossaire__entree" id="snmp">
+          <dt class="glossaire__terme">SNMP <span class="glossaire__nom-complet">Simple Network Management Protocol</span></dt>
+          <dd class="glossaire__definition">Protocole qui permet d'interroger les équipements réseau (charge, état des ports, température…) et de recevoir leurs alertes.</dd>
+        </div>
+        <div class="glossaire__entree" id="zabbix">
+          <dt class="glossaire__terme">Zabbix</dt>
+          <dd class="glossaire__definition">Logiciel libre de supervision&nbsp;: il collecte des mesures (par agents ou par SNMP), trace des graphiques et déclenche des alertes.</dd>
+        </div>
+        <div class="glossaire__entree" id="graylog">
+          <dt class="glossaire__terme">Graylog</dt>
+          <dd class="glossaire__definition">Plateforme de centralisation des journaux (logs)&nbsp;: elle collecte et indexe les événements de nombreuses machines pour pouvoir les rechercher et les analyser.</dd>
+        </div>
+        <div class="glossaire__entree" id="glpi">
+          <dt class="glossaire__terme">GLPI <span class="glossaire__nom-complet">Gestionnaire libre de parc informatique</span></dt>
+          <dd class="glossaire__definition">Logiciel libre d'inventaire du matériel et des logiciels, avec un outil de gestion des demandes et des incidents sous forme de tickets.</dd>
+        </div>
+        <div class="glossaire__entree" id="fog">
+          <dt class="glossaire__terme">FOG <span class="glossaire__nom-complet">FOG Project</span></dt>
+          <dd class="glossaire__definition">Solution libre de clonage et de déploiement de postes par le réseau&nbsp;: on crée l'image d'un poste de référence, puis on l'installe sur d'autres machines.</dd>
+        </div>
+        <div class="glossaire__entree" id="ticketing">
+          <dt class="glossaire__terme">Ticketing</dt>
+          <dd class="glossaire__definition">Suivi des demandes et des incidents sous forme de tickets&nbsp;: chaque demande est enregistrée, attribuée, traitée puis clôturée.</dd>
+        </div>
+        <div class="glossaire__entree" id="prise-en-main-a-distance">
+          <dt class="glossaire__terme">Prise en main à distance</dt>
+          <dd class="glossaire__definition">Contrôle d'un poste à distance pour aider un utilisateur ou dépanner sans se déplacer.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===================== Organismes ===================== -->
+    <section class="section" id="organismes">
+      <h2 class="titre-section">Organismes</h2>
+      <dl class="glossaire">
+        <div class="glossaire__entree" id="anssi">
+          <dt class="glossaire__terme">ANSSI <span class="glossaire__nom-complet">Agence nationale de la sécurité des systèmes d'information</span></dt>
+          <dd class="glossaire__definition">Autorité française chargée de la cybersécurité. Elle propose la SecNumacadémie, un MOOC gratuit de sensibilisation à la sécurité du numérique.</dd>
+        </div>
+        <div class="glossaire__entree" id="cnil">
+          <dt class="glossaire__terme">CNIL <span class="glossaire__nom-complet">Commission nationale de l'informatique et des libertés</span></dt>
+          <dd class="glossaire__definition">Autorité française chargée de la protection des données personnelles. Elle propose l'Atelier RGPD, un MOOC gratuit.</dd>
+        </div>
+        <div class="glossaire__entree" id="rgpd">
+          <dt class="glossaire__terme">RGPD <span class="glossaire__nom-complet">Règlement général sur la protection des données</span></dt>
+          <dd class="glossaire__definition">Règlement européen, appliqué depuis mai 2018, qui encadre la collecte et l'utilisation des données personnelles.</dd>
+        </div>
+        <div class="glossaire__entree" id="root-me">
+          <dt class="glossaire__terme">Root Me</dt>
+          <dd class="glossaire__definition">Plateforme française d'apprentissage du hacking éthique, avec des centaines de challenges et des CTF.</dd>
+        </div>
+        <div class="glossaire__entree" id="cisco">
+          <dt class="glossaire__terme">Cisco</dt>
+          <dd class="glossaire__definition">Constructeur américain d'équipements réseau. Sa Cisco Networking Academy propose des cours en ligne, dont une introduction à la cybersécurité.</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <!-- ===================== Pied de page ===================== -->
+  <footer class="pied-de-page">
+    <div class="pied-de-page__interieur">
+      <div class="pied-de-page__grille">
+        <div class="pied-de-page__colonne">
+          <a class="pied-de-page__logo" href="index.html">
+            <img src="assets/logo.svg" alt="" width="40" height="40">
+            <span>Janis Creach</span>
+          </a>
+          <p class="pied-de-page__texte">Administration systèmes, réseaux &amp; cybersécurité.</p>
+        </div>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Informations</p>
+          <a class="pied-de-page__lien" href="mentions-legales.html">Mentions légales <span class="fleche" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Me retrouver</p>
+          <ul class="liens-sociaux">
+            <li>
+              <a class="lien-social" href="https://github.com/Janis-Creach" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.57v-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .31.21.69.83.57A12 12 0 0 0 24 12.3c0-6.63-5.37-12-12-12"/></svg>
+                </span>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <!-- À FAIRE : remplacer par l'adresse du profil LinkedIn -->
+              <a class="lien-social" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                </span>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="lien-social" href="mailto:janis.creach@gmail.com">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16"/><path d="m2 5 10 8 10-8"/></svg>
+                </span>
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pied-de-page__bas">
+        <p>© 2026 Janis Creach</p>
+        <p>Site hébergé sur GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

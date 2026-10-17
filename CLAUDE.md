@@ -77,8 +77,9 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - **Mettre l'accent sur le réseau et la cybersécurité**, pas sur la programmation.
 - Le contenu vient du CV (BTS SIO SISR depuis 2025, Bac Pro SN-RISC 2022-2025, stages au lycée Félix le Dantec en juin 2025 et chez Axeinfo en juin 2024, certifications ANSSI, CNIL et Root Me obtenues en 2025, Cisco en 2026). **Ne rien inventer** : toute nouvelle information doit venir de Janis ou de son CV.
 - Janis se décrit au masculin dans son CV (« Sérieux et impliqué », « technicien ») : garder ces accords.
-- Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
-- L'en-tête et le pied de page sont **recopiés dans les 7 pages** (pas d'étape de build) : toute modification doit être faite dans les 7 fichiers.
+- Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `definition.html` (glossaire des notions, onglet « Définition » de la barre), `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
+- L'en-tête et le pied de page sont **recopiés dans les 8 pages** (pas d'étape de build) : toute modification doit être faite dans les 8 fichiers.
+- Barre de navigation : 6 liens (Mon CV, Certification, Documentation, Formation/Expérience, Projets, Définition). Elle tient au-dessus de 960 px (911 px nécessaires) ; en cas d'ajout d'un lien, vérifier qu'elle ne déborde pas, sinon relever le seuil du menu mobile dans `css/header.css`.
 
 ### Données personnelles
 - Ne **jamais publier** le téléphone ni l'adresse postale de Janis. Sur les pages du site, seuls la ville ou le département apparaissent, et pas de photo.
@@ -102,5 +103,5 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 - Hébergeur pour les mentions légales : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. GitHub ne publie pas de numéro de téléphone.
 
 ### Avant de dire que c'est terminé
-- Vérifier les 7 pages en clair et en sombre, de 320 px à 1920 px de large : aucun débordement horizontal, aucune erreur dans la console.
+- Vérifier les 8 pages en clair et en sombre, de 320 px à 1920 px de large : aucun débordement horizontal, aucune erreur dans la console.
 - Vérifier qu'il n'y a aucun CSS ni JS dans le HTML, que les chemins sont relatifs et que toutes les classes utilisées existent dans le CSS.

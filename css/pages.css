@@ -349,6 +349,77 @@ a.doc:hover {
   color: var(--couleur-texte-doux);
 }
 
+/* ==================== Définitions ==================== */
+
+/* Sommaire : un lien par catégorie, sous le titre de la page */
+.sommaire {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.sommaire__lien {
+  padding: 0.375rem 0.75rem;
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  text-decoration: none;
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond-secondaire);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi-md);
+  transition: border-color var(--duree-transition), color var(--duree-transition);
+}
+
+.sommaire__lien:hover {
+  color: var(--couleur-lien);
+  border-color: var(--couleur-bordure-forte);
+}
+
+/* Grille de définitions : une carte par notion */
+.glossaire {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 1rem;
+}
+
+.glossaire__entree {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--couleur-fond);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--arrondi-lg);
+}
+
+/* Notion ciblée par un lien (ex. definition.html#dhcp) : mise en avant */
+.glossaire__entree:target {
+  border-color: var(--couleur-accent);
+  box-shadow: inset 3px 0 0 var(--couleur-accent);
+}
+
+.glossaire__terme {
+  font-family: var(--police-titre);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Nom complet de l'acronyme, sous le terme */
+.glossaire__nom-complet {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--couleur-texte-doux);
+}
+
+.glossaire__definition {
+  margin-top: 0.75rem;
+  font-size: var(--taille-petit);
+  color: var(--couleur-texte-doux);
+}
+
 /* ==================== Formation / Expérience : frise ==================== */
 
 .titre-section {
