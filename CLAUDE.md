@@ -75,13 +75,14 @@ Quand tu lances des agents (sous-agents, tâches déléguées), choisis le modè
 ### Le site
 - Portfolio de **Janis Creach**, étudiant en BTS SIO option SISR, en recherche de stage de technicien en administration systèmes et réseaux.
 - **Mettre l'accent sur le réseau et la cybersécurité**, pas sur la programmation.
-- Le contenu vient du CV (BTS SIO SISR depuis 2025, Bac Pro SN-RISC 2022-2025, stages au lycée Félix le Dantec en juin 2025 et chez Axeinfo en juin 2024, certifications ANSSI, CNIL, Cisco et Root Me). **Ne rien inventer** : toute nouvelle information doit venir de Janis ou de son CV.
+- Le contenu vient du CV (BTS SIO SISR depuis 2025, Bac Pro SN-RISC 2022-2025, stages au lycée Félix le Dantec en juin 2025 et chez Axeinfo en juin 2024, certifications ANSSI, CNIL et Root Me obtenues en 2025, Cisco en 2026). **Ne rien inventer** : toute nouvelle information doit venir de Janis ou de son CV.
 - Janis se décrit au masculin dans son CV (« Sérieux et impliqué », « technicien ») : garder ces accords.
 - Pages : `index.html`, `cv.html`, `certification.html`, `documentation.html`, `formation-experience.html`, `projets.html`, `mentions-legales.html` (accessible seulement depuis le lien du pied de page).
 - L'en-tête et le pied de page sont **recopiés dans les 7 pages** (pas d'étape de build) : toute modification doit être faite dans les 7 fichiers.
 
 ### Données personnelles
-- Ne **jamais publier** le téléphone, l'adresse postale ni la photo de Janis. Seuls la ville ou le département apparaissent.
+- Ne **jamais publier** le téléphone ni l'adresse postale de Janis. Sur les pages du site, seuls la ville ou le département apparaissent, et pas de photo.
+- CV téléchargeable : `assets/cv-janis-creach.pdf` (bouton sur `cv.html`). C'est le CV Canva de Janis dont le téléphone et l'adresse ont été **réellement effacés** : texte, icônes, et aussi les copies cachées dans la couche d'accessibilité du PDF (champs `/E` des éléments de structure). La photo y est conservée (choix de Janis). Si Janis fournit un nouveau CV, refaire cet effacement avant de le publier, puis vérifier qu'il ne reste aucune trace (texte extrait **et** objets internes du PDF).
 - Contacts publiés : email `janis.creach@gmail.com` et GitHub `https://github.com/Janis-Creach`.
 - LinkedIn : lien **provisoire** (`https://www.linkedin.com/`, marqué « À FAIRE ») en attendant l'adresse du profil.
 
