@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="Procédures et notes techniques de Janis Creach sur l'administration des systèmes et des réseaux.">
+  <meta name="description" content="Procedures and technical notes by Janis Creach on systems and network administration.">
   <title>Documentation — Janis Creach</title>
 
   <!-- Icône de l'onglet -->
@@ -62,7 +62,7 @@
     <section class="section en-tete-page">
       <p class="etiquette-mono">// Documentation</p>
       <h1>Documentation</h1>
-      <p class="texte-intro">Procédures et notes techniques sur l'administration des systèmes et des réseaux.</p>
+      <p class="texte-intro">Procedures and technical notes on systems and network administration.</p>
     </section>
 
     <!-- ===================== Liste des documents ===================== -->
@@ -73,41 +73,41 @@
           <a class="doc" href="#article-vlan">
             <span class="doc__date">15.10.2026</span>
             <span>
-              <span class="doc__titre">Configurer des VLAN et le routage inter-VLAN</span>
-              <span class="doc__resume">Création des VLAN, ports d'accès, lien trunk et sous-interfaces sur du matériel Cisco.</span>
+              <span class="doc__titre">Configuring VLANs and inter-VLAN routing</span>
+              <span class="doc__resume">Creating VLANs, access ports, a trunk link and subinterfaces on Cisco equipment.</span>
             </span>
-            <span class="etiquette">Tutoriel</span>
+            <span class="etiquette">Tutorial</span>
             <span class="fleche" aria-hidden="true">→</span>
           </a>
         </li>
         <li>
           <div class="doc doc--a-venir">
-            <span class="doc__date">À venir</span>
+            <span class="doc__date">Coming soon</span>
             <span>
-              <span class="doc__titre">Installer un portail captif Alcasar</span>
-              <span class="doc__resume">Installation, configuration des utilisateurs et contrôle de l'accès à Internet.</span>
+              <span class="doc__titre">Installing an Alcasar captive portal</span>
+              <span class="doc__resume">Installation, user configuration and Internet access control.</span>
             </span>
-            <span class="etiquette">Procédure</span>
+            <span class="etiquette">Procedure</span>
           </div>
         </li>
         <li>
           <div class="doc doc--a-venir">
-            <span class="doc__date">À venir</span>
+            <span class="doc__date">Coming soon</span>
             <span>
-              <span class="doc__titre">Superviser son réseau avec Zabbix et SNMP</span>
-              <span class="doc__resume">Ajout des équipements, modèles de supervision et alertes.</span>
+              <span class="doc__titre">Monitoring your network with Zabbix and SNMP</span>
+              <span class="doc__resume">Adding devices, monitoring templates and alerts.</span>
             </span>
-            <span class="etiquette">Supervision</span>
+            <span class="etiquette">Monitoring</span>
           </div>
         </li>
         <li>
           <div class="doc doc--a-venir">
-            <span class="doc__date">À venir</span>
+            <span class="doc__date">Coming soon</span>
             <span>
-              <span class="doc__titre">Analyser des trames avec Wireshark</span>
-              <span class="doc__resume">Filtres utiles et lecture des échanges ARP, DHCP et DNS.</span>
+              <span class="doc__titre">Analysing frames with Wireshark</span>
+              <span class="doc__resume">Useful filters and reading ARP, DHCP and DNS exchanges.</span>
             </span>
-            <span class="etiquette">Mémo</span>
+            <span class="etiquette">Cheat sheet</span>
           </div>
         </li>
       </ul>
@@ -116,22 +116,22 @@
     <!-- ===================== Article ===================== -->
     <section class="section" id="article-vlan">
       <article class="article">
-        <p class="etiquette-mono">// Tutoriel · 15.10.2026 · 5 min de lecture</p>
-        <h2>Configurer des VLAN et le routage inter-VLAN</h2>
-        <p class="texte-intro">Séparer un réseau en VLAN isole les services (administration, utilisateurs, invités…). Pour qu'ils communiquent malgré tout, on ajoute un routage inter-VLAN, ici avec un routeur relié au commutateur par un seul lien trunk («&nbsp;router on a stick&nbsp;»).</p>
+        <p class="etiquette-mono">// Tutorial · 15.10.2026 · 5 min read</p>
+        <h2>Configuring VLANs and inter-VLAN routing</h2>
+        <p class="texte-intro">Splitting a network into VLANs isolates services (administration, users, guests…). So that they can still communicate, inter-VLAN routing is added, here with a router connected to the switch by a single trunk link (“router on a stick”).</p>
 
-        <h3>1. Créer les VLAN sur le commutateur</h3>
-        <p>On crée un VLAN par service et on lui donne un nom explicite.</p>
+        <h3>1. Create the VLANs on the switch</h3>
+        <p>One VLAN is created per service and given a descriptive name.</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">cisco ios</p>
           <pre tabindex="0"><code>Switch(config)# vlan 10
 Switch(config-vlan)# name ADMINISTRATION
 Switch(config-vlan)# vlan 20
-Switch(config-vlan)# name UTILISATEURS</code></pre>
+Switch(config-vlan)# name USERS</code></pre>
         </div>
 
-        <h3>2. Affecter les ports aux VLAN</h3>
-        <p>Les ports reliés aux postes passent en mode <code>access</code> dans le VLAN voulu.</p>
+        <h3>2. Assign the ports to the VLANs</h3>
+        <p>The ports connected to the workstations are set to <code>access</code> mode in the appropriate VLAN.</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">cisco ios</p>
           <pre tabindex="0"><code>Switch(config)# interface range fa0/1 - 12
@@ -142,8 +142,8 @@ Switch(config-if-range)# switchport mode access
 Switch(config-if-range)# switchport access vlan 20</code></pre>
         </div>
 
-        <h3>3. Créer le lien trunk vers le routeur</h3>
-        <p>Le port relié au routeur transporte tous les VLAN, chaque trame étant marquée avec son numéro de VLAN (norme 802.1Q).</p>
+        <h3>3. Create the trunk link to the router</h3>
+        <p>The port connected to the router carries all the VLANs, each frame being tagged with its VLAN number (802.1Q standard).</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">cisco ios</p>
           <pre tabindex="0"><code>Switch(config)# interface gi0/1
@@ -151,11 +151,11 @@ Switch(config-if)# switchport mode trunk</code></pre>
         </div>
 
         <div class="note">
-          <p><strong>À savoir&nbsp;:</strong> sur certains commutateurs (par exemple les Catalyst 3560), il faut d'abord indiquer <code>switchport trunk encapsulation dot1q</code> avant de passer le port en mode trunk.</p>
+          <p><strong>Good to know:</strong> on some switches (for example the Catalyst 3560), you must first enter <code>switchport trunk encapsulation dot1q</code> before setting the port to trunk mode.</p>
         </div>
 
-        <h3>4. Configurer les sous-interfaces du routeur</h3>
-        <p>Sur le routeur, on crée une sous-interface par VLAN. Son adresse IP sert de passerelle par défaut aux postes de ce VLAN.</p>
+        <h3>4. Configure the router subinterfaces</h3>
+        <p>On the router, one subinterface is created per VLAN. Its IP address serves as the default gateway for the workstations in that VLAN.</p>
         <div class="bloc-code">
           <p class="bloc-code__langage">cisco ios</p>
           <pre tabindex="0"><code>Router(config)# interface gi0/0
@@ -168,11 +168,11 @@ Router(config-subif)# encapsulation dot1Q 20
 Router(config-subif)# ip address 192.168.20.254 255.255.255.0</code></pre>
         </div>
 
-        <h3>5. Vérifier</h3>
+        <h3>5. Verify</h3>
         <ul>
-          <li><code>show vlan brief</code> sur le commutateur&nbsp;: chaque port est dans le bon VLAN&nbsp;;</li>
-          <li><code>show interfaces trunk</code>&nbsp;: le lien vers le routeur est bien en trunk&nbsp;;</li>
-          <li>un <code>ping</code> d'un poste du VLAN 10 vers un poste du VLAN 20 doit répondre.</li>
+          <li><code>show vlan brief</code> on the switch: each port is in the right VLAN;</li>
+          <li><code>show interfaces trunk</code>: the link to the router is indeed in trunk mode;</li>
+          <li>a <code>ping</code> from a workstation in VLAN 10 to a workstation in VLAN 20 should get a reply.</li>
         </ul>
       </article>
     </section>

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="Définitions des notions citées dans le portfolio de Janis Creach : BTS SIO, SISR, DHCP, VLAN, RADIUS, SIEM, Corosync…">
-  <title>Définitions — Janis Creach</title>
+  <meta name="description" content="Definitions of the terms mentioned in Janis Creach's portfolio: BTS SIO, SISR, DHCP, VLAN, RADIUS, SIEM, Corosync…">
+  <title>Glossary — Janis Creach</title>
 
   <!-- Icône de l'onglet -->
   <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
@@ -61,349 +61,349 @@
   <main id="contenu" class="page">
     <!-- ===================== En-tête de page ===================== -->
     <section class="section en-tete-page">
-      <p class="etiquette-mono">// Définition</p>
-      <h1>Définitions</h1>
-      <p class="texte-intro">Les notions, protocoles et outils cités sur ce portfolio, expliqués simplement.</p>
+      <p class="etiquette-mono">// Glossary</p>
+      <h1>Glossary</h1>
+      <p class="texte-intro">The concepts, protocols and tools mentioned in this portfolio, explained simply.</p>
       <div class="recherche" role="search">
-        <label class="visuellement-cache" for="recherche-definitions">Rechercher une définition</label>
+        <label class="visuellement-cache" for="recherche-definitions">Search for a definition</label>
         <span class="recherche__icone" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5"/></svg>
         </span>
-        <input class="recherche__champ" id="recherche-definitions" type="search" placeholder="Rechercher (DHCP, VLAN…)" autocomplete="off" spellcheck="false">
+        <input class="recherche__champ" id="recherche-definitions" type="search" placeholder="Search (DHCP, VLAN…)" autocomplete="off" spellcheck="false">
       </div>
       <p class="recherche__resultat" id="recherche-resultat" aria-live="polite"></p>
-      <nav class="sommaire" aria-label="Catégories de définitions">
-        <a class="sommaire__lien" href="#formation">Formation</a>
-        <a class="sommaire__lien" href="#reseau">Réseau</a>
-        <a class="sommaire__lien" href="#securite">Sécurité</a>
-        <a class="sommaire__lien" href="#systemes">Systèmes et virtualisation</a>
+      <nav class="sommaire" aria-label="Definition categories">
+        <a class="sommaire__lien" href="#formation">Education</a>
+        <a class="sommaire__lien" href="#reseau">Networking</a>
+        <a class="sommaire__lien" href="#securite">Security</a>
+        <a class="sommaire__lien" href="#systemes">Systems and virtualisation</a>
         <a class="sommaire__lien" href="#os">OS</a>
-        <a class="sommaire__lien" href="#supervision">Supervision et support</a>
-        <a class="sommaire__lien" href="#organismes">Organismes</a>
+        <a class="sommaire__lien" href="#supervision">Monitoring and support</a>
+        <a class="sommaire__lien" href="#organismes">Organisations</a>
       </nav>
     </section>
 
     <!-- ===================== Formation ===================== -->
     <section class="section" id="formation">
-      <h2 class="titre-section">Formation</h2>
+      <h2 class="titre-section">Education</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="bts-sio">
-          <dt class="glossaire__terme">BTS SIO <span class="glossaire__nom-complet">Brevet de technicien supérieur Services informatiques aux organisations</span></dt>
-          <dd class="glossaire__definition">Diplôme d'État de niveau bac+2, préparé en deux ans, qui forme des techniciens capables de gérer le système d'information d'une organisation. Il propose deux options&nbsp;: SISR et SLAM.</dd>
+          <dt class="glossaire__terme">BTS SIO <span class="glossaire__nom-complet">Brevet de technicien supérieur Services informatiques aux organisations (Higher Technician's Certificate in IT Services for Organisations)</span></dt>
+          <dd class="glossaire__definition">French state diploma at bac+2 level (two years after the baccalauréat), prepared over two years, that trains technicians able to manage an organisation's information system. It has two options: SISR and SLAM.</dd>
         </div>
         <div class="glossaire__entree" id="sisr">
-          <dt class="glossaire__terme">Option SISR <span class="glossaire__nom-complet">Solutions d'infrastructure, systèmes et réseaux</span></dt>
-          <dd class="glossaire__definition">Option du BTS SIO centrée sur l'installation, l'administration et la sécurisation des réseaux, des serveurs et des postes de travail.</dd>
+          <dt class="glossaire__terme">SISR option <span class="glossaire__nom-complet">Solutions d'infrastructure, systèmes et réseaux (Infrastructure, Systems and Networks Solutions)</span></dt>
+          <dd class="glossaire__definition">Option of the BTS SIO focused on installing, administering and securing networks, servers and workstations.</dd>
         </div>
         <div class="glossaire__entree" id="slam">
-          <dt class="glossaire__terme">Option SLAM <span class="glossaire__nom-complet">Solutions logicielles et applications métiers</span></dt>
-          <dd class="glossaire__definition">L'autre option du BTS SIO, centrée sur la conception et le développement d'applications.</dd>
+          <dt class="glossaire__terme">SLAM option <span class="glossaire__nom-complet">Solutions logicielles et applications métiers (Software Solutions and Business Applications)</span></dt>
+          <dd class="glossaire__definition">The other option of the BTS SIO, focused on designing and developing applications.</dd>
         </div>
         <div class="glossaire__entree" id="bac-pro-sn-risc">
-          <dt class="glossaire__terme">Bac Pro SN option RISC <span class="glossaire__nom-complet">Systèmes numériques, option Réseaux informatiques et systèmes communicants</span></dt>
-          <dd class="glossaire__definition">Baccalauréat professionnel en trois ans qui forme à l'installation et à la maintenance des réseaux et des équipements informatiques. Il a été remplacé par le Bac Pro CIEL (cybersécurité, informatique et réseaux, électronique) pour les élèves entrés en seconde à partir de 2023.</dd>
+          <dt class="glossaire__terme">Bac Pro SN RISC option <span class="glossaire__nom-complet">Systèmes numériques, option Réseaux informatiques et systèmes communicants (Digital Systems, Computer Networks and Communicating Systems option)</span></dt>
+          <dd class="glossaire__definition">Three-year vocational baccalauréat (French vocational high-school diploma) that trains students in installing and maintaining computer networks and equipment. It was replaced by the Bac Pro CIEL (cybersecurity, IT and networks, electronics) for students who entered seconde (the first year of upper secondary school) from 2023 onwards.</dd>
         </div>
         <div class="glossaire__entree" id="mooc">
           <dt class="glossaire__terme">MOOC <span class="glossaire__nom-complet">Massive Open Online Course</span></dt>
-          <dd class="glossaire__definition">Cours en ligne ouvert à tous, souvent gratuit, comme la SecNumacadémie de l'ANSSI ou l'Atelier RGPD de la CNIL.</dd>
+          <dd class="glossaire__definition">Online course open to everyone, often free, such as the ANSSI's SecNumacadémie or the CNIL's Atelier RGPD.</dd>
         </div>
         <div class="glossaire__entree" id="ctf">
           <dt class="glossaire__terme">CTF <span class="glossaire__nom-complet">Capture The Flag</span></dt>
-          <dd class="glossaire__definition">Exercice ou compétition de cybersécurité où il faut trouver et exploiter des failles pour récupérer des «&nbsp;drapeaux&nbsp;» cachés.</dd>
+          <dd class="glossaire__definition">Cybersecurity exercise or competition in which you have to find and exploit vulnerabilities to retrieve hidden “flags”.</dd>
         </div>
         <div class="glossaire__entree" id="portfolio">
-          <dt class="glossaire__terme">Portfolio <span class="glossaire__nom-complet">Portefeuille de compétences</span></dt>
-          <dd class="glossaire__definition">Recueil de réalisations, de compétences et de documents qui présente le parcours et le savoir-faire d'une personne (parfois écrit «&nbsp;portefolio&nbsp;»). Ce site est le portfolio de Janis Creach&nbsp;: CV, projets, certifications et documentation.</dd>
+          <dt class="glossaire__terme">Portfolio <span class="glossaire__nom-complet">Skills portfolio</span></dt>
+          <dd class="glossaire__definition">A collection of achievements, skills and documents that presents a person's background and know-how (sometimes spelt “portefolio” in French). This site is Janis Creach's portfolio: CV, projects, certifications and documentation.</dd>
         </div>
       </dl>
     </section>
 
     <!-- ===================== Réseau ===================== -->
     <section class="section" id="reseau">
-      <h2 class="titre-section">Réseau</h2>
+      <h2 class="titre-section">Networking</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="adresse-ip">
-          <dt class="glossaire__terme">Adresse IP <span class="glossaire__nom-complet">Internet Protocol</span></dt>
-          <dd class="glossaire__definition">Identifiant numérique d'une machine sur un réseau, par exemple 192.168.10.12 en IPv4. Associée à un masque, elle indique aussi à quel réseau la machine appartient.</dd>
+          <dt class="glossaire__terme">IP address <span class="glossaire__nom-complet">Internet Protocol</span></dt>
+          <dd class="glossaire__definition">Numerical identifier of a machine on a network, for example 192.168.10.12 in IPv4. Combined with a subnet mask, it also indicates which network the machine belongs to.</dd>
         </div>
         <div class="glossaire__entree" id="passerelle">
-          <dt class="glossaire__terme">Passerelle par défaut</dt>
-          <dd class="glossaire__definition">Adresse du routeur auquel une machine envoie tout le trafic destiné à un autre réseau, par exemple Internet.</dd>
+          <dt class="glossaire__terme">Default gateway</dt>
+          <dd class="glossaire__definition">Address of the router to which a machine sends all traffic destined for another network, for example the Internet.</dd>
         </div>
         <div class="glossaire__entree" id="dhcp">
           <dt class="glossaire__terme">DHCP <span class="glossaire__nom-complet">Dynamic Host Configuration Protocol</span></dt>
-          <dd class="glossaire__definition">Protocole qui attribue automatiquement aux machines leur configuration réseau&nbsp;: adresse IP, masque, passerelle et serveurs DNS. L'échange se fait en quatre étapes&nbsp;: Discover, Offer, Request, Acknowledge (DORA).</dd>
+          <dd class="glossaire__definition">Protocol that automatically assigns machines their network configuration: IP address, subnet mask, gateway and DNS servers. The exchange takes place in four steps: Discover, Offer, Request, Acknowledge (DORA).</dd>
         </div>
         <div class="glossaire__entree" id="dns">
           <dt class="glossaire__terme">DNS <span class="glossaire__nom-complet">Domain Name System</span></dt>
-          <dd class="glossaire__definition">Service qui traduit les noms de domaine (comme github.com) en adresses IP, un peu comme un annuaire.</dd>
+          <dd class="glossaire__definition">Service that translates domain names (such as github.com) into IP addresses, a bit like a phone book.</dd>
         </div>
         <div class="glossaire__entree" id="vlan">
           <dt class="glossaire__terme">VLAN <span class="glossaire__nom-complet">Virtual Local Area Network</span></dt>
-          <dd class="glossaire__definition">Réseau local virtuel&nbsp;: il découpe un même commutateur en plusieurs réseaux isolés (administration, utilisateurs, invités…) sans changer le câblage.</dd>
+          <dd class="glossaire__definition">Virtual local area network: it divides a single switch into several isolated networks (administration, users, guests…) without changing the cabling.</dd>
         </div>
         <div class="glossaire__entree" id="trunk">
-          <dt class="glossaire__terme">Trunk <span class="glossaire__nom-complet">Norme IEEE 802.1Q</span></dt>
-          <dd class="glossaire__definition">Lien entre deux équipements qui transporte plusieurs VLAN à la fois. Chaque trame porte une étiquette qui indique à quel VLAN elle appartient.</dd>
+          <dt class="glossaire__terme">Trunk <span class="glossaire__nom-complet">IEEE 802.1Q standard</span></dt>
+          <dd class="glossaire__definition">Link between two devices that carries several VLANs at once. Each frame carries a tag that indicates which VLAN it belongs to.</dd>
         </div>
         <div class="glossaire__entree" id="routage-inter-vlan">
-          <dt class="glossaire__terme">Routage inter-VLAN</dt>
-          <dd class="glossaire__definition">Mécanisme qui permet à des VLAN, isolés par défaut, de communiquer entre eux à travers un routeur ou un commutateur de niveau 3, avec si besoin des règles de filtrage.</dd>
+          <dt class="glossaire__terme">Inter-VLAN routing</dt>
+          <dd class="glossaire__definition">Mechanism that allows VLANs, isolated by default, to communicate with each other through a router or a layer 3 switch, with filtering rules where needed.</dd>
         </div>
         <div class="glossaire__entree" id="stp">
           <dt class="glossaire__terme">STP <span class="glossaire__nom-complet">Spanning Tree Protocol</span></dt>
-          <dd class="glossaire__definition">Protocole qui évite les boucles dans un réseau de commutateurs&nbsp;: il bloque les liens redondants et les réactive si un lien tombe en panne.</dd>
+          <dd class="glossaire__definition">Protocol that prevents loops in a network of switches: it blocks redundant links and reactivates them if a link fails.</dd>
         </div>
         <div class="glossaire__entree" id="wi-fi">
-          <dt class="glossaire__terme">Wi-Fi <span class="glossaire__nom-complet">Normes IEEE 802.11</span></dt>
-          <dd class="glossaire__definition">Technologie de réseau local sans fil qui relie les appareils à un point d'accès par ondes radio.</dd>
+          <dt class="glossaire__terme">Wi-Fi <span class="glossaire__nom-complet">IEEE 802.11 standards</span></dt>
+          <dd class="glossaire__definition">Wireless local area network technology that connects devices to an access point using radio waves.</dd>
         </div>
         <div class="glossaire__entree" id="radius">
           <dt class="glossaire__terme">RADIUS <span class="glossaire__nom-complet">Remote Authentication Dial-In User Service</span></dt>
-          <dd class="glossaire__definition">Protocole qui centralise l'authentification des utilisateurs, leurs autorisations et la traçabilité de leurs connexions. Il sert souvent à sécuriser un Wi-Fi d'entreprise avec des identifiants personnels (802.1X).</dd>
+          <dd class="glossaire__definition">Protocol that centralises the authentication and authorisations of users, and the traceability of their connections. It is often used to secure a corporate Wi-Fi network with personal credentials (802.1X).</dd>
         </div>
         <div class="glossaire__entree" id="trame">
-          <dt class="glossaire__terme">Trame</dt>
-          <dd class="glossaire__definition">Unité de données échangée sur un réseau local (par exemple Ethernet). Elle contient notamment les adresses MAC de l'émetteur et du destinataire.</dd>
+          <dt class="glossaire__terme">Frame</dt>
+          <dd class="glossaire__definition">Unit of data exchanged on a local network (for example Ethernet). It contains, among other things, the MAC addresses of the sender and the recipient.</dd>
         </div>
         <div class="glossaire__entree" id="wireshark">
           <dt class="glossaire__terme">Wireshark</dt>
-          <dd class="glossaire__definition">Logiciel libre d'analyse réseau qui capture et décode les trames et les paquets, très utile pour comprendre ou dépanner un échange.</dd>
+          <dd class="glossaire__definition">Open-source network analysis software that captures and decodes frames and packets, very useful for understanding or troubleshooting an exchange.</dd>
         </div>
       </dl>
     </section>
 
     <!-- ===================== Sécurité ===================== -->
     <section class="section" id="securite">
-      <h2 class="titre-section">Sécurité</h2>
+      <h2 class="titre-section">Security</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="nac">
           <dt class="glossaire__terme">NAC <span class="glossaire__nom-complet">Network Access Control</span></dt>
-          <dd class="glossaire__definition">Contrôle d'accès au réseau&nbsp;: ensemble de mécanismes qui décident qui, ou quel appareil, a le droit de se connecter au réseau et dans quelles conditions.</dd>
+          <dd class="glossaire__definition">Network access control: a set of mechanisms that decide who, or which device, is allowed to connect to the network and under what conditions.</dd>
         </div>
         <div class="glossaire__entree" id="portail-captif">
-          <dt class="glossaire__terme">Portail captif</dt>
-          <dd class="glossaire__definition">Page web qui s'affiche avant tout accès à Internet et demande à l'utilisateur de s'identifier, comme sur les Wi-Fi publics.</dd>
+          <dt class="glossaire__terme">Captive portal</dt>
+          <dd class="glossaire__definition">Web page displayed before any Internet access is granted, asking the user to identify themselves, as on public Wi-Fi networks.</dd>
         </div>
         <div class="glossaire__entree" id="alcasar">
-          <dt class="glossaire__terme">Alcasar <span class="glossaire__nom-complet">Application libre pour le contrôle d'accès sécurisé et authentifié au réseau</span></dt>
-          <dd class="glossaire__definition">Contrôleur d'accès au réseau libre et français&nbsp;: portail captif, authentification des utilisateurs, traçabilité des connexions et filtrage.</dd>
+          <dt class="glossaire__terme">Alcasar <span class="glossaire__nom-complet">Application libre pour le contrôle d'accès sécurisé et authentifié au réseau (Free application for secure, authenticated network access control)</span></dt>
+          <dd class="glossaire__definition">French open-source network access controller: captive portal, user authentication, connection traceability and filtering.</dd>
         </div>
         <div class="glossaire__entree" id="pare-feu">
-          <dt class="glossaire__terme">Pare-feu <span class="glossaire__nom-complet">Firewall</span></dt>
-          <dd class="glossaire__definition">Équipement ou logiciel qui filtre le trafic réseau selon des règles (adresses, ports, protocoles) pour bloquer ce qui n'est pas autorisé.</dd>
+          <dt class="glossaire__terme">Firewall <span class="glossaire__nom-complet">Pare-feu in French</span></dt>
+          <dd class="glossaire__definition">Device or software that filters network traffic according to rules (addresses, ports, protocols) to block anything that is not allowed.</dd>
         </div>
         <div class="glossaire__entree" id="vpn">
           <dt class="glossaire__terme">VPN <span class="glossaire__nom-complet">Virtual Private Network</span></dt>
-          <dd class="glossaire__definition">Réseau privé virtuel&nbsp;: tunnel chiffré qui relie un utilisateur ou un site distant au réseau de l'entreprise à travers Internet.</dd>
+          <dd class="glossaire__definition">Virtual private network: an encrypted tunnel that connects a remote user or site to the company network across the Internet.</dd>
         </div>
         <div class="glossaire__entree" id="ssh">
           <dt class="glossaire__terme">SSH <span class="glossaire__nom-complet">Secure Shell</span></dt>
-          <dd class="glossaire__definition">Protocole qui permet d'administrer une machine à distance en ligne de commande, grâce à une connexion chiffrée (port 22 par défaut).</dd>
+          <dd class="glossaire__definition">Protocol that makes it possible to administer a machine remotely from the command line, over an encrypted connection (port 22 by default).</dd>
         </div>
         <div class="glossaire__entree" id="tls-https">
-          <dt class="glossaire__terme">SSL/TLS et HTTPS <span class="glossaire__nom-complet">Transport Layer Security</span></dt>
-          <dd class="glossaire__definition">TLS, qui a succédé à SSL, chiffre et authentifie les échanges sur un réseau. HTTPS est le protocole du web (HTTP) protégé par TLS&nbsp;: le navigateur l'indique dans la barre d'adresse, souvent par un cadenas.</dd>
+          <dt class="glossaire__terme">SSL/TLS and HTTPS <span class="glossaire__nom-complet">Transport Layer Security</span></dt>
+          <dd class="glossaire__definition">TLS, which succeeded SSL, encrypts and authenticates exchanges over a network. HTTPS is the web protocol (HTTP) protected by TLS: the browser indicates this in the address bar, often with a padlock.</dd>
         </div>
         <div class="glossaire__entree" id="certificat">
-          <dt class="glossaire__terme">Certificat</dt>
-          <dd class="glossaire__definition">Fichier électronique, signé par une autorité de certification, qui associe une clé publique à une identité (un site, un serveur). Il permet de vérifier qu'on communique avec le bon serveur.</dd>
+          <dt class="glossaire__terme">Certificate</dt>
+          <dd class="glossaire__definition">Electronic file, signed by a certificate authority, that links a public key to an identity (a website, a server). It makes it possible to check that you are communicating with the right server.</dd>
         </div>
         <div class="glossaire__entree" id="ids-ips">
           <dt class="glossaire__terme">IDS / IPS <span class="glossaire__nom-complet">Intrusion Detection / Prevention System</span></dt>
-          <dd class="glossaire__definition">Un IDS détecte les comportements suspects sur le réseau ou sur une machine et donne l'alerte. Un IPS peut en plus les bloquer automatiquement.</dd>
+          <dd class="glossaire__definition">An IDS detects suspicious behaviour on the network or on a machine and raises an alert. An IPS can also block it automatically.</dd>
         </div>
         <div class="glossaire__entree" id="siem">
           <dt class="glossaire__terme">SIEM <span class="glossaire__nom-complet">Security Information and Event Management</span></dt>
-          <dd class="glossaire__definition">Outil qui centralise les journaux de nombreux équipements, les met en corrélation et génère des alertes de sécurité.</dd>
+          <dd class="glossaire__definition">Tool that centralises the logs of many devices, correlates them and generates security alerts.</dd>
         </div>
         <div class="glossaire__entree" id="xdr">
           <dt class="glossaire__terme">XDR <span class="glossaire__nom-complet">Extended Detection and Response</span></dt>
-          <dd class="glossaire__definition">Approche qui détecte les menaces et aide à y répondre en croisant les données de plusieurs sources&nbsp;: postes, serveurs, réseau, cloud.</dd>
+          <dd class="glossaire__definition">Approach that detects threats and helps respond to them by cross-referencing data from several sources: workstations, servers, network, cloud.</dd>
         </div>
         <div class="glossaire__entree" id="soc">
           <dt class="glossaire__terme">SOC <span class="glossaire__nom-complet">Security Operations Center</span></dt>
-          <dd class="glossaire__definition">Centre opérationnel de sécurité&nbsp;: équipe et outils chargés de surveiller en continu un système d'information et de traiter les incidents de sécurité.</dd>
+          <dd class="glossaire__definition">Security operations centre: a team and tools responsible for continuously monitoring an information system and handling security incidents.</dd>
         </div>
         <div class="glossaire__entree" id="wazuh">
           <dt class="glossaire__terme">Wazuh</dt>
-          <dd class="glossaire__definition">Plateforme de sécurité libre (SIEM et XDR)&nbsp;: des agents installés sur les machines remontent les événements, qui sont analysés pour détecter intrusions et anomalies.</dd>
+          <dd class="glossaire__definition">Open-source security platform (SIEM and XDR): agents installed on machines report events, which are analysed to detect intrusions and anomalies.</dd>
         </div>
         <div class="glossaire__entree" id="pentest">
-          <dt class="glossaire__terme">Pentest <span class="glossaire__nom-complet">Test d'intrusion</span></dt>
-          <dd class="glossaire__definition">Attaque simulée et autorisée d'un système pour en trouver les failles avant qu'elles ne soient exploitées par de vrais attaquants.</dd>
+          <dt class="glossaire__terme">Pentest <span class="glossaire__nom-complet">Penetration test</span></dt>
+          <dd class="glossaire__definition">Simulated, authorised attack on a system to find its weaknesses before they are exploited by real attackers.</dd>
         </div>
         <div class="glossaire__entree" id="kali-linux">
           <dt class="glossaire__terme">Kali Linux</dt>
-          <dd class="glossaire__definition">Distribution Linux spécialisée dans les tests de sécurité, livrée avec des centaines d'outils d'audit et de test d'intrusion.</dd>
+          <dd class="glossaire__definition">Linux distribution specialising in security testing, supplied with hundreds of audit and penetration testing tools.</dd>
         </div>
         <div class="glossaire__entree" id="metasploit">
           <dt class="glossaire__terme">Metasploit</dt>
-          <dd class="glossaire__definition">Framework de test d'intrusion qui permet de vérifier si des vulnérabilités connues peuvent être exploitées sur un système.</dd>
+          <dd class="glossaire__definition">Penetration testing framework that makes it possible to check whether known vulnerabilities can be exploited on a system.</dd>
         </div>
       </dl>
     </section>
 
     <!-- ===================== Systèmes et virtualisation ===================== -->
     <section class="section" id="systemes">
-      <h2 class="titre-section">Systèmes et virtualisation</h2>
+      <h2 class="titre-section">Systems and virtualisation</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="virtualisation">
           <dt class="glossaire__terme">Virtualisation</dt>
-          <dd class="glossaire__definition">Technique qui fait fonctionner plusieurs machines virtuelles, chacune avec son propre système, sur un même serveur physique.</dd>
+          <dd class="glossaire__definition">Technique that runs several virtual machines, each with its own operating system, on a single physical server.</dd>
         </div>
         <div class="glossaire__entree" id="hyperviseur">
-          <dt class="glossaire__terme">Hyperviseur</dt>
-          <dd class="glossaire__definition">Logiciel qui crée et fait tourner les machines virtuelles. Un hyperviseur de type 1 s'installe directement sur le serveur (Proxmox VE, VMware ESXi)&nbsp;; un hyperviseur de type 2 fonctionne dans un système existant (VirtualBox, VMware Workstation).</dd>
+          <dt class="glossaire__terme">Hypervisor</dt>
+          <dd class="glossaire__definition">Software that creates and runs virtual machines. A type 1 hypervisor is installed directly on the server (Proxmox VE, VMware ESXi); a type 2 hypervisor runs inside an existing operating system (VirtualBox, VMware Workstation).</dd>
         </div>
         <div class="glossaire__entree" id="proxmox">
           <dt class="glossaire__terme">Proxmox VE <span class="glossaire__nom-complet">Proxmox Virtual Environment</span></dt>
-          <dd class="glossaire__definition">Plateforme de virtualisation libre basée sur Debian. Elle gère des machines virtuelles (KVM) et des conteneurs (LXC) depuis une interface web, et peut fonctionner en cluster.</dd>
+          <dd class="glossaire__definition">Open-source virtualisation platform based on Debian. It manages virtual machines (KVM) and containers (LXC) from a web interface, and can run as a cluster.</dd>
         </div>
         <div class="glossaire__entree" id="esxi">
           <dt class="glossaire__terme">VMware ESXi</dt>
-          <dd class="glossaire__definition">Hyperviseur de type 1 de VMware, très répandu en entreprise pour virtualiser les serveurs. Depuis la version 9.0 (juin 2025), VMware le nomme «&nbsp;ESX&nbsp;»&nbsp;; les versions précédentes, comme la 8.0, s'appellent «&nbsp;ESXi&nbsp;».</dd>
+          <dd class="glossaire__definition">Type 1 hypervisor from VMware, widely used in companies to virtualise servers. Since version 9.0 (June 2025), VMware has called it “ESX”; earlier versions, such as 8.0, are called “ESXi”.</dd>
         </div>
         <div class="glossaire__entree" id="raid">
           <dt class="glossaire__terme">RAID <span class="glossaire__nom-complet">Redundant Array of Independent Disks</span></dt>
-          <dd class="glossaire__definition">Regroupement de plusieurs disques pour gagner en performance ou en tolérance aux pannes. En RAID 1, par exemple, les données sont copiées à l'identique sur deux disques.</dd>
+          <dd class="glossaire__definition">Grouping of several disks to gain performance or fault tolerance. In RAID 1, for example, the data is copied identically onto two disks.</dd>
         </div>
         <div class="glossaire__entree" id="haute-disponibilite">
-          <dt class="glossaire__terme">Haute disponibilité</dt>
-          <dd class="glossaire__definition">Ensemble de techniques (redondance, bascule automatique) qui permettent à un service de rester accessible même si un serveur ou un équipement tombe en panne.</dd>
+          <dt class="glossaire__terme">High availability</dt>
+          <dd class="glossaire__definition">Set of techniques (redundancy, automatic failover) that allow a service to remain accessible even if a server or a piece of equipment fails.</dd>
         </div>
         <div class="glossaire__entree" id="cluster">
           <dt class="glossaire__terme">Cluster</dt>
-          <dd class="glossaire__definition">Groupe de serveurs qui travaillent ensemble et se surveillent, pour se répartir la charge ou prendre le relais en cas de panne.</dd>
+          <dd class="glossaire__definition">Group of servers that work together and monitor each other, to share the load or take over in the event of a failure.</dd>
         </div>
         <div class="glossaire__entree" id="quorum">
           <dt class="glossaire__terme">Quorum</dt>
-          <dd class="glossaire__definition">Nombre minimal de membres d'un cluster qui doivent être présents pour qu'il continue de fonctionner, en général plus de la moitié. Si une panne réseau coupe le cluster en deux, seul le groupe majoritaire garde les services&nbsp;; l'autre s'arrête, ce qui évite que deux serveurs modifient les mêmes données en même temps («&nbsp;split&#8209;brain&nbsp;»). D'où l'intérêt d'un nombre impair de serveurs (3, 5…).</dd>
+          <dd class="glossaire__definition">Minimum number of cluster members that must be present for it to keep working, generally more than half. If a network failure splits the cluster in two, only the majority group keeps the services; the other stops, which prevents two servers from modifying the same data at the same time (“split&#8209;brain”). This is why an odd number of servers (3, 5…) is useful.</dd>
         </div>
         <div class="glossaire__entree" id="corosync">
           <dt class="glossaire__terme">Corosync</dt>
-          <dd class="glossaire__definition">Logiciel libre qui assure la communication entre les serveurs d'un cluster&nbsp;: il sait en permanence lesquels sont actifs et vérifie le quorum, c'est-à-dire qu'assez de serveurs sont présents pour prendre des décisions.</dd>
+          <dd class="glossaire__definition">Open-source software that handles communication between the servers of a cluster: it knows at all times which ones are active and checks the quorum, that is, whether enough servers are present to make decisions.</dd>
         </div>
         <div class="glossaire__entree" id="pacemaker">
           <dt class="glossaire__terme">Pacemaker</dt>
-          <dd class="glossaire__definition">Gestionnaire de ressources de cluster libre&nbsp;: il démarre et surveille les services, et les bascule automatiquement sur un autre serveur en cas de panne. Il s'appuie sur Corosync.</dd>
+          <dd class="glossaire__definition">Open-source cluster resource manager: it starts and monitors services, and automatically switches them over to another server in the event of a failure. It relies on Corosync.</dd>
         </div>
         <div class="glossaire__entree" id="repartition-de-charge">
-          <dt class="glossaire__terme">Répartition de charge <span class="glossaire__nom-complet">Load balancing</span></dt>
-          <dd class="glossaire__definition">Distribution des requêtes entre plusieurs serveurs, pour qu'aucun ne soit surchargé et que le service continue si l'un d'eux tombe.</dd>
+          <dt class="glossaire__terme">Load balancing <span class="glossaire__nom-complet">Répartition de charge in French</span></dt>
+          <dd class="glossaire__definition">Distribution of requests between several servers, so that none is overloaded and the service continues if one of them fails.</dd>
         </div>
         <div class="glossaire__entree" id="apache">
           <dt class="glossaire__terme">Apache <span class="glossaire__nom-complet">Apache HTTP Server</span></dt>
-          <dd class="glossaire__definition">Serveur web libre, parmi les plus utilisés, qui envoie les pages des sites aux navigateurs.</dd>
+          <dd class="glossaire__definition">Open-source web server, one of the most widely used, that sends website pages to browsers.</dd>
         </div>
         <div class="glossaire__entree" id="mysql">
           <dt class="glossaire__terme">MySQL</dt>
-          <dd class="glossaire__definition">Système de gestion de bases de données relationnelles, utilisé par de nombreuses applications web.</dd>
+          <dd class="glossaire__definition">Relational database management system, used by many web applications.</dd>
         </div>
         <div class="glossaire__entree" id="scripts">
           <dt class="glossaire__terme">Scripts <span class="glossaire__nom-complet">PowerShell, Bash, Batch</span></dt>
-          <dd class="glossaire__definition">Petits programmes qui automatisent des tâches d'administration&nbsp;: PowerShell et Batch sous Windows, Bash sous Linux.</dd>
+          <dd class="glossaire__definition">Small programs that automate administration tasks: PowerShell and Batch on Windows, Bash on Linux.</dd>
         </div>
       </dl>
     </section>
 
     <!-- ===================== OS (systèmes d'exploitation) ===================== -->
     <section class="section" id="os">
-      <h2 class="titre-section">OS (systèmes d'exploitation)</h2>
+      <h2 class="titre-section">OS (operating systems)</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="systeme-exploitation">
-          <dt class="glossaire__terme">Système d'exploitation <span class="glossaire__nom-complet">OS, Operating System</span></dt>
-          <dd class="glossaire__definition">Logiciel de base qui gère le matériel d'un ordinateur ou d'un équipement réseau (processeur, mémoire, stockage, interfaces) et permet aux autres programmes de fonctionner. Exemples&nbsp;: Windows, Linux, Cisco IOS.</dd>
+          <dt class="glossaire__terme">Operating system <span class="glossaire__nom-complet">OS</span></dt>
+          <dd class="glossaire__definition">Core software that manages the hardware of a computer or a network device (processor, memory, storage, interfaces) and allows other programs to run. Examples: Windows, Linux, Cisco IOS.</dd>
         </div>
         <div class="glossaire__entree" id="linux">
           <dt class="glossaire__terme">Linux</dt>
-          <dd class="glossaire__definition">Famille de systèmes d'exploitation libres basés sur le noyau Linux, créé par Linus Torvalds en 1991. Elle existe sous forme de distributions (Debian, Ubuntu, Red Hat, Kali Linux…) et est très répandue sur les serveurs, où on l'administre souvent en ligne de commande avec Bash.</dd>
+          <dd class="glossaire__definition">Family of open-source operating systems based on the Linux kernel, created by Linus Torvalds in 1991. It comes in the form of distributions (Debian, Ubuntu, Red Hat, Kali Linux…) and is very widespread on servers, where it is often administered from the command line with Bash.</dd>
         </div>
         <div class="glossaire__entree" id="windows">
           <dt class="glossaire__terme">Windows <span class="glossaire__nom-complet">Microsoft Windows</span></dt>
-          <dd class="glossaire__definition">Système d'exploitation de Microsoft, le plus répandu sur les postes de travail (par exemple Windows&nbsp;11). En entreprise, les postes sont souvent reliés à un domaine Active Directory géré par Windows Server.</dd>
+          <dd class="glossaire__definition">Microsoft's operating system, the most widespread on workstations (for example Windows&nbsp;11). In companies, workstations are often joined to an Active Directory domain managed by Windows Server.</dd>
         </div>
         <div class="glossaire__entree" id="windows-server">
           <dt class="glossaire__terme">Windows Server</dt>
-          <dd class="glossaire__definition">Version serveur de Windows. Elle fournit en entreprise des services comme l'annuaire Active Directory, le DNS, le DHCP ou le partage de fichiers&nbsp;; on l'administre avec une interface graphique ou avec PowerShell.</dd>
+          <dd class="glossaire__definition">Server edition of Windows. In companies, it provides services such as the Active Directory directory service, DNS, DHCP or file sharing; it is administered with a graphical interface or with PowerShell.</dd>
         </div>
         <div class="glossaire__entree" id="cisco-ios">
           <dt class="glossaire__terme">Cisco IOS <span class="glossaire__nom-complet">Internetwork Operating System</span></dt>
-          <dd class="glossaire__definition">Système d'exploitation des routeurs et commutateurs Cisco (à ne pas confondre avec iOS d'Apple). Il se configure en ligne de commande, en passant par plusieurs modes&nbsp;: utilisateur (invite <code>&gt;</code>), privilégié (invite <code>#</code>, commande <code>enable</code>) et configuration (<code>configure terminal</code>). Il existe des variantes pour d'autres gammes, comme IOS XE ou NX-OS.</dd>
+          <dd class="glossaire__definition">Operating system of Cisco routers and switches (not to be confused with Apple's iOS). It is configured from the command line, through several modes: user (prompt <code>&gt;</code>), privileged (prompt <code>#</code>, command <code>enable</code>) and configuration (<code>configure terminal</code>). There are variants for other product ranges, such as IOS XE or NX-OS.</dd>
         </div>
       </dl>
     </section>
 
     <!-- ===================== Supervision et support ===================== -->
     <section class="section" id="supervision">
-      <h2 class="titre-section">Supervision et support</h2>
+      <h2 class="titre-section">Monitoring and support</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="supervision-definition">
-          <dt class="glossaire__terme">Supervision</dt>
-          <dd class="glossaire__definition">Surveillance continue de l'état des serveurs, des équipements et des services, avec des alertes dès que quelque chose ne va pas.</dd>
+          <dt class="glossaire__terme">Monitoring</dt>
+          <dd class="glossaire__definition">Continuous monitoring of the status of servers, devices and services, with alerts as soon as something goes wrong.</dd>
         </div>
         <div class="glossaire__entree" id="snmp">
           <dt class="glossaire__terme">SNMP <span class="glossaire__nom-complet">Simple Network Management Protocol</span></dt>
-          <dd class="glossaire__definition">Protocole qui permet d'interroger les équipements réseau (charge, état des ports, température…) et de recevoir leurs alertes.</dd>
+          <dd class="glossaire__definition">Protocol used to query network devices (load, port status, temperature…) and receive their alerts.</dd>
         </div>
         <div class="glossaire__entree" id="zabbix">
           <dt class="glossaire__terme">Zabbix</dt>
-          <dd class="glossaire__definition">Logiciel libre de supervision&nbsp;: il collecte des mesures (par agents ou par SNMP), trace des graphiques et déclenche des alertes.</dd>
+          <dd class="glossaire__definition">Open-source monitoring software: it collects metrics (through agents or SNMP), draws graphs and triggers alerts.</dd>
         </div>
         <div class="glossaire__entree" id="graylog">
           <dt class="glossaire__terme">Graylog</dt>
-          <dd class="glossaire__definition">Plateforme de centralisation des journaux (logs)&nbsp;: elle collecte et indexe les événements de nombreuses machines pour pouvoir les rechercher et les analyser.</dd>
+          <dd class="glossaire__definition">Log centralisation platform: it collects and indexes events from many machines so that they can be searched and analysed.</dd>
         </div>
         <div class="glossaire__entree" id="glpi">
-          <dt class="glossaire__terme">GLPI <span class="glossaire__nom-complet">Gestionnaire libre de parc informatique</span></dt>
-          <dd class="glossaire__definition">Logiciel libre d'inventaire du matériel et des logiciels, avec un outil de gestion des demandes et des incidents sous forme de tickets.</dd>
+          <dt class="glossaire__terme">GLPI <span class="glossaire__nom-complet">Gestionnaire libre de parc informatique (Free IT asset manager)</span></dt>
+          <dd class="glossaire__definition">Open-source software for inventorying hardware and software, with a tool for managing requests and incidents in the form of tickets.</dd>
         </div>
         <div class="glossaire__entree" id="fog">
           <dt class="glossaire__terme">FOG <span class="glossaire__nom-complet">FOG Project</span></dt>
-          <dd class="glossaire__definition">Solution libre de clonage et de déploiement de postes par le réseau&nbsp;: on crée l'image d'un poste de référence, puis on l'installe sur d'autres machines.</dd>
+          <dd class="glossaire__definition">Open-source solution for cloning and deploying workstations over the network: an image of a reference workstation is created, then installed on other machines.</dd>
         </div>
         <div class="glossaire__entree" id="ticketing">
           <dt class="glossaire__terme">Ticketing</dt>
-          <dd class="glossaire__definition">Suivi des demandes et des incidents sous forme de tickets&nbsp;: chaque demande est enregistrée, attribuée, traitée puis clôturée.</dd>
+          <dd class="glossaire__definition">Tracking of requests and incidents in the form of tickets: each request is recorded, assigned, handled and then closed.</dd>
         </div>
         <div class="glossaire__entree" id="prise-en-main-a-distance">
-          <dt class="glossaire__terme">Prise en main à distance</dt>
-          <dd class="glossaire__definition">Contrôle d'un poste à distance pour aider un utilisateur ou dépanner sans se déplacer.</dd>
+          <dt class="glossaire__terme">Remote control</dt>
+          <dd class="glossaire__definition">Controlling a computer remotely to help a user or troubleshoot without having to travel.</dd>
         </div>
       </dl>
     </section>
 
     <!-- ===================== Organismes ===================== -->
     <section class="section" id="organismes">
-      <h2 class="titre-section">Organismes</h2>
+      <h2 class="titre-section">Organisations</h2>
       <dl class="glossaire">
         <div class="glossaire__entree" id="anssi">
-          <dt class="glossaire__terme">ANSSI <span class="glossaire__nom-complet">Agence nationale de la sécurité des systèmes d'information</span></dt>
-          <dd class="glossaire__definition">Autorité française chargée de la cybersécurité. Elle propose la SecNumacadémie, un MOOC gratuit de sensibilisation à la sécurité du numérique.</dd>
+          <dt class="glossaire__terme">ANSSI <span class="glossaire__nom-complet">Agence nationale de la sécurité des systèmes d'information (National Agency for the Security of Information Systems)</span></dt>
+          <dd class="glossaire__definition">French authority responsible for cybersecurity. It offers SecNumacadémie, a free MOOC raising awareness of digital security.</dd>
         </div>
         <div class="glossaire__entree" id="cnil">
-          <dt class="glossaire__terme">CNIL <span class="glossaire__nom-complet">Commission nationale de l'informatique et des libertés</span></dt>
-          <dd class="glossaire__definition">Autorité française chargée de la protection des données personnelles. Elle propose l'Atelier RGPD, un MOOC gratuit.</dd>
+          <dt class="glossaire__terme">CNIL <span class="glossaire__nom-complet">Commission nationale de l'informatique et des libertés (National Commission on Information Technology and Civil Liberties)</span></dt>
+          <dd class="glossaire__definition">French authority responsible for the protection of personal data. It offers the Atelier RGPD, a free MOOC.</dd>
         </div>
         <div class="glossaire__entree" id="rgpd">
-          <dt class="glossaire__terme">RGPD <span class="glossaire__nom-complet">Règlement général sur la protection des données</span></dt>
-          <dd class="glossaire__definition">Règlement européen, appliqué depuis mai 2018, qui encadre la collecte et l'utilisation des données personnelles.</dd>
+          <dt class="glossaire__terme">GDPR <span class="glossaire__nom-complet">General Data Protection Regulation (RGPD in French)</span></dt>
+          <dd class="glossaire__definition">European regulation that has applied since May 2018 and governs the collection and use of personal data.</dd>
         </div>
         <div class="glossaire__entree" id="root-me">
           <dt class="glossaire__terme">Root Me</dt>
-          <dd class="glossaire__definition">Plateforme française d'apprentissage du hacking éthique, avec des centaines de challenges et des CTF.</dd>
+          <dd class="glossaire__definition">French platform for learning ethical hacking, with hundreds of challenges and CTFs.</dd>
         </div>
         <div class="glossaire__entree" id="cisco">
           <dt class="glossaire__terme">Cisco</dt>
-          <dd class="glossaire__definition">Constructeur américain d'équipements réseau. Sa Cisco Networking Academy propose des cours en ligne, dont une introduction à la cybersécurité.</dd>
+          <dd class="glossaire__definition">American manufacturer of networking equipment. Its Cisco Networking Academy offers online courses, including an introduction to cybersecurity.</dd>
         </div>
         <div class="glossaire__entree" id="stormshield">
           <dt class="glossaire__terme">Stormshield</dt>
-          <dd class="glossaire__definition">Entreprise française de cybersécurité, filiale du groupe Airbus. Sa gamme de pare-feu Stormshield Network Security (SNS), qualifiée par l'ANSSI, filtre le trafic réseau, gère les connexions VPN et bloque les intrusions.</dd>
+          <dd class="glossaire__definition">French cybersecurity company, a subsidiary of the Airbus group. Its Stormshield Network Security (SNS) range of firewalls, qualified by the ANSSI, filters network traffic, manages VPN connections and blocks intrusions.</dd>
         </div>
         <div class="glossaire__entree" id="vmware">
           <dt class="glossaire__terme">VMware</dt>
-          <dd class="glossaire__definition">Éditeur américain de logiciels de virtualisation, qui appartient à Broadcom depuis 2023. Il propose notamment vSphere, qui associe l'hyperviseur ESXi et vCenter (gestion centralisée de plusieurs serveurs), ainsi que VMware Workstation, qui fait tourner des machines virtuelles sur un poste de travail.</dd>
+          <dd class="glossaire__definition">American virtualisation software vendor, owned by Broadcom since 2023. Its products include vSphere, which combines the ESXi hypervisor and vCenter (centralised management of several servers), as well as VMware Workstation, which runs virtual machines on a workstation.</dd>
         </div>
       </dl>
     </section>
