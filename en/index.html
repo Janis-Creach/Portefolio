@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Portfolio of Janis Creach: systems and network administration, cybersecurity.">
+  <title>Janis Creach — Portfolio</title>
+
+  <!-- Icône de l'onglet -->
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Space+Mono:wght@400;700&display=swap">
+
+  <!-- Styles du site (?v= : à changer après chaque modification du CSS ou du JS, voir CLAUDE.md) -->
+  <link rel="stylesheet" href="../css/style.css?v=20261019">
+
+  <!-- Scripts -->
+  <script src="../js/theme.js?v=20261019" defer></script>
+  <script src="../js/menu.js?v=20261019" defer></script>
+  <script src="../js/defilement.js?v=20261019" defer></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Skip to content</a>
+
+  <!-- ===================== Barre de navigation ===================== -->
+  <header class="entete">
+    <div class="entete__barre">
+      <a class="entete__logo" href="index.html">
+        <img src="../assets/logo.svg" alt="" width="28" height="28">
+        <span>Janis Creach</span>
+      </a>
+
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation-principale">
+        <span class="bouton-menu__barres" aria-hidden="true"></span>
+        <span class="visuellement-cache">Menu</span>
+      </button>
+
+      <nav class="navigation" id="navigation-principale" aria-label="Main navigation">
+        <ul class="navigation__liste">
+          <li><a class="navigation__lien" href="cv.html">My CV</a></li>
+          <li><a class="navigation__lien" href="certification.html">Certifications</a></li>
+          <li><a class="navigation__lien" href="documentation.html">Documentation</a></li>
+          <li><a class="navigation__lien" href="formation-experience.html">Education/Experience</a></li>
+          <li><a class="navigation__lien" href="projets.html">Projects</a></li>
+          <li><a class="navigation__lien" href="definition.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <button class="bouton-theme" type="button" aria-label="Change theme">
+        <svg class="bouton-theme__lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="bouton-theme__soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="8" height="8"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <a class="bouton-langue" href="../index.html" hreflang="fr" lang="fr" aria-label="Version française">FR</a>
+    </div>
+  </header>
+
+  <main id="contenu" class="page">
+    <!-- ===================== Présentation ===================== -->
+    <section class="section hero">
+      <div class="hero__texte">
+        <p class="etiquette-mono">// Portfolio</p>
+        <h1 class="hero__titre">
+          Janis Creach
+          <span class="hero__sous-titre">Systems &amp; network administration.</span>
+        </h1>
+        <p class="texte-intro">I am a BTS SIO student (a French two-year higher diploma in IT services), SISR option, and I am looking for an internship as a systems and network administration technician. I like hands-on work: cabling, configuring, securing and documenting infrastructure.</p>
+
+        <div class="hero__actions">
+          <a class="bouton bouton--principal" href="projets.html">See my projects <span class="fleche" aria-hidden="true">→</span></a>
+          <a class="bouton bouton--fantome" href="cv.html">View my CV</a>
+        </div>
+
+        <dl class="hero__infos">
+          <div class="hero__info">
+            <dt>Location</dt>
+            <dd>Finistère, Brittany</dd>
+          </div>
+          <div class="hero__info">
+            <dt>Status</dt>
+            <dd>Looking for an internship</dd>
+          </div>
+          <div class="hero__info">
+            <dt>Education</dt>
+            <dd>BTS SIO, SISR option</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__visuel">
+        <div class="terminal">
+          <div class="terminal__barre" aria-hidden="true">
+            <span class="terminal__pixel"></span>
+            <span class="terminal__pixel"></span>
+            <span class="terminal__pixel"></span>
+            <span class="terminal__titre">~/portfolio — bash</span>
+          </div>
+          <div class="terminal__contenu">
+            <p><span class="terminal__invite">$</span>whoami</p>
+            <p class="terminal__sortie">janis-creach</p>
+            <p><span class="terminal__invite">$</span>cat competences.txt</p>
+            <p class="terminal__sortie">→ Networking: VLAN, routing, Wi-Fi, RADIUS</p>
+            <p class="terminal__sortie">→ Security: firewall, VPN, Wazuh</p>
+            <p class="terminal__sortie">→ Systems: Windows, Linux, Proxmox</p>
+            <p><span class="terminal__invite">$</span>./statut.sh</p>
+            <p class="terminal__succes">✔ Available for an internship<span class="terminal__curseur" aria-hidden="true"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Technologies (bandeau défilant) ===================== -->
+    <section class="defilement" aria-label="Technologies used">
+      <div class="defilement__fenetre">
+        <div class="defilement__piste">
+          <ul class="defilement__liste">
+            <li class="defilement__element">VLAN &amp; STP</li>
+            <li class="defilement__element">Inter-VLAN routing</li>
+            <li class="defilement__element">Wi-Fi &amp; RADIUS</li>
+            <li class="defilement__element">Wireshark</li>
+            <li class="defilement__element">Firewall &amp; VPN</li>
+            <li class="defilement__element">Stormshield</li>
+            <li class="defilement__element">Alcasar</li>
+            <li class="defilement__element">Wazuh</li>
+            <li class="defilement__element">Zabbix</li>
+            <li class="defilement__element">Graylog</li>
+            <li class="defilement__element">Proxmox</li>
+            <li class="defilement__element">VMware ESXi</li>
+            <li class="defilement__element">Windows &amp; Linux</li>
+            <li class="defilement__element">GLPI</li>
+          </ul>
+          <!-- Copie de la liste pour que le défilement boucle sans trou -->
+          <ul class="defilement__liste" aria-hidden="true">
+            <li class="defilement__element">VLAN &amp; STP</li>
+            <li class="defilement__element">Inter-VLAN routing</li>
+            <li class="defilement__element">Wi-Fi &amp; RADIUS</li>
+            <li class="defilement__element">Wireshark</li>
+            <li class="defilement__element">Firewall &amp; VPN</li>
+            <li class="defilement__element">Stormshield</li>
+            <li class="defilement__element">Alcasar</li>
+            <li class="defilement__element">Wazuh</li>
+            <li class="defilement__element">Zabbix</li>
+            <li class="defilement__element">Graylog</li>
+            <li class="defilement__element">Proxmox</li>
+            <li class="defilement__element">VMware ESXi</li>
+            <li class="defilement__element">Windows &amp; Linux</li>
+            <li class="defilement__element">GLPI</li>
+          </ul>
+        </div>
+      </div>
+      <button class="defilement__pause" type="button" aria-pressed="false" aria-label="Pause scrolling">
+        <span class="defilement__icone" aria-hidden="true"></span>
+      </button>
+    </section>
+
+    <!-- ===================== En bref (grille bento) ===================== -->
+    <section class="section">
+      <div class="section__entete">
+        <div>
+          <p class="etiquette-mono">// At a glance</p>
+          <h2>An overview of my background</h2>
+        </div>
+        <a class="bouton bouton--fantome" href="formation-experience.html">Education &amp; experience <span class="fleche" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="grille-bento">
+        <article class="carte colonnes-7">
+          <p class="etiquette-mono">About</p>
+          <h3>From cable to server, I like hands-on work.</h3>
+          <p class="carte__texte">I am serious and committed, curious, and I get on easily with people. I like being on the move and working with my hands: cabling, installing equipment, configuring and securing networks. I want to put these qualities at the service of a company to help it manage and administer its networks.</p>
+          <a class="carte__lien" href="cv.html">Read my CV <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="carte colonnes-5">
+          <p class="etiquette-mono">Key figures</p>
+          <dl class="statistiques">
+            <div class="statistique">
+              <dt>Internships completed</dt>
+              <dd>2</dd>
+            </div>
+            <div class="statistique">
+              <dt>Certifications and MOOCs</dt>
+              <dd>6</dd>
+            </div>
+            <div class="statistique">
+              <dt>Years of Bac Pro (vocational baccalaureate) in networking</dt>
+              <dd>3</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="carte carte--avec-visuel colonnes-8">
+          <div class="carte__corps">
+            <p class="etiquette-mono">Featured project</p>
+            <h3>Alcasar captive portal</h3>
+            <p class="carte__texte">During my internship at Lycée Félix le Dantec, I installed and maintained an Alcasar: an open-source network access controller that authenticates users before giving them access to the Internet.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">Alcasar</li>
+              <li class="etiquette">Access control</li>
+              <li class="etiquette">Networking</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">View the projects <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+          <div class="visuel-pixels" aria-hidden="true"></div>
+        </article>
+
+        <article class="carte colonnes-4">
+          <p class="etiquette-mono">Certification</p>
+          <span class="badge-certification" aria-hidden="true">ANSSI</span>
+          <h3>SecNumacadémie</h3>
+          <p class="carte__texte">ANSSI MOOC on digital security · 2025</p>
+          <a class="carte__lien" href="certification.html">All certifications <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="carte colonnes-6">
+          <p class="etiquette-mono">Skills</p>
+          <dl class="liste-domaines">
+            <div class="domaine">
+              <dt>Networking</dt>
+              <dd>VLAN, STP, inter-VLAN routing, Wi-Fi, RADIUS, Wireshark</dd>
+            </div>
+            <div class="domaine">
+              <dt>Security</dt>
+              <dd>Firewall, VPN, IDS/IPS, SSH, SSL/TLS, Wazuh</dd>
+            </div>
+            <div class="domaine">
+              <dt>Systems</dt>
+              <dd>Windows, Linux, Proxmox, VMware ESXi</dd>
+            </div>
+            <div class="domaine">
+              <dt>Monitoring</dt>
+              <dd>Zabbix, SNMP, Graylog</dd>
+            </div>
+          </dl>
+          <a class="carte__lien" href="cv.html">All my skills <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="carte colonnes-6">
+          <p class="etiquette-mono">Documentation</p>
+          <ul class="liste-liens">
+            <li><a href="documentation.html#article-vlan"><span class="liste-liens__date">15.10.2026</span> Configuring VLANs and inter-VLAN routing</a></li>
+            <li><p class="liste-liens__a-venir"><span class="liste-liens__date">Coming soon</span> Installing an Alcasar captive portal</p></li>
+            <li><p class="liste-liens__a-venir"><span class="liste-liens__date">Coming soon</span> Monitoring your network with Zabbix and SNMP</p></li>
+          </ul>
+          <a class="carte__lien" href="documentation.html">All documentation <span class="fleche" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <div class="separateur-losanges" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <!-- ===================== Projets ===================== -->
+    <section class="section">
+      <div class="section__entete">
+        <div>
+          <p class="etiquette-mono">// Projects</p>
+          <h2>Achievements</h2>
+        </div>
+        <a class="bouton bouton--fantome" href="projets.html">All projects <span class="fleche" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="grille-projets">
+        <article class="carte-projet">
+          <div class="visuel-pixels" aria-hidden="true"></div>
+          <div class="carte-projet__corps">
+            <p class="etiquette-mono">Internship 2025 · Access control</p>
+            <h3 class="carte-projet__titre">Alcasar captive portal</h3>
+            <p class="carte-projet__texte">Installing and maintaining an Alcasar to control and track users' access to the network.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">Alcasar</li>
+              <li class="etiquette">NAC</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">Learn more <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="carte-projet">
+          <div class="visuel-pixels visuel-pixels--gauche" aria-hidden="true"></div>
+          <div class="carte-projet__corps">
+            <p class="etiquette-mono">Networking</p>
+            <h3 class="carte-projet__titre">Network segmented into VLANs</h3>
+            <p class="carte-projet__texte">Segmentation into VLANs, STP, inter-VLAN routing and Wi-Fi with RADIUS authentication.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">VLAN</li>
+              <li class="etiquette">STP</li>
+              <li class="etiquette">RADIUS</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">Learn more <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="carte-projet">
+          <div class="visuel-pixels visuel-pixels--haut" aria-hidden="true"></div>
+          <div class="carte-projet__corps">
+            <p class="etiquette-mono">Cybersecurity</p>
+            <h3 class="carte-projet__titre">Incident detection with Wazuh</h3>
+            <p class="carte-projet__texte">Wazuh SIEM/XDR to centralise security alerts and manage incidents.</p>
+            <ul class="liste-etiquettes">
+              <li class="etiquette">Wazuh</li>
+              <li class="etiquette">SIEM</li>
+              <li class="etiquette">IDS/IPS</li>
+            </ul>
+            <a class="carte__lien" href="projets.html">Learn more <span class="fleche" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Définitions (accroche) ===================== -->
+    <section class="section section--compacte">
+      <div class="accroche-definitions">
+        <div>
+          <p class="etiquette-mono">// Glossary</p>
+          <h2 class="accroche-definitions__titre">Not sure what an acronym means?</h2>
+          <p class="carte__texte">The concepts, protocols and tools mentioned in this portfolio are explained simply on the Glossary page.</p>
+        </div>
+        <div class="accroche-definitions__actions">
+          <ul class="liste-etiquettes" aria-label="Examples of concepts">
+            <li><a class="etiquette etiquette--lien" href="definition.html#dhcp">DHCP</a></li>
+            <li><a class="etiquette etiquette--lien" href="definition.html#vlan">VLAN</a></li>
+            <li><a class="etiquette etiquette--lien" href="definition.html#radius">RADIUS</a></li>
+            <li><a class="etiquette etiquette--lien" href="definition.html#siem">SIEM</a></li>
+            <li><a class="etiquette etiquette--lien" href="definition.html#corosync">Corosync</a></li>
+          </ul>
+          <a class="bouton bouton--principal" href="definition.html">View the glossary <span class="fleche" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section class="section">
+      <div class="appel-contact">
+        <div>
+          <p class="etiquette-mono">// Contact</p>
+          <h2 class="appel-contact__titre">Got an internship to offer?</h2>
+          <p class="appel-contact__texte">Write to me by email and I will reply quickly.</p>
+        </div>
+        <div class="appel-contact__actions">
+          <a class="bouton bouton--accent" href="mailto:janis.creach@gmail.com">Email me <span class="fleche" aria-hidden="true">→</span></a>
+          <a class="bouton bouton--fantome-clair" href="cv.html">View my CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Pied de page ===================== -->
+  <footer class="pied-de-page">
+    <div class="pied-de-page__interieur">
+      <div class="pied-de-page__grille">
+        <div class="pied-de-page__colonne">
+          <a class="pied-de-page__logo" href="index.html">
+            <img src="../assets/logo.svg" alt="" width="40" height="40">
+            <span>Janis Creach</span>
+          </a>
+          <p class="pied-de-page__texte">Systems, network &amp; cybersecurity administration.</p>
+        </div>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Information</p>
+          <a class="pied-de-page__lien" href="mentions-legales.html">Legal notice <span class="fleche" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Find me</p>
+          <ul class="liens-sociaux">
+            <li>
+              <a class="lien-social" href="https://github.com/Janis-Creach" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.57v-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .31.21.69.83.57A12 12 0 0 0 24 12.3c0-6.63-5.37-12-12-12"/></svg>
+                </span>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <!-- À FAIRE : remplacer par l'adresse du profil LinkedIn -->
+              <a class="lien-social" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                </span>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="lien-social" href="mailto:janis.creach@gmail.com">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16"/><path d="m2 5 10 8 10-8"/></svg>
+                </span>
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pied-de-page__bas">
+        <p>© 2026 Janis Creach</p>
+        <p>Hosted on GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -7,11 +7,21 @@
    ========================================================================== */
 
 // Textes affichés sous la barre de recherche (lus aussi par les lecteurs d'écran)
-const TEXTES_RECHERCHE = {
-  aucun: (recherche) => `Aucune définition ne correspond à « ${recherche} ».`,
-  une: "1 définition trouvée.",
-  plusieurs: (nombre) => `${nombre} définitions trouvées.`,
+const TEXTES_RECHERCHE_PAR_LANGUE = {
+  fr: {
+    aucun: (recherche) => `Aucune définition ne correspond à « ${recherche} ».`,
+    une: "1 définition trouvée.",
+    plusieurs: (nombre) => `${nombre} définitions trouvées.`,
+  },
+  en: {
+    aucun: (recherche) => `No definition matches “${recherche}”.`,
+    une: "1 definition found.",
+    plusieurs: (nombre) => `${nombre} definitions found.`,
+  },
 };
+
+// Pages anglaises (dossier en/) : <html lang="en"> ; sinon français
+const TEXTES_RECHERCHE = TEXTES_RECHERCHE_PAR_LANGUE[document.documentElement.lang === "en" ? "en" : "fr"];
 
 const champRecherche = document.querySelector("#recherche-definitions");
 const resultatRecherche = document.querySelector("#recherche-resultat");

@@ -8,10 +8,10 @@
    environ 10 minutes). Le changer ici ET dans les 8 pages HTML.
    ========================================================================== */
 
-@import url("variables.css?v=20261017f");   /* couleurs, polices, tailles */
-@import url("base.css?v=20261017f");        /* remise à zéro, typographie, mise en page */
-@import url("header.css?v=20261017f");      /* barre de navigation */
-@import url("footer.css?v=20261017f");      /* pied de page */
-@import url("components.css?v=20261017f");  /* boutons, cartes, étiquettes, terminal… */
-@import url("accueil.css?v=20261017f");     /* page d'accueil */
-@import url("pages.css?v=20261017f");       /* CV, certifications, documentation, parcours */
+@import url("variables.css?v=20261019");   /* couleurs, polices, tailles */
+@import url("base.css?v=20261019");        /* remise à zéro, typographie, mise en page */
+@import url("header.css?v=20261019");      /* barre de navigation */
+@import url("footer.css?v=20261019");      /* pied de page */
+@import url("components.css?v=20261019");  /* boutons, cartes, étiquettes, terminal… */
+@import url("accueil.css?v=20261019");     /* page d'accueil */
+@import url("pages.css?v=20261019");       /* CV, certifications, documentation, parcours */

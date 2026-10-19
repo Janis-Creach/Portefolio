@@ -75,9 +75,10 @@
   box-shadow: inset 0 -2px 0 var(--couleur-accent);
 }
 
-/* ----- Boutons carrés (thème, menu, et pause du bandeau défilant) ----- */
+/* ----- Boutons carrés (thème, langue, menu, et pause du bandeau défilant) ----- */
 
 .bouton-theme,
+.bouton-langue,
 .bouton-menu,
 .defilement__pause {
   display: grid;
@@ -93,8 +94,18 @@
 }
 
 .bouton-theme:hover,
+.bouton-langue:hover,
 .bouton-menu:hover {
   background-color: var(--couleur-fond-nav-survol);
+}
+
+/* Bouton de langue : un lien vers la même page dans l'autre langue (FR / EN) */
+.bouton-langue {
+  font-family: var(--police-mono);
+  font-size: var(--taille-mini);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
 }
 
 /* Le bouton pause est dans le bandeau de l'accueil, pas dans la barre :
@@ -174,9 +185,11 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* ----- Petits écrans : menu déroulant ----- */
+/* ----- Petits écrans : menu déroulant -----
+   La barre complète a besoin d'environ 960 px (6 liens + boutons thème et
+   langue) : en dessous de 1024 px, on passe au menu déroulant. */
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .bouton-menu {
     display: grid;
     order: 3;

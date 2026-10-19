@@ -9,11 +9,14 @@
 // Clé utilisée pour mémoriser le choix dans le navigateur
 const CLE_STOCKAGE_THEME = "portfolio-theme";
 
-// Texte lu par les lecteurs d'écran sur le bouton, selon le thème actif
-const LIBELLES_BOUTON_THEME = {
-  light: "Passer en mode sombre",
-  dark: "Passer en mode clair",
+// Texte lu par les lecteurs d'écran sur le bouton, selon la langue et le thème actif
+const LIBELLES_THEME_PAR_LANGUE = {
+  fr: { light: "Passer en mode sombre", dark: "Passer en mode clair" },
+  en: { light: "Switch to dark mode", dark: "Switch to light mode" },
 };
+
+// Pages anglaises (dossier en/) : <html lang="en"> ; sinon français
+const LIBELLES_BOUTON_THEME = LIBELLES_THEME_PAR_LANGUE[document.documentElement.lang === "en" ? "en" : "fr"];
 
 const racine = document.documentElement;
 const requeteThemeSombre = window.matchMedia("(prefers-color-scheme: dark)");

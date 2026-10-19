@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Janis Creach's CV: networking, systems and cybersecurity skills, internships and education.">
+  <title>My CV — Janis Creach</title>
+
+  <!-- Icône de l'onglet -->
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=Space+Mono:wght@400;700&display=swap">
+
+  <!-- Styles du site (?v= : à changer après chaque modification du CSS ou du JS, voir CLAUDE.md) -->
+  <link rel="stylesheet" href="../css/style.css?v=20261019">
+
+  <!-- Scripts -->
+  <script src="../js/theme.js?v=20261019" defer></script>
+  <script src="../js/menu.js?v=20261019" defer></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Skip to content</a>
+
+  <!-- ===================== Barre de navigation ===================== -->
+  <header class="entete">
+    <div class="entete__barre">
+      <a class="entete__logo" href="index.html">
+        <img src="../assets/logo.svg" alt="" width="28" height="28">
+        <span>Janis Creach</span>
+      </a>
+
+      <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="navigation-principale">
+        <span class="bouton-menu__barres" aria-hidden="true"></span>
+        <span class="visuellement-cache">Menu</span>
+      </button>
+
+      <nav class="navigation" id="navigation-principale" aria-label="Main navigation">
+        <ul class="navigation__liste">
+          <li><a class="navigation__lien" href="cv.html" aria-current="page">My CV</a></li>
+          <li><a class="navigation__lien" href="certification.html">Certifications</a></li>
+          <li><a class="navigation__lien" href="documentation.html">Documentation</a></li>
+          <li><a class="navigation__lien" href="formation-experience.html">Education/Experience</a></li>
+          <li><a class="navigation__lien" href="projets.html">Projects</a></li>
+          <li><a class="navigation__lien" href="definition.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <button class="bouton-theme" type="button" aria-label="Change theme">
+        <svg class="bouton-theme__lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="bouton-theme__soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="8" height="8"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <a class="bouton-langue" href="../cv.html" hreflang="fr" lang="fr" aria-label="Version française">FR</a>
+    </div>
+  </header>
+
+  <main id="contenu" class="page">
+    <!-- ===================== En-tête de page ===================== -->
+    <section class="section en-tete-page">
+      <p class="etiquette-mono">// My CV</p>
+      <h1>My CV</h1>
+      <p class="texte-intro">I am a BTS SIO student (French two-year higher diploma in IT services), SISR option, and I am looking for an internship as a systems and network administration technician.</p>
+      <div class="en-tete-page__actions">
+        <a class="bouton bouton--principal" href="../assets/cv-janis-creach.pdf" download="CV-Janis-Creach.pdf">Download my CV (PDF, in French)</a>
+        <a class="bouton bouton--fantome" href="mailto:janis.creach@gmail.com">Contact me <span class="fleche" aria-hidden="true">→</span></a>
+        <a class="bouton bouton--fantome" href="formation-experience.html">Detailed background</a>
+      </div>
+    </section>
+
+    <!-- ===================== CV ===================== -->
+    <div class="cv">
+      <!-- Colonne latérale -->
+      <aside class="cv__laterale">
+        <div class="cv__bloc">
+          <img class="cv__avatar" src="../assets/logo.svg" alt="" width="88" height="88">
+          <p class="cv__nom">Janis Creach</p>
+          <p class="cv__poste">Looking for an internship: systems and network administration technician</p>
+        </div>
+
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Contact details</h2>
+          <dl class="liste-infos">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:janis.creach@gmail.com">janis.creach@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/Janis-Creach" target="_blank" rel="noopener noreferrer">github.com/Janis-Creach</a></dd>
+            </div>
+            <div>
+              <dt>LinkedIn</dt>
+              <dd>Link coming soon</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Saint-Martin-des-Champs (29)</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Certifications</h2>
+          <ul class="liste-puces">
+            <li>CNIL MOOC — Atelier RGPD (2025)</li>
+            <li>ANSSI MOOC — SecNumacadémie (2025)</li>
+            <li>Root Me — CTF challenges (2025)</li>
+            <li>Cisco — Introduction to Cybersecurity (2026)</li>
+            <li>SST — Workplace first aider (Sauveteur secouriste du travail) (2024)</li>
+            <li>Training for B1V electrical authorisation (2023)</li>
+          </ul>
+        </div>
+
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Soft skills</h2>
+          <ul class="liste-etiquettes">
+            <li class="etiquette">Conscientious</li>
+            <li class="etiquette">Committed</li>
+            <li class="etiquette">Curious</li>
+            <li class="etiquette">Approachable</li>
+            <li class="etiquette">Hands-on work</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Colonne principale -->
+      <div class="cv__principale">
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Profile</h2>
+          <p>Conscientious and committed, I like being on the move and working with my hands. I am curious and easy to get on with.</p>
+          <p>I will put all these qualities at your service to help you manage and administer your networks.</p>
+        </div>
+
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Skills</h2>
+          <div class="groupes-competences">
+            <div class="groupe-competences">
+              <h3>Networking</h3>
+              <ul class="liste-puces">
+                <li>VLAN, STP, routing and inter-VLAN routing</li>
+                <li>Wi-Fi and RADIUS authentication</li>
+                <li>Network and frame analysis with Wireshark</li>
+                <li>Cabling and installation of network interconnection equipment</li>
+                <li>Infrastructure design: requirements specification, planning, network diagrams</li>
+              </ul>
+            </div>
+            <div class="groupe-competences">
+              <h3>Cybersecurity</h3>
+              <ul class="liste-puces">
+                <li>Securing infrastructures, systems and services</li>
+                <li>Secure protocols: HTTPS, SSL/TLS, SSH, certificates</li>
+                <li>Firewalls and filtering, VPN, RADIUS, IDS/IPS</li>
+                <li>SOC, SIEM/XDR (Wazuh) and incident management</li>
+                <li>Vulnerability research and pentesting: Kali Linux, Metasploit</li>
+              </ul>
+            </div>
+            <div class="groupe-competences">
+              <h3>Systems and services</h3>
+              <ul class="liste-puces">
+                <li>Windows / Linux servers and workstations</li>
+                <li>Apache, MySQL, DNS, DHCP and email services</li>
+                <li>Virtualisation: Proxmox, VMware ESXi and Workstation, VirtualBox</li>
+                <li>High availability: RAID, clustering, load balancing</li>
+                <li>Scripting: PowerShell, Bash, Batch</li>
+              </ul>
+            </div>
+            <div class="groupe-competences">
+              <h3>Monitoring and support</h3>
+              <ul class="liste-puces">
+                <li>Monitoring and logs: Zabbix, SNMP, Graylog</li>
+                <li>Network access control (NAC): Alcasar</li>
+                <li>IT asset management: GLPI, FOG, backup and restore, updates</li>
+                <li>Incident resolution: ticketing, remote control</li>
+                <li>Writing procedures and technical documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Professional experience</h2>
+          <ul class="liste-resume">
+            <li>
+              <div class="resume__entete">
+                <h3 class="resume__titre">Internship — IT and network maintenance</h3>
+                <span class="resume__date">June 2025</span>
+              </div>
+              <p class="resume__organisation">Lycée Félix le Dantec · Lannion</p>
+              <p class="resume__texte">IT and network maintenance, installation and maintenance of an Alcasar.</p>
+            </li>
+            <li>
+              <div class="resume__entete">
+                <h3 class="resume__titre">Internship — IT maintenance</h3>
+                <span class="resume__date">June 2024</span>
+              </div>
+              <p class="resume__organisation">Axeinfo · Lannion</p>
+              <p class="resume__texte">Computer repairs and IT maintenance.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv__bloc">
+          <h2 class="etiquette-mono">Education</h2>
+          <ul class="liste-resume">
+            <li>
+              <div class="resume__entete">
+                <h3 class="resume__titre">BTS SIO — SISR option</h3>
+                <span class="resume__date">2025 — present</span>
+              </div>
+              <p class="resume__organisation">Lycée Félix le Dantec · Lannion</p>
+            </li>
+            <li>
+              <div class="resume__entete">
+                <h3 class="resume__titre">Bac Pro SN — RISC option</h3>
+                <span class="resume__date">2022 — 2025</span>
+              </div>
+              <p class="resume__organisation">Lycée Félix le Dantec · Lannion</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== Pied de page ===================== -->
+  <footer class="pied-de-page">
+    <div class="pied-de-page__interieur">
+      <div class="pied-de-page__grille">
+        <div class="pied-de-page__colonne">
+          <a class="pied-de-page__logo" href="index.html">
+            <img src="../assets/logo.svg" alt="" width="40" height="40">
+            <span>Janis Creach</span>
+          </a>
+          <p class="pied-de-page__texte">Systems, network &amp; cybersecurity administration.</p>
+        </div>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Information</p>
+          <a class="pied-de-page__lien" href="mentions-legales.html">Legal notice <span class="fleche" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="pied-de-page__colonne">
+          <p class="etiquette-mono">Find me</p>
+          <ul class="liens-sociaux">
+            <li>
+              <a class="lien-social" href="https://github.com/Janis-Creach" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.2 11.38.6.12.82-.26.82-.57v-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .31.21.69.83.57A12 12 0 0 0 24 12.3c0-6.63-5.37-12-12-12"/></svg>
+                </span>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <!-- À FAIRE : remplacer par l'adresse du profil LinkedIn -->
+              <a class="lien-social" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                </span>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="lien-social" href="mailto:janis.creach@gmail.com">
+                <span class="lien-social__icone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16"/><path d="m2 5 10 8 10-8"/></svg>
+                </span>
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pied-de-page__bas">
+        <p>© 2026 Janis Creach</p>
+        <p>Hosted on GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
